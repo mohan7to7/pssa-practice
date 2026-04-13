@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PSSA Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #27ae60;
+        }
+
+        .user-info {
+            text-align: left;
+        }
+
+        .user-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .user-grade {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin: 5px 0 0 0;
+        }
+
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .subject-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .subject-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #27ae60;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 0.85em;
+            margin-top: 8px;
+        }
+
+        .levels-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .level-btn {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.8em;
+            transition: all 0.2s ease;
+            background-color: #f0f0f0;
+            color: #2c3e50;
+        }
+
+        .level-btn:hover:not(:disabled) {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .level-btn.unlocked {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .level-btn.locked {
+            background-color: #bdc3c7;
+            color: #7f8c8d;
+            cursor: not-allowed;
+        }
+
+        .level-btn.completed {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        .level-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .stats-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <div class="user-info">
+                <p class="user-name">👤 <span id="userName"></span></p>
+                <p class="user-grade">Grade: <span id="userGrade"></span></p>
+            </div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div id="subjectGrid" class="subject-grid"></div>
+
+        <div class="stats-section">
+            <h2>📊 Your Progress</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="completedLevels">0</div>
+                    <div class="stat-label">Levels Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="averageScore">0%</div>
+                    <div class="stat-label">Average Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalAttempts">0</div>
+                    <div class="stat-label">Total Attempts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/userManager.js"></script>
+    <script>
+        // Check if user is logged in
+        function checkLogin() {
+            const currentUser = userManager.getCurrentUser();
+            if (!currentUser) {
+                window.location.href = 'login.html';
+                return;
+            }
+            return currentUser;
+        }
+
+        // Load dashboard
+        function loadDashboard() {
+            const currentUser = checkLogin();
+            if (!currentUser) return;
+
+            document.getElementById('userName').textContent = currentUser.name;
+            document.getElementById('userGrade').textContent = currentUser.gradeLevel;
+
+            loadSubjects(currentUser);
+            updateStats(currentUser);
+        }
+
+        // Load subjects and levels
+        function loadSubjects(currentUser) {
+            const subjects = [
+                { name: 'Math', emoji: '📐', icon: '🔢' },
+                { name: 'English', emoji: '📚', icon: '✍️' },
+                { name: 'Social Studies', emoji: '🌍', icon: '📍' },
+                { name: 'Science', emoji: '🔬', icon: '⚗️' }
+            ];
+
+            const progress = userManager.getUserProgress(currentUser.id);
+            const grid = document.getElementById('subjectGrid');
+            grid.innerHTML = '';
+
+            const subjectKeyMap = {
+                'Math': 'math',
+                'English': 'english',
+                'Social Studies': 'social',
+                'Science': 'science'
+            };
+
+            subjects.forEach(subject => {
+                const subjectKey = subjectKeyMap[subject.name];
+                const subjectProgress = progress.grades[currentUser.gradeLevel]?.[subjectKey];
+
+                if (!subjectProgress) return;
+
+                const completedLevels = subjectProgress.levels.filter(l => l.completed).length;
+                const progressPercent = (completedLevels / 10) * 100;
+
+                let html = `
+                    <div class="subject-card" onclick="selectSubject('${subjectKey}', '${subject.name}')">
+                        <h3>${subject.emoji} ${subject.name}</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progressPercent}%"></div>
+                        </div>
+                        <div class="progress-text">${completedLevels}/10 levels completed</div>
+                        <div class="levels-container">
+                `;
+
+                subjectProgress.levels.forEach(level => {
+                    const btnClass = level.locked ? 'locked' : (level.completed ? 'completed' : 'unlocked');
+                    const btnText = level.locked ? '🔒' : (level.completed ? '✓' : level.levelNum);
+                    const onclick = level.locked ? '' : `onclick="startQuiz('${subjectKey}', '${currentUser.gradeLevel}', ${level.levelNum})"`;
+
+                    html += `
+                        <button class="level-btn ${btnClass}" ${onclick} ${level.locked ? 'disabled' : ''} title="Level ${level.levelNum}">
+                            ${btnText}
+                        </button>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+
+                grid.innerHTML += html;
+            });
+        }
+
+        // Select subject (optional - for now goes directly to level)
+        function selectSubject(subject, subjectName) {
+            console.log('Subject selected:', subject);
+        }
+
+        // Start quiz
+        function startQuiz(subject, grade, level) {
+            const url = `${subject}/quiz.html?grade=${grade}&level=${level}`;
+            window.location.href = url;
+        }
+
+        // Update statistics
+        function updateStats(currentUser) {
+            const progress = userManager.getUserProgress(currentUser.id);
+            const subjects = ['math', 'english', 'social', 'science'];
+
+            let totalCompleted = 0;
+            let totalScore = 0;
+            let scoreCount = 0;
+            let totalAttempts = 0;
+
+            subjects.forEach(subject => {
+                const levels = progress.grades[currentUser.gradeLevel]?.[subject]?.levels || [];
+                levels.forEach(level => {
+                    if (level.completed) {
+                        totalCompleted++;
+                        totalScore += level.score;
+                        scoreCount++;
+                    }
+                    totalAttempts += level.attempts || 0;
+                });
+            });
+
+            document.getElementById('completedLevels').textContent = totalCompleted;
+            document.getElementById('averageScore').textContent = scoreCount > 0 ? Math.round(totalScore / scoreCount) + '%' : '0%';
+            document.getElementById('totalAttempts').textContent = totalAttempts;
+        }
+
+        // Logout
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                sessionStorage.removeItem('pssaCurrentUser');
+                window.location.href = 'login.html';
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', loadDashboard);
+    </script>
+</body>
+</html>
+

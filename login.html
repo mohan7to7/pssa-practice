@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSSA Practice - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        .form-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .existing-users {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        .existing-users h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .user-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .user-btn {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .user-btn:hover {
+            background-color: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .error {
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fadbd8;
+            border-radius: 5px;
+        }
+
+        .success {
+            color: #27ae60;
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #d5f4e6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="header">
+            <h1>🎓 PSSA Practice Hub</h1>
+            <h2>Welcome to Your Learning Portal</h2>
+            <p class="subtitle">Create a new account or select an existing user</p>
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="success" class="success" style="display: none;"></div>
+
+        <div id="loginForm">
+            <div class="form-group">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gradeLevel">Select Your Grade:</label>
+                <select id="gradeLevel" required>
+                    <option value="">-- Select a Grade --</option>
+                    <option value="K">Kindergarten</option>
+                    <option value="1">1st Grade</option>
+                    <option value="2">2nd Grade</option>
+                    <option value="3">3rd Grade</option>
+                    <option value="4">4th Grade</option>
+                    <option value="5">5th Grade</option>
+                </select>
+            </div>
+
+            <div class="form-buttons">
+                <button class="btn-login" onclick="createNewUser()">Create New User</button>
+                <button class="btn-login" onclick="goToDashboard()" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%);">Continue</button>
+            </div>
+        </div>
+
+        <div id="existingUsersSection" class="existing-users"></div>
+    </div>
+
+    <script src="js/userManager.js"></script>
+    <script>
+        // Load existing users on page load
+        function loadExistingUsers() {
+            const users = userManager.getAllUsers();
+            const section = document.getElementById('existingUsersSection');
+
+            if (users.length === 0) {
+                section.innerHTML = '';
+                return;
+            }
+
+            let html = '<h3>Previous Users:</h3><div class="user-list">';
+
+            users.forEach(user => {
+                html += `
+                    <button class="user-btn" onclick="selectExistingUser('${user.id}')">
+                        ${user.name}<br>
+                        <small>Grade ${user.gradeLevel}</small>
+                    </button>
+                `;
+            });
+
+            html += '</div>';
+            section.innerHTML = html;
+        }
+
+        // Create new user
+        function createNewUser() {
+            const name = document.getElementById('userName').value.trim();
+            const grade = document.getElementById('gradeLevel').value;
+            const errorDiv = document.getElementById('error');
+            const successDiv = document.getElementById('success');
+
+            errorDiv.style.display = 'none';
+            successDiv.style.display = 'none';
+
+            if (!name) {
+                errorDiv.textContent = '❌ Please enter your name';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            if (!grade) {
+                errorDiv.textContent = '❌ Please select your grade';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            try {
+                userManager.createUser(name, grade);
+                successDiv.textContent = `✅ Welcome, ${name}! Starting your learning journey...`;
+                successDiv.style.display = 'block';
+
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 1500);
+            } catch (e) {
+                errorDiv.textContent = '❌ ' + e.message;
+                errorDiv.style.display = 'block';
+            }
+        }
+
+        // Select existing user
+        function selectExistingUser(userId) {
+            try {
+                const user = userManager.setCurrentUser(userId);
+                document.getElementById('success').textContent = `✅ Welcome back, ${user.name}!`;
+                document.getElementById('success').style.display = 'block';
+
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 1000);
+            } catch (e) {
+                document.getElementById('error').textContent = '❌ ' + e.message;
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+
+        // Go to dashboard (continue with existing user)
+        function goToDashboard() {
+            const currentUser = userManager.getCurrentUser();
+            if (!currentUser) {
+                document.getElementById('error').textContent = '❌ Please create a new user first or select an existing one';
+                document.getElementById('error').style.display = 'block';
+                return;
+            }
+            window.location.href = 'dashboard.html';
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is already logged in
+            if (userManager.getCurrentUser()) {
+                window.location.href = 'dashboard.html';
+                return;
+            }
+            loadExistingUsers();
+        });
+    </script>
+</body>
+</html>
+
