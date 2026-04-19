@@ -4,7 +4,20 @@ const questionBank = {
         math: {
             1: [
                 { question: "How many dots do you see? ●●●", answers: [{ text: "2", correct: false }, { text: "3", correct: true }, { text: "4", correct: false }, { text: "5", correct: false }] },
-                { question: "Which is bigger? 🐘 or 🐁", answers: [{ text: "🐁", correct: false }, { text: "🐘", correct: true }] }
+                { question: "Which is bigger? 🐘 or 🐁", answers: [{ text: "🐁", correct: false }, { text: "🐘", correct: true }] },
+                { question: "Count the apples: 🍎🍎🍎🍎", answers: [{ text: "3", correct: false }, { text: "4", correct: true }, { text: "5", correct: false }, { text: "2", correct: false }] },
+                { question: "What number comes after 7? 1, 2, 3, 4, 5, 6, 7, ?", answers: [{ text: "6", correct: false }, { text: "8", correct: true }, { text: "9", correct: false }, { text: "7", correct: false }] },
+                { question: "How many fingers on one hand? ✋", answers: [{ text: "4", correct: false }, { text: "5", correct: true }, { text: "6", correct: false }, { text: "3", correct: false }] },
+                { question: "Which number is bigger: 2 or 5?", answers: [{ text: "2", correct: false }, { text: "5", correct: true }] },
+                { question: "Count the stars: ⭐⭐⭐", answers: [{ text: "2", correct: false }, { text: "3", correct: true }, { text: "4", correct: false }, { text: "1", correct: false }] },
+                { question: "What comes before 3? 1, 2, ?", answers: [{ text: "1", correct: false }, { text: "2", correct: true }, { text: "4", correct: false }, { text: "3", correct: false }] },
+                { question: "How many wheels on a bicycle? 🚲", answers: [{ text: "2", correct: true }, { text: "3", correct: false }, { text: "4", correct: false }, { text: "1", correct: false }] },
+                { question: "Which is smaller? 🐘 or 🐁", answers: [{ text: "🐘", correct: false }, { text: "🐁", correct: true }] },
+                { question: "Count the balloons: 🎈🎈🎈🎈🎈", answers: [{ text: "4", correct: false }, { text: "5", correct: true }, { text: "6", correct: false }, { text: "3", correct: false }] },
+                { question: "What number is zero? 0", answers: [{ text: "One", correct: false }, { text: "Zero", correct: true }, { text: "Two", correct: false }, { text: "Three", correct: false }] },
+                { question: "How many eyes do you have? 👀", answers: [{ text: "1", correct: false }, { text: "2", correct: true }, { text: "3", correct: false }, { text: "4", correct: false }] },
+                { question: "Which number comes first: 1 or 2?", answers: [{ text: "1", correct: true }, { text: "2", correct: false }] },
+                { question: "Count the hearts: ❤️❤️❤️❤️", answers: [{ text: "3", correct: false }, { text: "4", correct: true }, { text: "5", correct: false }, { text: "2", correct: false }] }
             ],
             2: [
                 { question: "What comes after 5? 1, 2, 3, 4, 5, ?", answers: [{ text: "4", correct: false }, { text: "6", correct: true }, { text: "7", correct: false }] }
@@ -213,7 +226,7 @@ function expandQuestionBank() {
     return questionBank;
 }
 
-// Get questions for a specific grade, subject, and level
+// Get questions for a specific grade, subject, and levelNum
 function getQuestionsForLevel(grade, subject, levelNum) {
     try {
         const questions = questionBank[grade]?.[subject]?.[levelNum];

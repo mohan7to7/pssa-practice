@@ -24,6 +24,41 @@
             color: #7f8c8d;
         }
 
+        .timer-container {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .timer {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e74c3c;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 2px solid #e74c3c;
+            display: inline-block;
+            min-width: 80px;
+        }
+
+        .timer.warning {
+            color: #f39c12;
+            border-color: #f39c12;
+            animation: pulse 1s infinite;
+        }
+
+        .timer.danger {
+            color: #e74c3c;
+            border-color: #e74c3c;
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
         .question-container {
             margin: 20px 0;
         }
@@ -209,6 +244,10 @@
             </div>
         </div>
 
+        <div class="timer-container">
+            <div class="timer" id="timer">60</div>
+        </div>
+
         <div id="quiz-container">
             <div id="question-container" class="question-container">
                 <div class="question-number" id="questionNumber">Question 1</div>
@@ -261,7 +300,9 @@
             answered: false,
             currentUser: null,
             startTime: null,
-            endTime: null
+            endTime: null,
+            timer: null,
+            timeLeft: 60
         };
 
         // Initialize quiz
@@ -339,11 +380,88 @@
 
             document.getElementById('next-btn').disabled = true;
             quizState.answered = false;
+
+            // Start timer for current question
+            startTimer();
+        }
+
+        // Start timer for current question
+        function startTimer() {
+            quizState.timeLeft = 60;
+            updateTimerDisplay();
+
+            quizState.timer = setInterval(() => {
+                quizState.timeLeft--;
+                updateTimerDisplay();
+
+                if (quizState.timeLeft <= 0) {
+                    clearInterval(quizState.timer);
+                    timeUp();
+                }
+            }, 1000);
+        }
+
+        // Update timer display with visual feedback
+        function updateTimerDisplay() {
+            const timerElement = document.getElementById('timer');
+            timerElement.textContent = quizState.timeLeft;
+
+            // Remove existing classes
+            timerElement.classList.remove('warning', 'danger');
+
+            // Add warning class when time is low
+            if (quizState.timeLeft <= 10) {
+                timerElement.classList.add('danger');
+            } else if (quizState.timeLeft <= 20) {
+                timerElement.classList.add('warning');
+            }
+        }
+
+        // Handle when time runs out
+        function timeUp() {
+            if (quizState.answered) return; // Already answered
+
+            // Mark as answered (incorrect since time ran out)
+            quizState.answered = true;
+
+            // Show correct answer
+            const buttons = document.querySelectorAll('.answer-btn');
+            buttons.forEach((btn, i) => {
+                btn.disabled = true;
+                const question = quizState.questions[quizState.currentQuestionIndex];
+                if (question.answers[i].correct) {
+                    btn.classList.add('correct');
+                }
+            });
+
+            // Add incorrect answer to results
+            quizState.answers.push({
+                questionIndex: quizState.currentQuestionIndex,
+                selected: -1, // -1 indicates time ran out
+                correct: false,
+                timeUp: true
+            });
+
+            // Enable next button after a short delay
+            setTimeout(() => {
+                document.getElementById('next-btn').disabled = false;
+            }, 2000);
+        }
+
+        // Clear timer
+        function clearTimer() {
+            if (quizState.timer) {
+                clearInterval(quizState.timer);
+                quizState.timer = null;
+            }
         }
 
         // Select answer
         function selectAnswer(index, isCorrect) {
             if (quizState.answered) return;
+
+            // Clear timer when answer is selected
+            clearTimer();
 
             quizState.answered = true;
 
@@ -417,10 +535,16 @@
             } else {
                 document.getElementById('retryDiv').classList.remove('hide');
             }
+
+            // Clear timer when quiz is finished
+            clearTimer();
         }
 
         // Retake quiz
         function retakeQuiz() {
+            // Clear any existing timer
+            clearTimer();
+
             quizState.currentQuestionIndex = 0;
             quizState.score = 0;
             quizState.answers = [];
