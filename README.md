@@ -74,7 +74,7 @@ pssa-practice/
 
 ### For Users:
 1. **First Time Setup:**
-   - Open `index.html` or `login.html`
+   - Open `index.html` (home page) or go directly to `login.html`
    - Enter your name and select your grade
    - Click "Create New User"
 
@@ -87,6 +87,10 @@ pssa-practice/
    - Open login page
    - Click your name in "Previous Users" section
    - Click "Continue"
+
+4. **Subject Pages:**
+   - Visit individual subject pages (e.g., `math/index.html`) for direct level access
+   - Kindergarten students can start from `K/index.html`
 
 ### For Developers:
 
@@ -167,6 +171,14 @@ Each level tracks:
 - ⏰ Timestamp of completion
 - 🔒 Lock status
 
+## 🆕 Recent Improvements
+
+- **Enhanced Navigation:** Improved page structure with dedicated subject pages
+- **Kindergarten Support:** Special landing page for kindergarten students
+- **Bug Fixes:** Resolved JavaScript syntax errors in question bank
+- **Consistent Styling:** Unified design across all pages
+- **Better UX:** Direct access to quiz levels from subject pages
+
 ## 🎨 Customization
 
 ### Branding:
@@ -208,4 +220,3 @@ Kindergarten to 5th Grade students practicing for PSSA assessments
 ---
 
 **Start Learning:** Open `login.html` in your browser to begin! 🎓
-
