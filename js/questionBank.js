@@ -126,7 +126,7 @@ const questionBank = {
                 { question: "What are the 50 states divided into?", answers: [{ text: "Counties", correct: true }, { text: "Cities", correct: false }, { text: "Towns", correct: false }] }
             ],
             2: [
-                { question: "What is a map?", answers: [{{ text: "A drawing of an area", correct: true }, { text: "A type of food", correct: false }] }
+                { question: "What is a map?", answers: [{ text: "A drawing of an area", correct: true }, { text: "A type of food", correct: false }] }
             ]
         },
         science: {
@@ -157,7 +157,7 @@ const questionBank = {
         },
         social: {
             1: [
-                { question: "What is a continent?", answers: [{{ text: "A large area of land", correct: true }, { text: "A type of weather", correct: false }] }
+                { question: "What is a continent?", answers: [{ text: "A large area of land", correct: true }, { text: "A type of weather", correct: false }] }
             ],
             2: [
                 { question: "What are natural resources?", answers: [{ text: "Things found in nature that people use", correct: true }, { text: "Man-made objects", correct: false }] }
@@ -165,10 +165,10 @@ const questionBank = {
         },
         science: {
             1: [
-                { question: "What are the planets in our solar system?", answers: [{{ text: "8 planets", correct: true }, { text: "9 planets", correct: false }, { text: "10 planets", correct: false }] }
+                { question: "What are the planets in our solar system?", answers: [{ text: "8 planets", correct: true }, { text: "9 planets", correct: false }, { text: "10 planets", correct: false }] }
             ],
             2: [
-                { question: "What is the water cycle?", answers: [{{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing only", correct: false }] }
+                { question: "What is the water cycle?", answers: [{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing only", correct: false }] }
             ]
         }
     },
@@ -178,31 +178,31 @@ const questionBank = {
                 { question: "What is 123 + 456?", answers: [{ text: "569", correct: false }, { text: "579", correct: true }, { text: "589", correct: false }] }
             ],
             2: [
-                { question: "What is 50% of 200?", answers: [{{ text: "100", correct: true }, { text: "150", correct: false }, { text: "200", correct: false }] }
+                { question: "What is 50% of 200?", answers: [{ text: "100", correct: true }, { text: "150", correct: false }, { text: "200", correct: false }] }
             ]
         },
         english: {
             1: [
-                { question: "What is a preposition?", answers: [{{ text: "A word showing location or time", correct: true }, { text: "An action word", correct: false }, { text: "A describing word", correct: false }] }
+                { question: "What is a preposition?", answers: [{ text: "A word showing location or time", correct: true }, { text: "An action word", correct: false }, { text: "A describing word", correct: false }] }
             ],
             2: [
-                { question: "What is a complex sentence?", answers: [{{ text: "A sentence with independent and dependent clauses", correct: true }, { text: "A short sentence", correct: false }] }
+                { question: "What is a complex sentence?", answers: [{ text: "A sentence with independent and dependent clauses", correct: true }, { text: "A short sentence", correct: false }] }
             ]
         },
         social: {
             1: [
-                { question: "What is a democracy?", answers: [{{ text: "A government of the people, by the people", correct: true }, { text: "A type of weather", correct: false }] }
+                { question: "What is a democracy?", answers: [{ text: "A government of the people, by the people", correct: true }, { text: "A type of weather", correct: false }] }
             ],
             2: [
-                { question: "What are checks and balances?", answers: [{{ text: "A system that keeps one branch from having too much power", correct: true }, { text: "Banking concepts", correct: false }] }
+                { question: "What are checks and balances?", answers: [{ text: "A system that keeps one branch from having too much power", correct: true }, { text: "Banking concepts", correct: false }] }
             ]
         },
         science: {
             1: [
-                { question: "What is the scientific method?", answers: [{{ text: "Steps for testing ideas", correct: true }, { text: "A type of science", correct: false }] }
+                { question: "What is the scientific method?", answers: [{ text: "Steps for testing ideas", correct: true }, { text: "A type of science", correct: false }] }
             ],
             2: [
-                { question: "What is an ecosystem?", answers: [{{ text: "A community of organisms and their environment", correct: true }, { text: "Only animals", correct: false }] }
+                { question: "What is an ecosystem?", answers: [{ text: "A community of organisms and their environment", correct: true }, { text: "Only animals", correct: false }] }
             ]
         }
     }

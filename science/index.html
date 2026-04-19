@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science Practice</title>
+    <title>Science Practice - PSSA</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Science Practice</h1>
-        <div id="quiz-container">
-            <div id="question-container">
-                <h2 id="question">Question</h2>
-                <div id="answer-buttons" class="btn-grid">
-                    <!-- Options will be inserted here -->
-                </div>
-            </div>
-            <div id="controls">
-                <button id="next-btn" class="btn">Next</button>
-            </div>
+        <div class="header">
+            <h1>🔬 Science Practice</h1>
+            <h2>Discover the Wonders of Science</h2>
+            <p class="subtitle">Explore biology, physics, and more</p>
         </div>
 
-        <!-- add more context  -->
-        <div id="results" class="hide">
-            <h2>Quiz Complete!</h2>
-            <p id="score">Your score: </p>
-            <a href="../index.html" class="btn">Back to Home</a>
-            <button id="restart-btn" class="btn">Restart Quiz</button>
+        <div class="subject-buttons">
+            <a href="quiz.html?grade=K&level=1" class="btn">Kindergarten Level 1</a>
+            <a href="quiz.html?grade=K&level=2" class="btn">Kindergarten Level 2</a>
+            <a href="quiz.html?grade=1&level=1" class="btn">Grade 1 Level 1</a>
+            <a href="quiz.html?grade=1&level=2" class="btn">Grade 1 Level 2</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="../dashboard.html" class="btn" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%);">Back to Dashboard</a>
         </div>
     </div>
-    <script src="../js/science.js"></script>
 </body>
 </html>
