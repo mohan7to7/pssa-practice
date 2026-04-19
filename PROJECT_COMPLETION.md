@@ -432,3 +432,6 @@ Your PSSA Practice Hub is:
 
 Your kids now have a professional, secure, and engaging PSSA practice platform. Happy learning! 🎉
 
+######### Pending tasks:
+- [ ] Add timer for quizzes
+- [ ] Need to show the failed questions at the end of the quiz
