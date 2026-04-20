@@ -229,10 +229,4 @@ Modify subject list in `dashboard.html`
 
 Educational use only - PSSA Practice Material
 
-## 👨‍👩‍👧‍👦 Created For
-
-Kindergarten to 5th Grade students practicing for PSSA assessments
-
----
-
 **Start Learning:** Open `login.html` in your browser to begin! 🎓
