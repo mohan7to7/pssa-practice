@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - PSSA Practice</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/timer.css">
     <style>
         .quiz-header {
             display: flex;
@@ -200,263 +201,311 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="quiz-header">
-            <h1 class="quiz-title" id="quizTitle">Quiz</h1>
-            <div class="progress-info">
-                <div id="progressText">Question 1 of 5</div>
-                <div style="margin-top: 5px;">Grade: <span id="gradeDisplay"></span> | Level: <span id="levelDisplay"></span></div>
-            </div>
-        </div>
-
-        <div id="quiz-container">
-            <div id="question-container" class="question-container">
-                <div class="question-number" id="questionNumber">Question 1</div>
-                <h2 id="question">Loading question...</h2>
-                <div id="answer-buttons" class="btn-grid">
-                    <!-- Answer buttons will be inserted here -->
-                </div>
-            </div>
-            <div id="controls">
-                <button class="btn-action" id="next-btn" disabled>Next Question</button>
-                <button class="btn-action" style="background-color: #95a5a6;" onclick="goBack()">Back to Dashboard</button>
-            </div>
-        </div>
-
-        <div id="results" class="hide">
-            <div class="result-emoji" id="resultEmoji">🎉</div>
-            <h2 class="result-message" id="resultMessage">Great Job!</h2>
-            <div class="result-score" id="resultScore">80%</div>
-            <div class="result-details" id="resultDetails">You scored 4 out of 5</div>
-
-            <div id="certificateDiv" class="certificate hide">
-                <h3>🏆 LEVEL COMPLETED!</h3>
-                <p id="certificateText">Congratulations! You've unlocked the next level.</p>
-            </div>
-
-            <div id="retryDiv" class="hide">
-                <p style="color: #e74c3c; font-weight: bold; margin: 15px 0;">You need 70% to unlock the next level. Keep practicing!</p>
-            </div>
-
-            <div id="controls" style="gap: 10px;">
-                <button class="btn-action" id="restart-btn" onclick="retakeQuiz()">Retake Level</button>
-                <button class="btn-action" style="background-color: #27ae60;" onclick="goBack()">Back to Dashboard</button>
-                <button class="btn-action" id="nextLevelBtn" style="background-color: #27ae60; display: none;" onclick="goToNextLevel()">Next Level →</button>
-            </div>
+<div class="container">
+    <div class="quiz-header">
+        <h1 class="quiz-title" id="quizTitle">Quiz</h1>
+        <div class="progress-info">
+            <div id="progressText">Question 1 of 5</div>
+            <div style="margin-top: 5px;">Grade: <span id="gradeDisplay"></span> | Level: <span id="levelDisplay"></span></div>
         </div>
     </div>
 
-    <script src="../js/userManager.js"></script>
-    <script src="../js/questionBank.js"></script>
-    <script>
-        // Quiz state
-        let quizState = {
-            grade: null,
-            subject: null,
-            level: null,
-            currentQuestionIndex: 0,
-            score: 0,
-            answers: [],
-            questions: [],
-            answered: false,
-            currentUser: null,
-            startTime: null,
-            endTime: null
-        };
+    <div class="timer-container">
+        <div class="timer" id="timer">60</div>
+    </div>
 
-        // Initialize quiz
-        function initQuiz() {
-            // Check login
-            quizState.currentUser = userManager.getCurrentUser();
-            if (!quizState.currentUser) {
-                window.location.href = '../login.html';
-                return;
-            }
+    <div id="quiz-container">
+        <div id="question-container" class="question-container">
+            <div class="question-number" id="questionNumber">Question 1</div>
+            <h2 id="question">Loading question...</h2>
+            <div id="answer-buttons" class="btn-grid">
+                <!-- Answer buttons will be inserted here -->
+            </div>
+        </div>
+        <div id="controls">
+            <button class="btn-action" id="next-btn" disabled>Next Question</button>
+            <button class="btn-action" style="background-color: #95a5a6;" onclick="goBack()">Back to Dashboard</button>
+        </div>
+    </div>
 
-            // Get parameters from URL
-            const urlParams = new URLSearchParams(window.location.search);
-            quizState.grade = urlParams.get('grade') || quizState.currentUser.gradeLevel;
-            quizState.level = parseInt(urlParams.get('level')) || 1;
+    <div id="results" class="hide">
+        <div class="result-emoji" id="resultEmoji">🎉</div>
+        <h2 class="result-message" id="resultMessage">Great Job!</h2>
+        <div class="result-score" id="resultScore">80%</div>
+        <div class="result-details" id="resultDetails">You scored 4 out of 5</div>
 
-            // Get subject from current URL
-            const pathParts = window.location.pathname.split('/');
-            quizState.subject = pathParts[pathParts.length - 2]; // Get folder name
+        <div id="certificateDiv" class="certificate hide">
+            <h3>🏆 LEVEL COMPLETED!</h3>
+            <p id="certificateText">Congratulations! You've unlocked the next level.</p>
+        </div>
 
-            // Validate parameters
-            if (!quizState.grade || !quizState.subject || !quizState.level) {
-                alert('Invalid quiz parameters');
-                window.location.href = '../dashboard.html';
-                return;
-            }
+        <div id="retryDiv" class="hide">
+            <p style="color: #e74c3c; font-weight: bold; margin: 15px 0;">You need 70% to unlock the next level. Keep practicing!</p>
+        </div>
 
-            // Check if level is unlocked
-            if (!userManager.isLevelUnlocked(quizState.currentUser.id, quizState.grade, quizState.subject, quizState.level)) {
-                alert('This level is locked. Complete the previous level first!');
-                window.location.href = '../dashboard.html';
-                return;
-            }
+        <div id="results-controls" style="gap: 10px;">
+            <button class="btn-action" id="restart-btn" onclick="retakeQuiz()">Retake Level</button>
+            <button class="btn-action" style="background-color: #27ae60;" onclick="goBack()">Back to Dashboard</button>
+            <button class="btn-action" id="nextLevelBtn" style="background-color: #27ae60; display: none;" onclick="goToNextLevel()">Next Level →</button>
+        </div>
+    </div>
+</div>
 
-            // Load questions
-            quizState.questions = getQuestionsForLevel(quizState.grade, quizState.subject, quizState.level);
+<script src="../js/userManager.js"></script>
+<script src="../js/questionBank.js"></script>
+<script src="../js/timerManager.js"></script>
+<script>
+    // Quiz state
+    let quizState = {
+        grade: null,
+        subject: null,
+        level: null,
+        currentQuestionIndex: 0,
+        score: 0,
+        answers: [],
+        questions: [],
+        answered: false,
+        currentUser: null,
+        startTime: null,
+        endTime: null,
+        timer: null,
+        timeLeft: 60
+    };
 
-            // Display quiz info
-            const subjectNames = { math: 'Math', english: 'English', social: 'Social Studies', science: 'Science' };
-            const gradeNames = { K: 'Kindergarten', 1: '1st', 2: '2nd', 3: '3rd', 4: '4th', 5: '5th' };
-
-            document.getElementById('quizTitle').textContent = `${subjectNames[quizState.subject] || 'Quiz'} - Level ${quizState.level}`;
-            document.getElementById('gradeDisplay').textContent = gradeNames[quizState.grade] || quizState.grade;
-            document.getElementById('levelDisplay').textContent = quizState.level;
-
-            quizState.startTime = Date.now();
-            showQuestion();
+    // Initialize quiz
+    function initQuiz() {
+        // Check login
+        quizState.currentUser = userManager.getCurrentUser();
+        if (!quizState.currentUser) {
+            window.location.href = '../login.html';
+            return;
         }
 
-        // Show current question
-        function showQuestion() {
-            if (quizState.currentQuestionIndex >= quizState.questions.length) {
-                showResults();
-                return;
-            }
+        // Get parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        quizState.grade = urlParams.get('grade') || quizState.currentUser.gradeLevel;
+        quizState.level = parseInt(urlParams.get('level')) || 1;
 
-            const question = quizState.questions[quizState.currentQuestionIndex];
-            const questionNum = quizState.currentQuestionIndex + 1;
+        // Get subject from current URL
+        const pathParts = window.location.pathname.split('/');
+        quizState.subject = pathParts[pathParts.length - 2]; // Get folder name
 
-            document.getElementById('questionNumber').textContent = `Question ${questionNum}`;
-            document.getElementById('question').textContent = question.question;
-            document.getElementById('progressText').textContent = `Question ${questionNum} of ${quizState.questions.length}`;
-
-            const buttonContainer = document.getElementById('answer-buttons');
-            buttonContainer.innerHTML = '';
-
-            question.answers.forEach((answer, index) => {
-                const button = document.createElement('button');
-                button.className = 'answer-btn';
-                button.textContent = answer.text;
-                button.onclick = () => selectAnswer(index, answer.correct);
-                button.id = `answer-${index}`;
-                buttonContainer.appendChild(button);
-            });
-
-            document.getElementById('next-btn').disabled = true;
-            quizState.answered = false;
-        }
-
-        // Select answer
-        function selectAnswer(index, isCorrect) {
-            if (quizState.answered) return;
-
-            quizState.answered = true;
-
-            const buttons = document.querySelectorAll('.answer-btn');
-            buttons.forEach((btn, i) => {
-                btn.disabled = true;
-                const question = quizState.questions[quizState.currentQuestionIndex];
-                if (question.answers[i].correct) {
-                    btn.classList.add('correct');
-                } else if (i === index && !isCorrect) {
-                    btn.classList.add('wrong');
-                }
-            });
-
-            if (isCorrect) {
-                quizState.score++;
-            }
-
-            quizState.answers.push({
-                questionIndex: quizState.currentQuestionIndex,
-                selected: index,
-                correct: isCorrect
-            });
-
-            document.getElementById('next-btn').disabled = false;
-        }
-
-        // Next question
-        function nextQuestion() {
-            quizState.currentQuestionIndex++;
-            if (quizState.currentQuestionIndex < quizState.questions.length) {
-                showQuestion();
-            } else {
-                showResults();
-            }
-        }
-
-        // Show results
-        function showResults() {
-            quizState.endTime = Date.now();
-            const percentage = Math.round((quizState.score / quizState.questions.length) * 100);
-            const passed = percentage >= 70;
-
-            document.getElementById('quiz-container').classList.add('hide');
-            document.getElementById('results').classList.remove('hide');
-
-            if (passed) {
-                document.getElementById('resultEmoji').textContent = '🎉';
-                document.getElementById('resultMessage').textContent = 'Excellent Work!';
-            } else {
-                document.getElementById('resultEmoji').textContent = '📚';
-                document.getElementById('resultMessage').textContent = 'Good Try! Keep Practicing!';
-            }
-
-            document.getElementById('resultScore').textContent = percentage + '%';
-            document.getElementById('resultDetails').textContent = `You scored ${quizState.score} out of ${quizState.questions.length}`;
-
-            // Save progress
-            const result = userManager.completeLevelWithScore(
-                quizState.currentUser.id,
-                quizState.grade,
-                quizState.subject,
-                quizState.level,
-                quizState.score,
-                quizState.questions.length
-            );
-
-            if (passed) {
-                document.getElementById('certificateDiv').classList.remove('hide');
-                document.getElementById('nextLevelBtn').style.display = quizState.level < 10 ? 'inline-block' : 'none';
-            } else {
-                document.getElementById('retryDiv').classList.remove('hide');
-            }
-        }
-
-        // Retake quiz
-        function retakeQuiz() {
-            quizState.currentQuestionIndex = 0;
-            quizState.score = 0;
-            quizState.answers = [];
-            quizState.answered = false;
-            document.getElementById('results').classList.add('hide');
-            document.getElementById('quiz-container').classList.remove('hide');
-            showQuestion();
-        }
-
-        // Go to next level
-        function goToNextLevel() {
-            if (quizState.level < 10) {
-                window.location.href = `${window.location.pathname}?grade=${quizState.grade}&level=${quizState.level + 1}`;
-            }
-        }
-
-        // Go back to dashboard
-        function goBack() {
+        // Validate parameters
+        if (!quizState.grade || !quizState.subject || !quizState.level) {
+            alert('Invalid quiz parameters');
             window.location.href = '../dashboard.html';
+            return;
         }
 
-        // Prevent cheating - disable back button during quiz
-        window.addEventListener('beforeunload', function(e) {
-            if (!document.getElementById('results').classList.contains('hide')) return;
-            if (quizState.currentQuestionIndex > 0 && !document.getElementById('quiz-container').classList.contains('hide')) {
-                e.preventDefault();
-                e.returnValue = '';
+        // Check if level is unlocked
+        if (!userManager.isLevelUnlocked(quizState.currentUser.id, quizState.grade, quizState.subject, quizState.level)) {
+            alert('This level is locked. Complete the previous level first!');
+            window.location.href = '../dashboard.html';
+            return;
+        }
+
+        // Load questions
+        quizState.questions = getQuestionsForLevel(quizState.grade, quizState.subject, quizState.level);
+
+        // Display quiz info
+        const subjectNames = { math: 'Math', english: 'English', social: 'Social Studies', science: 'Science' };
+        const gradeNames = { K: 'Kindergarten', 1: '1st', 2: '2nd', 3: '3rd', 4: '4th', 5: '5th' };
+
+        document.getElementById('quizTitle').textContent = `${subjectNames[quizState.subject] || 'Quiz'} - Level ${quizState.level}`;
+        document.getElementById('gradeDisplay').textContent = gradeNames[quizState.grade] || quizState.grade;
+        document.getElementById('levelDisplay').textContent = quizState.level;
+
+        quizState.startTime = Date.now();
+        showQuestion();
+    }
+
+    // Show current question
+    function showQuestion() {
+        if (quizState.currentQuestionIndex >= quizState.questions.length) {
+            showResults();
+            return;
+        }
+
+        const question = quizState.questions[quizState.currentQuestionIndex];
+        const questionNum = quizState.currentQuestionIndex + 1;
+
+        document.getElementById('questionNumber').textContent = `Question ${questionNum}`;
+        document.getElementById('question').textContent = question.question;
+        document.getElementById('progressText').textContent = `Question ${questionNum} of ${quizState.questions.length}`;
+
+        const buttonContainer = document.getElementById('answer-buttons');
+        buttonContainer.innerHTML = '';
+
+        question.answers.forEach((answer, index) => {
+            const button = document.createElement('button');
+            button.className = 'answer-btn';
+            button.textContent = answer.text;
+            button.onclick = () => selectAnswer(index, answer.correct);
+            button.id = `answer-${index}`;
+            buttonContainer.appendChild(button);
+        });
+
+        document.getElementById('next-btn').disabled = true;
+        quizState.answered = false;
+        startTimer();
+    }
+
+    // Start timer for current question
+    function startTimer() {
+        timerManager.init(timeUp);
+        timerManager.start(60);
+    }
+
+    // Clear timer
+    function clearTimer() {
+        timerManager.stop();
+    }
+
+    // Handle when time runs out
+    function timeUp() {
+        if (quizState.answered) return;
+
+        quizState.answered = true;
+
+        const buttons = document.querySelectorAll('.answer-btn');
+        buttons.forEach((btn, i) => {
+            btn.disabled = true;
+            const question = quizState.questions[quizState.currentQuestionIndex];
+            if (question.answers[i].correct) {
+                btn.classList.add('correct');
             }
         });
 
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', initQuiz);
+        quizState.answers.push({
+            questionIndex: quizState.currentQuestionIndex,
+            selected: -1,
+            correct: false,
+            timeUp: true
+        });
 
-        // Next button click handler
-        document.getElementById('next-btn').addEventListener('click', nextQuestion);
-    </script>
+        setTimeout(() => {
+            document.getElementById('next-btn').disabled = false;
+        }, 2000);
+    }
+
+    // Select answer
+    function selectAnswer(index, isCorrect) {
+        if (quizState.answered) return;
+        clearTimer();
+
+        quizState.answered = true;
+
+        const buttons = document.querySelectorAll('.answer-btn');
+        buttons.forEach((btn, i) => {
+            btn.disabled = true;
+            const question = quizState.questions[quizState.currentQuestionIndex];
+            if (question.answers[i].correct) {
+                btn.classList.add('correct');
+            } else if (i === index && !isCorrect) {
+                btn.classList.add('wrong');
+            }
+        });
+
+        if (isCorrect) {
+            quizState.score++;
+        }
+
+        quizState.answers.push({
+            questionIndex: quizState.currentQuestionIndex,
+            selected: index,
+            correct: isCorrect
+        });
+
+        document.getElementById('next-btn').disabled = false;
+    }
+
+    // Next question
+    function nextQuestion() {
+        quizState.currentQuestionIndex++;
+        if (quizState.currentQuestionIndex < quizState.questions.length) {
+            showQuestion();
+        } else {
+            showResults();
+        }
+    }
+
+    // Show results
+    function showResults() {
+        quizState.endTime = Date.now();
+        const percentage = Math.round((quizState.score / quizState.questions.length) * 100);
+        const passed = percentage >= 70;
+
+        document.getElementById('quiz-container').classList.add('hide');
+        document.getElementById('results').classList.remove('hide');
+
+        if (passed) {
+            document.getElementById('resultEmoji').textContent = '🎉';
+            document.getElementById('resultMessage').textContent = 'Excellent Work!';
+        } else {
+            document.getElementById('resultEmoji').textContent = '📚';
+            document.getElementById('resultMessage').textContent = 'Good Try! Keep Practicing!';
+        }
+
+        document.getElementById('resultScore').textContent = percentage + '%';
+        document.getElementById('resultDetails').textContent = `You scored ${quizState.score} out of ${quizState.questions.length}`;
+
+        // Save progress
+        userManager.completeLevelWithScore(
+            quizState.currentUser.id,
+            quizState.grade,
+            quizState.subject,
+            quizState.level,
+            quizState.score,
+            quizState.questions.length
+        );
+
+        if (passed) {
+            document.getElementById('certificateDiv').classList.remove('hide');
+            document.getElementById('nextLevelBtn').style.display = quizState.level < 10 ? 'inline-block' : 'none';
+        } else {
+            document.getElementById('retryDiv').classList.remove('hide');
+        }
+        clearTimer();
+    }
+
+    // Retake quiz
+    function retakeQuiz() {
+        clearTimer();
+        quizState.currentQuestionIndex = 0;
+        quizState.score = 0;
+        quizState.answers = [];
+        quizState.answered = false;
+        document.getElementById('results').classList.add('hide');
+        document.getElementById('quiz-container').classList.remove('hide');
+        showQuestion();
+    }
+
+    // Go to next level
+    function goToNextLevel() {
+        if (quizState.level < 10) {
+            window.location.href = `${window.location.pathname}?grade=${quizState.grade}&level=${quizState.level + 1}`;
+        }
+    }
+
+    // Go back to dashboard
+    function goBack() {
+        window.location.href = '../dashboard.html';
+    }
+
+    // Prevent cheating - disable back button during quiz
+    window.addEventListener('beforeunload', function(e) {
+        if (!document.getElementById('results').classList.contains('hide')) return;
+        if (quizState.currentQuestionIndex > 0 && !document.getElementById('quiz-container').classList.contains('hide')) {
+            e.preventDefault();
+            e.returnValue = '';
+        }
+    });
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', initQuiz);
+
+    // Next button click handler
+    document.getElementById('next-btn').addEventListener('click', nextQuestion);
+</script>
 </body>
 </html>
-

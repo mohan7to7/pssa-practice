@@ -1,6 +1,8 @@
 # PSSA Practice Hub - Multi-Grade Learning Platform
 
-A comprehensive online learning platform for PSSA (Pennsylvania System of School Assessment) practice with support for Kindergarten through 5th grade, featuring progressive level-based learning, user authentication, and progress tracking.
+# PSSA Practice Hub - Multi-Grade Learning Platform
+
+A comprehensive online learning platform for PSSA (Pennsylvania System of School Assessment) practice with support for Kindergarten through 5th grade, featuring progressive level-based learning, user authentication, progress tracking, and **timed quizzes with visual feedback**.
 
 ## 🎯 Key Features
 
@@ -8,6 +10,7 @@ A comprehensive online learning platform for PSSA (Pennsylvania System of School
 - Kindergarten through 5th Grade
 - 4 Core Subjects: Math, English, Social Studies, Science
 - Grade-specific content and difficulty levels
+- 15+ questions per subject per level
 
 ### 2. **Progressive Level System**
 - 10 levels per subject per grade
@@ -15,13 +18,24 @@ A comprehensive online learning platform for PSSA (Pennsylvania System of School
 - 70% score required to progress to next level
 - Tracks attempts and performance history
 
-### 3. **User Management**
+### 3. **⏱️ Timed Quiz System** (NEW)
+- **60-second timer per question** on all quizzes
+- **Visual feedback:**
+    - 🟢 Green (normal) - 60-21 seconds remaining
+    - 🟡 Orange (warning) - 20-11 seconds remaining with pulse animation
+    - 🔴 Red (danger) - 10-0 seconds remaining with faster pulse
+- Auto-marks as incorrect if time runs out
+- Shows correct answer if time expires
+- Timer automatically stops when answer is selected
+- Timer resets for each new question
+
+### 4. **User Management**
 - Create user profiles with grade selection
 - Session-based authentication
 - Support for multiple users on same device
 - User history and progress saved locally
 
-### 4. **Anti-Cheating Security Features**
+### 5. **Anti-Cheating Security Features**
 - Session-based user validation
 - Level locking prevents unauthorized access
 - Progress verification before level access
@@ -29,17 +43,19 @@ A comprehensive online learning platform for PSSA (Pennsylvania System of School
 - Attempt and timestamp tracking
 - Completion validation
 
-### 5. **Progress Tracking & Dashboard**
+### 6. **Progress Tracking & Dashboard**
 - Visual progress bars per subject
 - Level completion indicators (🔒 locked, ✓ completed, 🔢 available)
 - Statistics: Levels completed, Average score, Total attempts
 - Detailed performance data
 
-### 6. **Responsive Design**
+### 7. **Responsive Design**
 - Mobile-friendly interface
 - Tablet optimized
 - Desktop friendly
 - Works offline with localStorage
+
+## 📁 Project Structure
 
 ## 📁 Project Structure
 
