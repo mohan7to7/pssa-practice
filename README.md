@@ -305,3 +305,30 @@ Add teacher notes to questions
 Show educational context
 Help students understand why
 Estimated time: 1 hour
+
+🔵 BACKEND/ADVANCED - Future Phase
+❌ Backend Database (FUTURE)
+Cloud sync across devices
+Teacher dashboard
+Class management
+Estimated time: 4-6 hours (requires backend setup)
+❌ Parent Portal (FUTURE)
+View child's progress
+Email notifications
+Unlock/reset levels
+Estimated time: 3-4 hours
+❌ Teacher Dashboard (FUTURE)
+Monitor student progress
+Create custom questions
+Assign levels/quizzes
+Estimated time: 6-8 hours
+❌ Mobile App Version (FUTURE)
+Native iOS/Android app
+Offline capability
+Push notifications
+Estimated time: 10-15 hours
+❌ API Integration (FUTURE)
+Sync with school systems
+Real-time reporting
+Classroom integration
+Estimated time: 8-10 hours
