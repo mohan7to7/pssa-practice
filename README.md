@@ -225,8 +225,50 @@ Modify subject list in `dashboard.html`
 - Video tutorials
 - Parent access portal
 
-## 📝 License
-
-Educational use only - PSSA Practice Material
 
 **Start Learning:** Open `login.html` in your browser to begin! 🎓
+PENDING UPDATES & IMPROVEMENTS LIST
+🔴 HIGH PRIORITY - Core Features
+❌ Show Failed Questions Review (CRITICAL)
+Display all incorrect answers at end of quiz
+Show: Question → Student's answer (❌) → Correct answer (✅)
+Help students learn from mistakes
+Add explanation/hints for each question
+Estimated time: 30-45 minutes
+❌ Multiple Question Bank Expansion
+Currently: Only 2 levels per subject with placeholder questions
+Needed: Full questions for all 10 levels across K-5th grades
+Estimated time: 2-3 hours (depends on question depth)
+❌ Question Images/Visuals
+Add images to math questions (visual counting, shapes)
+Add visual elements to other subjects
+Better for younger students (K-2)
+Estimated time: 1-2 hours
+
+🟡 MEDIUM PRIORITY - Enhanced Features
+❌ Detailed Analytics Dashboard
+Show performance trends
+Time spent per question/level
+Correct vs incorrect ratio
+Subject strengths/weaknesses
+Estimated time: 1-2 hours
+❌ Hints System
+Optional hints for each question
+Reduce points slightly if hint used
+Encourages learning without giving answer
+Estimated time: 45 minutes
+❌ Difficulty Adjustment
+Adapt questions based on performance
+Easier questions if struggling
+Harder questions if doing well
+Estimated time: 1.5-2 hours
+❌ Badges & Achievement System
+Achievement unlocks (e.g., "Math Master", "Perfect Score")
+Visual badges/trophies
+Motivates students
+Estimated time: 1 hour
+❌ Time Tracking
+Show average time per question
+Track total quiz time
+Display in results
+Estimated time: 30 minutes
