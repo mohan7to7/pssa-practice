@@ -272,3 +272,36 @@ Show average time per question
 Track total quiz time
 Display in results
 Estimated time: 30 minutes
+
+🟢 LOW PRIORITY - Polish & Enhancement
+❌ Question Categories/Tags
+Tag questions by topic (e.g., "Multiplication", "Fractions")
+Filter by category
+Focus practice areas
+Estimated time: 1 hour
+❌ Sound Effects
+Correct answer "ding" sound
+Incorrect answer "buzz" sound
+Timer warning sounds
+Option to mute
+Estimated time: 30 minutes
+❌ Dark Mode
+Toggle dark/light theme
+Better for evening study
+Eye comfort
+Estimated time: 45 minutes
+❌ Leaderboard (Single Device)
+Top scores per level
+Compare among users
+Motivational feature
+Estimated time: 1 hour
+❌ Export/Print Progress Report
+PDF export of progress
+Printable certificates
+Share with parents/teachers
+Estimated time: 1.5 hours
+❌ Question Comments/Notes
+Add teacher notes to questions
+Show educational context
+Help students understand why
+Estimated time: 1 hour
