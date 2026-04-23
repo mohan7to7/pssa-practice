@@ -6,7 +6,7 @@ const timerManager = {
         isRunning: false,
         onTimeUp: null
     },
-
+//Need to add timer to all questions
     // Initialize timer with callback
     init: function(onTimeUpCallback) {
         this.state.onTimeUp = onTimeUpCallback;
