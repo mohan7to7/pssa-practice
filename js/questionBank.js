@@ -1542,8 +1542,6 @@ function getQuestionsForLevel(grade, subject, levelNum) {
         return generatePlaceholderQuestions(grade, subject, levelNum);
     }
 }
-
-
 // Generate placeholder questions for missing content
 function generatePlaceholderQuestions(grade, subject, levelNum) {
     return [
