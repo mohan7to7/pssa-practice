@@ -124,7 +124,7 @@ function showResults() {
     resultsElement.classList.remove('hide');
     scoreElement.innerText = `Your score: ${score} out of ${questions.length}`;
 }
-
+//need to check and add more questions
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     showQuestion();
