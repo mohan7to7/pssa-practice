@@ -14,16 +14,48 @@
             <p class="subtitle">Practice math with engaging quizzes</p>
         </div>
 
-        <div class="subject-buttons">
-            <a href="quiz.html?grade=K&level=1" class="btn">Kindergarten Level 1</a>
-            <a href="quiz.html?grade=K&level=2" class="btn">Kindergarten Level 2</a>
-            <a href="quiz.html?grade=1&level=1" class="btn">Grade 1 Level 1</a>
-            <a href="quiz.html?grade=1&level=2" class="btn">Grade 1 Level 2</a>
+        <div class="subject-buttons" id="levelButtons">
+            <p>Loading levels...</p>
         </div>
 
         <div style="text-align: center; margin-top: 30px;">
             <a href="../dashboard.html" class="btn" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%);">Back to Dashboard</a>
         </div>
     </div>
-</body>
-</html>
+
+    <script src="../js/userManager.js"></script>
+    <script>
+        // Dynamically generate level buttons based on user's grade
+        function loadLevels() {
+            const user = userManager.getCurrentUser();
+            const container = document.getElementById('levelButtons');
+            
+            if (!user) {
+                container.innerHTML = '<p>Please <a href="../login.html">log in</a> to access levels.</p>';
+                return;
+            }
+
+            const grade = user.gradeLevel;
+            const gradeNames = { K: 'Kindergarten', 1: '1st', 2: '2nd', 3: '3rd', 4: '4th', 5: '5th' };
+            const progress = userManager.getUserProgress(user.id);
+            
+            let html = '';
+            for (let level = 1; level <= 10; level++) {
+                const isUnlocked = userManager.isLevelUnlocked(user.id, grade, 'math', level);
+                const isCompleted = progress?.grades?.[grade]?.math?.levels?.[level - 1]?.completed;
+                
+                if (isCompleted) {
+                    html += `<a href="quiz.html?grade=${grade}&level=${level}" class="btn" style="background-color: #3498db;">✓ Level ${level}</a>`;
+                } else if (isUnlocked) {
+                    html += `<a href="quiz.html?grade=${grade}&level=${level}" class="btn">Level ${level}</a>`;
+                } else {
+                    html += `<a href="#" class="btn" style="background-color: #bdc3c7; cursor: not-allowed;" onclick="alert('Complete previous levels first!'); return false;">🔒 Level ${level}</a>`;
+                }
+            }
+            
+            container.innerHTML = html;
+        }
+
+        // Load on page load
+        document.addEventListener('DOMContentLoaded', loadLevels);
+    </script>

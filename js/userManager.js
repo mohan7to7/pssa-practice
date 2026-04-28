@@ -4,10 +4,9 @@ class UserManager {
         this.storageKey = 'pssaUsers';
         this.currentUserKey = 'pssaCurrentUser';
         this.progressKey = 'pssaProgress';
-        this.encryptionKey = 'pssa_secure_2024'; // Simple encryption
     }
-    // Need to rewrite the getting user
-    // Initialize or get current user
+
+    // Get current user from session
     getCurrentUser() {
         const userId = sessionStorage.getItem(this.currentUserKey);
         if (!userId) return null;
