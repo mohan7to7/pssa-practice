@@ -912,218 +912,1477 @@ const questionBank = {
     1: {
         math: {
             1: [
-                { question: "What is 2 + 1?", answers: [{ text: "2", correct: false }, { text: "3", correct: true }, { text: "4", correct: false }] },
-                { question: "What is 5 - 2?", answers: [{ text: "2", correct: false }, { text: "3", correct: true }, { text: "4", correct: false }] },
-                { question: "What is 3 + 4?", answers: [{ text: "6", correct: false }, { text: "7", correct: true }, { text: "8", correct: false }] },
-                { question: "What is 8 - 3?", answers: [{ text: "4", correct: false }, { text: "5", correct: true }, { text: "6", correct: false }] },
-                { question: "What is 6 + 2?", answers: [{ text: "7", correct: false }, { text: "8", correct: true }, { text: "9", correct: false }] },
-                { question: "What is 9 - 4?", answers: [{ text: "4", correct: false }, { text: "5", correct: true }, { text: "6", correct: false }] },
-                { question: "What is 4 + 5?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
-                { question: "What is 10 - 5?", answers: [{ text: "4", correct: false }, { text: "5", correct: true }, { text: "6", correct: false }] },
-                { question: "What is 7 + 2?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
-                { question: "What is 7 - 3?", answers: [{ text: "3", correct: false }, { text: "4", correct: true }, { text: "5", correct: false }] },
-                { question: "What is 5 + 3?", answers: [{ text: "7", correct: false }, { text: "8", correct: true }, { text: "9", correct: false }] },
-                { question: "What is 6 - 2?", answers: [{ text: "3", correct: false }, { text: "4", correct: true }, { text: "5", correct: false }] },
-                { question: "What is 8 + 1?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
-                { question: "What is 4 - 1?", answers: [{ text: "2", correct: false }, { text: "3", correct: true }, { text: "4", correct: false }] },
-                { question: "What is 2 + 2?", answers: [{ text: "3", correct: false }, { text: "4", correct: true }, { text: "5", correct: false }] }
+                {
+                    "question": "What is 2 + 1?",
+                    "answers": [
+                        { "text": "2", "correct": false },
+                        { "text": "3", "correct": true },
+                        { "text": "4", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 5 - 2?",
+                    "answers": [
+                        { "text": "2", "correct": false },
+                        { "text": "3", "correct": true },
+                        { "text": "4", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 3 + 4?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "7", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 8 - 3?",
+                    "answers": [
+                        { "text": "4", "correct": false },
+                        { "text": "5", "correct": true },
+                        { "text": "6", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 6 + 2?",
+                    "answers": [
+                        { "text": "7", "correct": false },
+                        { "text": "8", "correct": true },
+                        { "text": "9", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 9 - 4?",
+                    "answers": [
+                        { "text": "4", "correct": false },
+                        { "text": "5", "correct": true },
+                        { "text": "6", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 4 + 5?",
+                    "answers": [
+                        { "text": "8", "correct": false },
+                        { "text": "9", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 10 - 5?",
+                    "answers": [
+                        { "text": "4", "correct": false },
+                        { "text": "5", "correct": true },
+                        { "text": "6", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 7 + 2?",
+                    "answers": [
+                        { "text": "8", "correct": false },
+                        { "text": "9", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 7 - 3?",
+                    "answers": [
+                        { "text": "3", "correct": false },
+                        { "text": "4", "correct": true },
+                        { "text": "5", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 5 + 3?",
+                    "answers": [
+                        { "text": "7", "correct": false },
+                        { "text": "8", "correct": true },
+                        { "text": "9", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 6 - 2?",
+                    "answers": [
+                        { "text": "3", "correct": false },
+                        { "text": "4", "correct": true },
+                        { "text": "5", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 8 + 1?",
+                    "answers": [
+                        { "text": "8", "correct": false },
+                        { "text": "9", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 4 - 1?",
+                    "answers": [
+                        { "text": "2", "correct": false },
+                        { "text": "3", "correct": true },
+                        { "text": "4", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 2 + 2?",
+                    "answers": [
+                        { "text": "3", "correct": false },
+                        { "text": "4", "correct": true },
+                        { "text": "5", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "What is 3 + 3?", answers: [{ text: "5", correct: false }, { text: "6", correct: true }, { text: "7", correct: false }] },
-                { question: "What is 10 - 3?", answers: [{ text: "6", correct: false }, { text: "7", correct: true }, { text: "8", correct: false }] },
-                { question: "What is 5 + 5?", answers: [{ text: "9", correct: false }, { text: "10", correct: true }, { text: "11", correct: false }] },
-                { question: "What is 12 - 5?", answers: [{ text: "6", correct: false }, { text: "7", correct: true }, { text: "8", correct: false }] },
-                { question: "What is 8 + 4?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
-                { question: "What is 15 - 6?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
-                { question: "What is 7 + 6?", answers: [{ text: "12", correct: false }, { text: "13", correct: true }, { text: "14", correct: false }] },
-                { question: "What is 14 - 7?", answers: [{ text: "6", correct: false }, { text: "7", correct: true }, { text: "8", correct: false }] },
-                { question: "What is 9 + 3?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
-                { question: "What is 11 - 4?", answers: [{ text: "6", correct: false }, { text: "7", correct: true }, { text: "8", correct: false }] },
-                { question: "What is 6 + 6?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
-                { question: "What is 13 - 6?", answers: [{ text: "6", correct: false }, { text: "7", correct: true }, { text: "8", correct: false }] },
-                { question: "What is 4 + 8?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
-                { question: "What is 16 - 8?", answers: [{ text: "7", correct: false }, { text: "8", correct: true }, { text: "9", correct: false }] },
-                { question: "What is 9 + 8?", answers: [{ text: "16", correct: false }, { text: "17", correct: true }, { text: "18", correct: false }] }
+                {
+                    "question": "What is 3 + 3?",
+                    "answers": [
+                        { "text": "5", "correct": false },
+                        { "text": "6", "correct": true },
+                        { "text": "7", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 10 - 3?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "7", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 5 + 5?",
+                    "answers": [
+                        { "text": "9", "correct": false },
+                        { "text": "10", "correct": true },
+                        { "text": "11", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 12 - 5?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "7", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 8 + 4?",
+                    "answers": [
+                        { "text": "11", "correct": false },
+                        { "text": "12", "correct": true },
+                        { "text": "13", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 15 - 6?",
+                    "answers": [
+                        { "text": "8", "correct": false },
+                        { "text": "9", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 7 + 6?",
+                    "answers": [
+                        { "text": "12", "correct": false },
+                        { "text": "13", "correct": true },
+                        { "text": "14", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 14 - 7?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "7", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 9 + 3?",
+                    "answers": [
+                        { "text": "11", "correct": false },
+                        { "text": "12", "correct": true },
+                        { "text": "13", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 11 - 4?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "7", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 6 + 6?",
+                    "answers": [
+                        { "text": "11", "correct": false },
+                        { "text": "12", "correct": true },
+                        { "text": "13", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 13 - 6?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "7", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 4 + 8?",
+                    "answers": [
+                        { "text": "11", "correct": false },
+                        { "text": "12", "correct": true },
+                        { "text": "13", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 16 - 8?",
+                    "answers": [
+                        { "text": "7", "correct": false },
+                        { "text": "8", "correct": true },
+                        { "text": "9", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 9 + 8?",
+                    "answers": [
+                        { "text": "16", "correct": false },
+                        { "text": "17", "correct": true },
+                        { "text": "18", "correct": false }
+                    ]
+                }
             ]
         },
         english: {
             1: [
-                { question: "Which word starts with 'S'?", answers: [{ text: "Apple", correct: false }, { text: "Sun", correct: true }, { text: "Dog", correct: false }] },
-                { question: "Which word starts with 'C'?", answers: [{ text: "Ball", correct: false }, { text: "Cat", correct: true }, { text: "Dog", correct: false }] },
-                { question: "Which word starts with 'D'?", answers: [{ text: "Cat", correct: false }, { text: "Ball", correct: false }, { text: "Dog", correct: true }] },
-                { question: "Which word starts with 'B'?", answers: [{ text: "Apple", correct: false }, { text: "Ball", correct: true }, { text: "Cat", correct: false }] },
-                { question: "Which word starts with 'A'?", answers: [{ text: "Apple", correct: true }, { text: "Ball", correct: false }, { text: "Cat", correct: false }] },
-                { question: "Which word ends with 't'?", answers: [{ text: "Dog", correct: false }, { text: "Cat", correct: true }, { text: "Ball", correct: false }] },
-                { question: "Which word ends with 'g'?", answers: [{ text: "Cat", correct: false }, { text: "Ball", correct: false }, { text: "Dog", correct: true }] },
-                { question: "Which word is a color?", answers: [{ text: "Happy", correct: false }, { text: "Blue", correct: true }, { text: "Run", correct: false }] },
-                { question: "Which word is an animal?", answers: [{ text: "Tree", correct: false }, { text: "Cat", correct: true }, { text: "Happy", correct: false }] },
-                { question: "Is 'run' a noun or verb?", answers: [{ text: "Noun", correct: false }, { text: "Verb", correct: true }, { text: "Both", correct: false }] },
-                { question: "What is the past tense of 'run'?", answers: [{ text: "Running", correct: false }, { text: "Ran", correct: true }, { text: "Will run", correct: false }] },
-                { question: "Which sentence is correct?", answers: [{ text: "I goes", correct: false }, { text: "I go", correct: true }, { text: "I going", correct: false }] },
-                { question: "How many letters in 'cat'?", answers: [{ text: "2", correct: false }, { text: "3", correct: true }, { text: "4", correct: false }] },
-                { question: "Which word rhymes with 'cat'?", answers: [{ text: "Dog", correct: false }, { text: "Bat", correct: true }, { text: "Run", correct: false }] },
-                { question: "Which letter comes first in 'sun'?", answers: [{ text: "u", correct: false }, { text: "s", correct: true }, { text: "n", correct: false }] }
+                {
+                    "question": "Which word starts with 'S'?",
+                    "answers": [
+                        { "text": "Apple", "correct": false },
+                        { "text": "Sun", "correct": true },
+                        { "text": "Dog", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word starts with 'C'?",
+                    "answers": [
+                        { "text": "Ball", "correct": false },
+                        { "text": "Cat", "correct": true },
+                        { "text": "Dog", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word starts with 'D'?",
+                    "answers": [
+                        { "text": "Cat", "correct": false },
+                        { "text": "Ball", "correct": false },
+                        { "text": "Dog", "correct": true }
+                    ]
+                },
+                {
+                    "question": "Which word starts with 'B'?",
+                    "answers": [
+                        { "text": "Apple", "correct": false },
+                        { "text": "Ball", "correct": true },
+                        { "text": "Cat", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word starts with 'A'?",
+                    "answers": [
+                        { "text": "Apple", "correct": true },
+                        { "text": "Ball", "correct": false },
+                        { "text": "Cat", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word ends with 't'?",
+                    "answers": [
+                        { "text": "Dog", "correct": false },
+                        { "text": "Cat", "correct": true },
+                        { "text": "Ball", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word ends with 'g'?",
+                    "answers": [
+                        { "text": "Cat", "correct": false },
+                        { "text": "Ball", "correct": false },
+                        { "text": "Dog", "correct": true }
+                    ]
+                },
+                {
+                    "question": "Which word is a color?",
+                    "answers": [
+                        { "text": "Happy", "correct": false },
+                        { "text": "Blue", "correct": true },
+                        { "text": "Run", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word is an animal?",
+                    "answers": [
+                        { "text": "Tree", "correct": false },
+                        { "text": "Cat", "correct": true },
+                        { "text": "Happy", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Is 'run' a noun or verb?",
+                    "answers": [
+                        { "text": "Noun", "correct": false },
+                        { "text": "Verb", "correct": true },
+                        { "text": "Both", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the past tense of 'run'?",
+                    "answers": [
+                        { "text": "Running", "correct": false },
+                        { "text": "Ran", "correct": true },
+                        { "text": "Will run", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which sentence is correct?",
+                    "answers": [
+                        { "text": "I goes", "correct": false },
+                        { "text": "I go", "correct": true },
+                        { "text": "I going", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many letters in 'cat'?",
+                    "answers": [
+                        { "text": "2", "correct": false },
+                        { "text": "3", "correct": true },
+                        { "text": "4", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word rhymes with 'cat'?",
+                    "answers": [
+                        { "text": "Dog", "correct": false },
+                        { "text": "Bat", "correct": true },
+                        { "text": "Run", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which letter comes first in 'sun'?",
+                    "answers": [
+                        { "text": "u", "correct": false },
+                        { "text": "s", "correct": true },
+                        { "text": "n", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "What is the past tense of 'run'?", answers: [{ text: "Running", correct: false }, { text: "Ran", correct: true }, { text: "Will run", correct: false }] },
-                { question: "What is the past tense of 'play'?", answers: [{ text: "Playing", correct: false }, { text: "Played", correct: true }, { text: "Will play", correct: false }] },
-                { question: "What is the plural of 'cat'?", answers: [{ text: "Cate", correct: false }, { text: "Cats", correct: true }, { text: "Catz", correct: false }] },
-                { question: "What is the plural of 'dog'?", answers: [{ text: "Doges", correct: false }, { text: "Dogs", correct: true }, { text: "Dogz", correct: false }] },
-                { question: "Which sentence is correct?", answers: [{ text: "She go to school", correct: false }, { text: "She goes to school", correct: true }, { text: "She going to school", correct: false }] },
-                { question: "Which sentence is correct?", answers: [{ text: "He don't like apples", correct: false }, { text: "He doesn't like apples", correct: true }, { text: "He does not likes apples", correct: false }] },
-                { question: "What is a noun?", answers: [{ text: "An action", correct: false }, { text: "A naming word", correct: true }, { text: "A describing word", correct: false }] },
-                { question: "What is a verb?", answers: [{ text: "A naming word", correct: false }, { text: "An action word", correct: true }, { text: "A describing word", correct: false }] },
-                { question: "What is an adjective?", answers: [{ text: "A naming word", correct: false }, { text: "An action word", correct: false }, { text: "A describing word", correct: true }] },
-                { question: "How many syllables in 'mother'?", answers: [{ text: "1", correct: false }, { text: "2", correct: true }, { text: "3", correct: false }] },
-                { question: "How many syllables in 'happy'?", answers: [{ text: "1", correct: false }, { text: "2", correct: true }, { text: "3", correct: false }] },
-                { question: "What punctuation ends a sentence?", answers: [{ text: "Comma", correct: false }, { text: "Period", correct: true }, { text: "Colon", correct: false }] },
-                { question: "What punctuation is used in a question?", answers: [{ text: "Period", correct: false }, { text: "Question mark", correct: true }, { text: "Comma", correct: false }] },
-                { question: "Which word rhymes with 'dog'?", answers: [{ text: "Cat", correct: false }, { text: "Log", correct: true }, { text: "Hat", correct: false }] },
-                { question: "Which word rhymes with 'hat'?", answers: [{ text: "Dog", correct: false }, { text: "Cat", correct: true }, { text: "Run", correct: false }] }
+                {
+                    "question": "What is the past tense of 'run'?",
+                    "answers": [
+                        { "text": "Running", "correct": false },
+                        { "text": "Ran", "correct": true },
+                        { "text": "Will run", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the past tense of 'play'?",
+                    "answers": [
+                        { "text": "Playing", "correct": false },
+                        { "text": "Played", "correct": true },
+                        { "text": "Will play", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the plural of 'cat'?",
+                    "answers": [
+                        { "text": "Cate", "correct": false },
+                        { "text": "Cats", "correct": true },
+                        { "text": "Catz", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the plural of 'dog'?",
+                    "answers": [
+                        { "text": "Doges", "correct": false },
+                        { "text": "Dogs", "correct": true },
+                        { "text": "Dogz", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which sentence is correct?",
+                    "answers": [
+                        { "text": "She go to school", "correct": false },
+                        { "text": "She goes to school", "correct": true },
+                        { "text": "She going to school", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which sentence is correct?",
+                    "answers": [
+                        { "text": "He don't like apples", "correct": false },
+                        { "text": "He doesn't like apples", "correct": true },
+                        { "text": "He does not likes apples", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a noun?",
+                    "answers": [
+                        { "text": "An action", "correct": false },
+                        { "text": "A naming word", "correct": true },
+                        { "text": "A describing word", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a verb?",
+                    "answers": [
+                        { "text": "A naming word", "correct": false },
+                        { "text": "An action word", "correct": true },
+                        { "text": "A describing word", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is an adjective?",
+                    "answers": [
+                        { "text": "A naming word", "correct": false },
+                        { "text": "An action word", "correct": false },
+                        { "text": "A describing word", "correct": true }
+                    ]
+                },
+                {
+                    "question": "How many syllables in 'mother'?",
+                    "answers": [
+                        { "text": "1", "correct": false },
+                        { "text": "2", "correct": true },
+                        { "text": "3", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many syllables in 'happy'?",
+                    "answers": [
+                        { "text": "1", "correct": false },
+                        { "text": "2", "correct": true },
+                        { "text": "3", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What punctuation ends a sentence?",
+                    "answers": [
+                        { "text": "Comma", "correct": false },
+                        { "text": "Period", "correct": true },
+                        { "text": "Colon", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What punctuation is used in a question?",
+                    "answers": [
+                        { "text": "Period", "correct": false },
+                        { "text": "Question mark", "correct": true },
+                        { "text": "Comma", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word rhymes with 'dog'?",
+                    "answers": [
+                        { "text": "Cat", "correct": false },
+                        { "text": "Log", "correct": true },
+                        { "text": "Hat", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word rhymes with 'hat'?",
+                    "answers": [
+                        { "text": "Dog", "correct": false },
+                        { "text": "Cat", "correct": true },
+                        { "text": "Run", "correct": false }
+                    ]
+                }
             ]
         },
         social: {
             1: [
-                { question: "What is the capital of the United States?", answers: [{ text: "New York", correct: false }, { text: "Washington, D.C.", correct: true }, { text: "Los Angeles", correct: false }] },
-                { question: "How many months are in a year?", answers: [{ text: "10", correct: false }, { text: "12", correct: true }, { text: "14", correct: false }] },
-                { question: "What is a family?", answers: [{ text: "A group of people related", correct: true }, { text: "A school", correct: false }, { text: "A town", correct: false }] },
-                { question: "What is a holiday?", answers: [{ text: "A special day", correct: true }, { text: "A vacation", correct: false }, { text: "A game", correct: false }] },
-                { question: "What is Thanksgiving?", answers: [{ text: "A holiday to give thanks", correct: true }, { text: "A type of food", correct: false }, { text: "A month", correct: false }] },
-                { question: "What is Christmas?", answers: [{ text: "A winter holiday", correct: true }, { text: "A summer holiday", correct: false }, { text: "A spring holiday", correct: false }] },
-                { question: "What do we celebrate on July 4th?", answers: [{ text: "Independence Day", correct: true }, { text: "Thanksgiving", correct: false }, { text: "Christmas", correct: false }] },
-                { question: "What are the four seasons?", answers: [{ text: "Spring, Summer, Fall, Winter", correct: true }, { text: "Hot, Cold, Warm, Cool", correct: false }, { text: "North, South, East, West", correct: false }] },
-                { question: "What is a neighbor?", answers: [{ text: "Someone who lives near you", correct: true }, { text: "A family member", correct: false }, { text: "A teacher", correct: false }] },
-                { question: "What is a community?", answers: [{ text: "A group of people living together", correct: true }, { text: "Only one family", correct: false }, { text: "A school only", correct: false }] },
-                { question: "What is a street?", answers: [{ text: "A road in a town", correct: true }, { text: "A building", correct: false }, { text: "A park", correct: false }] },
-                { question: "What is an address?", answers: [{ text: "Where someone lives", correct: true }, { text: "A name", correct: false }, { text: "A phone number", correct: false }] },
-                { question: "What is a job?", answers: [{ text: "Work someone does", correct: true }, { text: "A hobby", correct: false }, { text: "A game", correct: false }] },
-                { question: "Who is a teacher?", answers: [{ text: "Someone who teaches", correct: true }, { text: "Someone who works at a store", correct: false }, { text: "Someone who farms", correct: false }] },
-                { question: "What is school?", answers: [{ text: "A place where children learn", correct: true }, { text: "A playground", correct: false }, { text: "A park", correct: false }] }
+                {
+                    "question": "What is the capital of the United States?",
+                    "answers": [
+                        { "text": "New York", "correct": false },
+                        { "text": "Washington, D.C.", "correct": true },
+                        { "text": "Los Angeles", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many months are in a year?",
+                    "answers": [
+                        { "text": "10", "correct": false },
+                        { "text": "12", "correct": true },
+                        { "text": "14", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a family?",
+                    "answers": [
+                        { "text": "A group of people related", "correct": true },
+                        { "text": "A school", "correct": false },
+                        { "text": "A town", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a holiday?",
+                    "answers": [
+                        { "text": "A special day", "correct": true },
+                        { "text": "A vacation", "correct": false },
+                        { "text": "A game", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is Thanksgiving?",
+                    "answers": [
+                        { "text": "A holiday to give thanks", "correct": true },
+                        { "text": "A type of food", "correct": false },
+                        { "text": "A month", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is Christmas?",
+                    "answers": [
+                        { "text": "A winter holiday", "correct": true },
+                        { "text": "A summer holiday", "correct": false },
+                        { "text": "A spring holiday", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do we celebrate on July 4th?",
+                    "answers": [
+                        { "text": "Independence Day", "correct": true },
+                        { "text": "Thanksgiving", "correct": false },
+                        { "text": "Christmas", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are the four seasons?",
+                    "answers": [
+                        { "text": "Spring, Summer, Fall, Winter", "correct": true },
+                        { "text": "Hot, Cold, Warm, Cool", "correct": false },
+                        { "text": "North, South, East, West", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a neighbor?",
+                    "answers": [
+                        { "text": "Someone who lives near you", "correct": true },
+                        { "text": "A family member", "correct": false },
+                        { "text": "A teacher", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a community?",
+                    "answers": [
+                        { "text": "A group of people living together", "correct": true },
+                        { "text": "Only one family", "correct": false },
+                        { "text": "A school only", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a street?",
+                    "answers": [
+                        { "text": "A road in a town", "correct": true },
+                        { "text": "A building", "correct": false },
+                        { "text": "A park", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is an address?",
+                    "answers": [
+                        { "text": "Where someone lives", "correct": true },
+                        { "text": "A name", "correct": false },
+                        { "text": "A phone number", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a job?",
+                    "answers": [
+                        { "text": "Work someone does", "correct": true },
+                        { "text": "A hobby", "correct": false },
+                        { "text": "A game", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Who is a teacher?",
+                    "answers": [
+                        { "text": "Someone who teaches", "correct": true },
+                        { "text": "Someone who works at a store", "correct": false },
+                        { "text": "Someone who farms", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is school?",
+                    "answers": [
+                        { "text": "A place where children learn", "correct": true },
+                        { "text": "A playground", "correct": false },
+                        { "text": "A park", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "How many days are there in a week?", answers: [{ text: "5", correct: false }, { text: "7", correct: true }, { text: "10", correct: false }] },
-                { question: "What are the days of the week?", answers: [{ text: "Monday through Sunday", correct: true }, { text: "Seasons", correct: false }, { text: "Months", correct: false }] },
-                { question: "What are the months?", answers: [{ text: "12 divisions of the year", correct: true }, { text: "4 seasons", correct: false }, { text: "7 days", correct: false }] },
-                { question: "What is a map?", answers: [{ text: "A drawing of an area", correct: true }, { text: "A book", correct: false }, { text: "A tool", correct: false }] },
-                { question: "What direction is north?", answers: [{ text: "Up", correct: true }, { text: "Down", correct: false }, { text: "Left", correct: false }] },
-                { question: "What direction is south?", answers: [{ text: "Down", correct: true }, { text: "Up", correct: false }, { text: "Right", correct: false }] },
-                { question: "What is east?", answers: [{ text: "Right", correct: true }, { text: "Left", correct: false }, { text: "Up", correct: false }] },
-                { question: "What is west?", answers: [{ text: "Left", correct: true }, { text: "Right", correct: false }, { text: "Down", correct: false }] },
-                { question: "What is a compass?", answers: [{ text: "A tool that shows directions", correct: true }, { text: "A drawing tool", correct: false }, { text: "A measuring tool", correct: false }] },
-                { question: "What is a city?", answers: [{ text: "A large town", correct: true }, { text: "A small house", correct: false }, { text: "A park", correct: false }] },
-                { question: "What is a town?", answers: [{ text: "A small city", correct: true }, { text: "A farm", correct: false }, { text: "A country", correct: false }] },
-                { question: "What is a country?", answers: [{ text: "A large area with its own government", correct: true }, { text: "A city", correct: false }, { text: "A small area", correct: false }] },
-                { question: "What is a rule?", answers: [{ text: "Something we must follow", correct: true }, { text: "A game", correct: false }, { text: "A toy", correct: false }] },
-                { question: "Who is a police officer?", answers: [{ text: "Someone who helps keep us safe", correct: true }, { text: "A teacher", correct: false }, { text: "A doctor", correct: false }] },
-                { question: "What is safety?", answers: [{ text: "Being free from danger", correct: true }, { text: "Having fun", correct: false }, { text: "Playing games", correct: false }] }
+                {
+                    "question": "How many days are there in a week?",
+                    "answers": [
+                        { "text": "5", "correct": false },
+                        { "text": "7", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are the days of the week?",
+                    "answers": [
+                        { "text": "Monday through Sunday", "correct": true },
+                        { "text": "Seasons", "correct": false },
+                        { "text": "Months", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are the months?",
+                    "answers": [
+                        { "text": "12 divisions of the year", "correct": true },
+                        { "text": "4 seasons", "correct": false },
+                        { "text": "7 days", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a map?",
+                    "answers": [
+                        { "text": "A drawing of an area", "correct": true },
+                        { "text": "A book", "correct": false },
+                        { "text": "A tool", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What direction is north?",
+                    "answers": [
+                        { "text": "Up", "correct": true },
+                        { "text": "Down", "correct": false },
+                        { "text": "Left", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What direction is south?",
+                    "answers": [
+                        { "text": "Down", "correct": true },
+                        { "text": "Up", "correct": false },
+                        { "text": "Right", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is east?",
+                    "answers": [
+                        { "text": "Right", "correct": true },
+                        { "text": "Left", "correct": false },
+                        { "text": "Up", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is west?",
+                    "answers": [
+                        { "text": "Left", "correct": true },
+                        { "text": "Right", "correct": false },
+                        { "text": "Down", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a compass?",
+                    "answers": [
+                        { "text": "A tool that shows directions", "correct": true },
+                        { "text": "A drawing tool", "correct": false },
+                        { "text": "A measuring tool", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a city?",
+                    "answers": [
+                        { "text": "A large town", "correct": true },
+                        { "text": "A small house", "correct": false },
+                        { "text": "A park", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a town?",
+                    "answers": [
+                        { "text": "A small city", "correct": true },
+                        { "text": "A farm", "correct": false },
+                        { "text": "A country", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a country?",
+                    "answers": [
+                        { "text": "A large area with its own government", "correct": true },
+                        { "text": "A city", "correct": false },
+                        { "text": "A small area", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a rule?",
+                    "answers": [
+                        { "text": "Something we must follow", "correct": true },
+                        { "text": "A game", "correct": false },
+                        { "text": "A toy", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Who is a police officer?",
+                    "answers": [
+                        { "text": "Someone who helps keep us safe", "correct": true },
+                        { "text": "A teacher", "correct": false },
+                        { "text": "A doctor", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is safety?",
+                    "answers": [
+                        { "text": "Being free from danger", "correct": true },
+                        { "text": "Having fun", "correct": false },
+                        { "text": "Playing games", "correct": false }
+                    ]
+                }
             ]
         },
         science: {
             1: [
-                { question: "What do plants need to grow?", answers: [{ text: "Water, sunlight, and soil", correct: true }, { text: "Only water", correct: false }, { text: "Only sunlight", correct: false }] },
-                { question: "Is a penguin a bird?", answers: [{ text: "Yes", correct: true }, { text: "No", correct: false }, { text: "Maybe", correct: false }] },
-                { question: "What does a tree have?", answers: [{ text: "Roots, trunk, branches, leaves", correct: true }, { text: "Only leaves", correct: false }, { text: "Only roots", correct: false }] },
-                { question: "What is a leaf?", answers: [{ text: "Part of a plant", correct: true }, { text: "An animal", correct: false }, { text: "A rock", correct: false }] },
-                { question: "What is a flower?", answers: [{ text: "Part of a plant", correct: true }, { text: "An animal", correct: false }, { text: "A type of tree", correct: false }] },
-                { question: "What is the sun?", answers: [{ text: "A star that gives us heat and light", correct: true }, { text: "A planet", correct: false }, { text: "A moon", correct: false }] },
-                { question: "What is the moon?", answers: [{ text: "A body that orbits Earth", correct: true }, { text: "A star", correct: false }, { text: "A planet", correct: false }] },
-                { question: "What are stars?", answers: [{ text: "Bright objects in the night sky", correct: true }, { text: "Only during day", correct: false }, { text: "Weather", correct: false }] },
-                { question: "How many legs does an insect have?", answers: [{ text: "4", correct: false }, { text: "6", correct: true }, { text: "8", correct: false }] },
-                { question: "What is a butterfly?", answers: [{ text: "An insect", correct: true }, { text: "A bird", correct: false }, { text: "A plant", correct: false }] },
-                { question: "What do animals need?", answers: [{ text: "Food, water, shelter, air", correct: true }, { text: "Only food", correct: false }, { text: "Only water", correct: false }] },
-                { question: "What is water?", answers: [{ text: "A liquid we need to survive", correct: true }, { text: "A gas", correct: false }, { text: "A rock", correct: false }] },
-                { question: "What is air?", answers: [{ text: "What we breathe", correct: true }, { text: "A liquid", correct: false }, { text: "A solid", correct: false }] },
-                { question: "What is a habitat?", answers: [{ text: "Where an organism lives", correct: true }, { text: "A tool", correct: false }, { text: "A food", correct: false }] },
-                { question: "What is weather?", answers: [{ text: "What happens in the atmosphere", correct: true }, { text: "Only sunny days", correct: false }, { text: "Only rainy days", correct: false }] }
+                {
+                    "question": "What do plants need to grow?",
+                    "answers": [
+                        { "text": "Water, sunlight, and soil", "correct": true },
+                        { "text": "Only water", "correct": false },
+                        { "text": "Only sunlight", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Is a penguin a bird?",
+                    "answers": [
+                        { "text": "Yes", "correct": true },
+                        { "text": "No", "correct": false },
+                        { "text": "Maybe", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What does a tree have?",
+                    "answers": [
+                        { "text": "Roots, trunk, branches, leaves", "correct": true },
+                        { "text": "Only leaves", "correct": false },
+                        { "text": "Only roots", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a leaf?",
+                    "answers": [
+                        { "text": "Part of a plant", "correct": true },
+                        { "text": "An animal", "correct": false },
+                        { "text": "A rock", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a flower?",
+                    "answers": [
+                        { "text": "Part of a plant", "correct": true },
+                        { "text": "An animal", "correct": false },
+                        { "text": "A type of tree", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the sun?",
+                    "answers": [
+                        { "text": "A star that gives us heat and light", "correct": true },
+                        { "text": "A planet", "correct": false },
+                        { "text": "A moon", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the moon?",
+                    "answers": [
+                        { "text": "A body that orbits Earth", "correct": true },
+                        { "text": "A star", "correct": false },
+                        { "text": "A planet", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are stars?",
+                    "answers": [
+                        { "text": "Bright objects in the night sky", "correct": true },
+                        { "text": "Only during day", "correct": false },
+                        { "text": "Weather", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many legs does an insect have?",
+                    "answers": [
+                        { "text": "4", "correct": false },
+                        { "text": "6", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a butterfly?",
+                    "answers": [
+                        { "text": "An insect", "correct": true },
+                        { "text": "A bird", "correct": false },
+                        { "text": "A plant", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do animals need?",
+                    "answers": [
+                        { "text": "Food, water, shelter, air", "correct": true },
+                        { "text": "Only food", "correct": false },
+                        { "text": "Only water", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is water?",
+                    "answers": [
+                        { "text": "A liquid we need to survive", "correct": true },
+                        { "text": "A gas", "correct": false },
+                        { "text": "A rock", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is air?",
+                    "answers": [
+                        { "text": "What we breathe", "correct": true },
+                        { "text": "A liquid", "correct": false },
+                        { "text": "A solid", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a habitat?",
+                    "answers": [
+                        { "text": "Where an organism lives", "correct": true },
+                        { "text": "A tool", "correct": false },
+                        { "text": "A food", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is weather?",
+                    "answers": [
+                        { "text": "What happens in the atmosphere", "correct": true },
+                        { "text": "Only sunny days", "correct": false },
+                        { "text": "Only rainy days", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "Is a penguin a bird?", answers: [{ text: "Yes", correct: true }, { text: "No", correct: false }] },
-                { question: "How many legs does a spider have?", answers: [{ text: "6", correct: false }, { text: "8", correct: true }, { text: "4", correct: false }] },
-                { question: "How many legs does an insect have?", answers: [{ text: "4", correct: false }, { text: "6", correct: true }, { text: "8", correct: false }] },
-                { question: "How many legs does a dog have?", answers: [{ text: "2", correct: false }, { text: "3", correct: false }, { text: "4", correct: true }] },
-                { question: "What do birds have?", answers: [{ text: "Feathers and wings", correct: true }, { text: "Scales", correct: false }, { text: "Fur", correct: false }] },
-                { question: "Do fish live in water?", answers: [{ text: "Yes", correct: true }, { text: "No", correct: false }, { text: "Sometimes", correct: false }] },
-                { question: "Do birds fly?", answers: [{ text: "Yes", correct: true }, { text: "No", correct: false }, { text: "Some do", correct: false }] },
-                { question: "What do fish have?", answers: [{ text: "Scales and fins", correct: true }, { text: "Fur", correct: false }, { text: "Feathers", correct: false }] },
-                { question: "What do mammals have?", answers: [{ text: "Fur and produce milk", correct: true }, { text: "Scales", correct: false }, { text: "Feathers", correct: false }] },
-                { question: "What is a reptile?", answers: [{ text: "An animal with scales", correct: true }, { text: "An animal with fur", correct: false }, { text: "An animal with feathers", correct: false }] },
-                { question: "What is the water cycle?", answers: [{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing only", correct: false }, { text: "Melting only", correct: false }] },
-                { question: "Do plants need sunlight?", answers: [{ text: "Yes", correct: true }, { text: "No", correct: false }, { text: "Maybe", correct: false }] },
-                { question: "What is photosynthesis?", answers: [{ text: "How plants make food", correct: true }, { text: "How animals eat", correct: false }, { text: "How we sleep", correct: false }] },
-                { question: "What do plants produce?", answers: [{ text: "Oxygen", correct: true }, { text: "Carbon dioxide", correct: false }, { text: "Nitrogen", correct: false }] },
-                { question: "What is a food chain?", answers: [{ text: "How energy transfers through organisms", correct: true }, { text: "A restaurant", correct: false }, { text: "Types of food", correct: false }] }
+                {
+                    "question": "Is a penguin a bird?",
+                    "answers": [
+                        { "text": "Yes", "correct": true },
+                        { "text": "No", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many legs does a spider have?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "8", "correct": true },
+                        { "text": "4", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many legs does an insect have?",
+                    "answers": [
+                        { "text": "4", "correct": false },
+                        { "text": "6", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many legs does a dog have?",
+                    "answers": [
+                        { "text": "2", "correct": false },
+                        { "text": "3", "correct": false },
+                        { "text": "4", "correct": true }
+                    ]
+                },
+                {
+                    "question": "What do birds have?",
+                    "answers": [
+                        { "text": "Feathers and wings", "correct": true },
+                        { "text": "Scales", "correct": false },
+                        { "text": "Fur", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Do fish live in water?",
+                    "answers": [
+                        { "text": "Yes", "correct": true },
+                        { "text": "No", "correct": false },
+                        { "text": "Sometimes", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Do birds fly?",
+                    "answers": [
+                        { "text": "Yes", "correct": true },
+                        { "text": "No", "correct": false },
+                        { "text": "Some do", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do fish have?",
+                    "answers": [
+                        { "text": "Scales and fins", "correct": true },
+                        { "text": "Fur", "correct": false },
+                        { "text": "Feathers", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do mammals have?",
+                    "answers": [
+                        { "text": "Fur and produce milk", "correct": true },
+                        { "text": "Scales", "correct": false },
+                        { "text": "Feathers", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a reptile?",
+                    "answers": [
+                        { "text": "An animal with scales", "correct": true },
+                        { "text": "An animal with fur", "correct": false },
+                        { "text": "An animal with feathers", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the water cycle?",
+                    "answers": [
+                        { "text": "Evaporation, Condensation, Precipitation", "correct": true },
+                        { "text": "Freezing only", "correct": false },
+                        { "text": "Melting only", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Do plants need sunlight?",
+                    "answers": [
+                        { "text": "Yes", "correct": true },
+                        { "text": "No", "correct": false },
+                        { "text": "Maybe", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is photosynthesis?",
+                    "answers": [
+                        { "text": "How plants make food", "correct": true },
+                        { "text": "How animals eat", "correct": false },
+                        { "text": "How we sleep", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do plants produce?",
+                    "answers": [
+                        { "text": "Oxygen", "correct": true },
+                        { "text": "Carbon dioxide", "correct": false },
+                        { "text": "Nitrogen", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a food chain?",
+                    "answers": [
+                        { "text": "How energy transfers through organisms", "correct": true },
+                        { "text": "A restaurant", "correct": false },
+                        { "text": "Types of food", "correct": false }
+                    ]
+                }
             ]
         }
     },
     2: {
         math: {
             1: [
-                { question: "What is 10 + 5?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] },
-                { question: "What is 20 - 8?", answers: [{ text: "10", correct: false }, { text: "12", correct: true }, { text: "14", correct: false }] },
-                { question: "What is 7 + 4?", answers: [{ text: "10", correct: false }, { text: "11", correct: true }, { text: "12", correct: false }] },
-                { question: "What is 15 - 6?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
-                { question: "What is 8 + 8?", answers: [{ text: "15", correct: false }, { text: "16", correct: true }, { text: "17", correct: false }] },
-                { question: "What is 18 - 9?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
-                { question: "What is 12 + 5?", answers: [{ text: "16", correct: false }, { text: "17", correct: true }, { text: "18", correct: false }] },
-                { question: "What is 25 - 10?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] },
-                { question: "What is 9 + 6?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] },
-                { question: "What is 20 - 5?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] },
-                { question: "What is 11 + 7?", answers: [{ text: "17", correct: false }, { text: "18", correct: true }, { text: "19", correct: false }] },
-                { question: "What is 30 - 15?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] },
-                { question: "What is 13 + 4?", answers: [{ text: "16", correct: false }, { text: "17", correct: true }, { text: "18", correct: false }] },
-                { question: "What is 22 - 7?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] },
-                { question: "What is 6 + 9?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] }
+                {
+                    "question": "What is 10 + 5?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 20 - 8?",
+                    "answers": [
+                        { "text": "10", "correct": false },
+                        { "text": "12", "correct": true },
+                        { "text": "14", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 7 + 4?",
+                    "answers": [
+                        { "text": "10", "correct": false },
+                        { "text": "11", "correct": true },
+                        { "text": "12", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 15 - 6?",
+                    "answers": [
+                        { "text": "8", "correct": false },
+                        { "text": "9", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 8 + 8?",
+                    "answers": [
+                        { "text": "15", "correct": false },
+                        { "text": "16", "correct": true },
+                        { "text": "17", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 18 - 9?",
+                    "answers": [
+                        { "text": "8", "correct": false },
+                        { "text": "9", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 12 + 5?",
+                    "answers": [
+                        { "text": "16", "correct": false },
+                        { "text": "17", "correct": true },
+                        { "text": "18", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 25 - 10?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 9 + 6?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 20 - 5?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 11 + 7?",
+                    "answers": [
+                        { "text": "17", "correct": false },
+                        { "text": "18", "correct": true },
+                        { "text": "19", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 30 - 15?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 13 + 4?",
+                    "answers": [
+                        { "text": "16", "correct": false },
+                        { "text": "17", "correct": true },
+                        { "text": "18", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 22 - 7?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 6 + 9?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "What is 25 + 10?", answers: [{ text: "34", correct: false }, { text: "35", correct: true }, { text: "36", correct: false }] },
-                { question: "What is 40 - 15?", answers: [{ text: "24", correct: false }, { text: "25", correct: true }, { text: "26", correct: false }] },
-                { question: "What is 18 + 12?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 35 - 8?", answers: [{ text: "26", correct: false }, { text: "27", correct: true }, { text: "28", correct: false }] },
-                { question: "What is 16 + 14?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 50 - 20?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 24 + 6?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 45 - 12?", answers: [{ text: "32", correct: false }, { text: "33", correct: true }, { text: "34", correct: false }] },
-                { question: "What is 17 + 13?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 38 - 8?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 22 + 8?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 42 - 7?", answers: [{ text: "34", correct: false }, { text: "35", correct: true }, { text: "36", correct: false }] },
-                { question: "What is 19 + 11?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] },
-                { question: "What is 48 - 13?", answers: [{ text: "34", correct: false }, { text: "35", correct: true }, { text: "36", correct: false }] },
-                { question: "What is 26 + 4?", answers: [{ text: "29", correct: false }, { text: "30", correct: true }, { text: "31", correct: false }] }
+                {
+                    "question": "What is 25 + 10?",
+                    "answers": [
+                        { "text": "34", "correct": false },
+                        { "text": "35", "correct": true },
+                        { "text": "36", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 40 - 15?",
+                    "answers": [
+                        { "text": "24", "correct": false },
+                        { "text": "25", "correct": true },
+                        { "text": "26", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 18 + 12?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 35 - 8?",
+                    "answers": [
+                        { "text": "26", "correct": false },
+                        { "text": "27", "correct": true },
+                        { "text": "28", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 16 + 14?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 50 - 20?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 24 + 6?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 45 - 12?",
+                    "answers": [
+                        { "text": "32", "correct": false },
+                        { "text": "33", "correct": true },
+                        { "text": "34", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 17 + 13?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 38 - 8?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 22 + 8?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 42 - 7?",
+                    "answers": [
+                        { "text": "34", "correct": false },
+                        { "text": "35", "correct": true },
+                        { "text": "36", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 19 + 11?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 48 - 13?",
+                    "answers": [
+                        { "text": "34", "correct": false },
+                        { "text": "35", "correct": true },
+                        { "text": "36", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 26 + 4?",
+                    "answers": [
+                        { "text": "29", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "31", "correct": false }
+                    ]
+                }
             ],
             3: [
-                { question: "What is 3 × 2?", answers: [{ text: "5", correct: false }, { text: "6", correct: true }, { text: "8", correct: false }] },
-                { question: "What is 5 × 2?", answers: [{ text: "8", correct: false }, { text: "10", correct: true }, { text: "12", correct: false }] },
-                { question: "What is 4 × 5?", answers: [{ text: "18", correct: false }, { text: "20", correct: true }, { text: "24", correct: false }] },
-                { question: "What is 6 × 5?", answers: [{ text: "28", correct: false }, { text: "30", correct: true }, { text: "36", correct: false }] },
-                { question: "What is 7 × 2?", answers: [{ text: "12", correct: false }, { text: "14", correct: true }, { text: "16", correct: false }] },
-                { question: "What is 8 × 2?", answers: [{ text: "14", correct: false }, { text: "16", correct: true }, { text: "18", correct: false }] },
-                { question: "What is 9 × 2?", answers: [{ text: "16", correct: false }, { text: "18", correct: true }, { text: "20", correct: false }] },
-                { question: "What is 10 × 2?", answers: [{ text: "18", correct: false }, { text: "20", correct: true }, { text: "22", correct: false }] },
-                { question: "What is 2 × 2?", answers: [{ text: "2", correct: false }, { text: "4", correct: true }, { text: "6", correct: false }] },
-                { question: "What is 5 × 5?", answers: [{ text: "20", correct: false }, { text: "25", correct: true }, { text: "30", correct: false }] },
-                { question: "What is 3 × 5?", answers: [{ text: "12", correct: false }, { text: "15", correct: true }, { text: "18", correct: false }] },
-                { question: "What is 4 × 2?", answers: [{ text: "6", correct: false }, { text: "8", correct: true }, { text: "10", correct: false }] },
-                { question: "What is 6 × 2?", answers: [{ text: "10", correct: false }, { text: "12", correct: true }, { text: "14", correct: false }] },
-                { question: "What is 10 × 5?", answers: [{ text: "45", correct: false }, { text: "50", correct: true }, { text: "55", correct: false }] },
-                { question: "What is 7 × 5?", answers: [{ text: "30", correct: false }, { text: "35", correct: true }, { text: "40", correct: false }] }
+                {
+                    "question": "What is 3 × 2?",
+                    "answers": [
+                        { "text": "5", "correct": false },
+                        { "text": "6", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 5 × 2?",
+                    "answers": [
+                        { "text": "8", "correct": false },
+                        { "text": "10", "correct": true },
+                        { "text": "12", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 4 × 5?",
+                    "answers": [
+                        { "text": "18", "correct": false },
+                        { "text": "20", "correct": true },
+                        { "text": "24", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 6 × 5?",
+                    "answers": [
+                        { "text": "28", "correct": false },
+                        { "text": "30", "correct": true },
+                        { "text": "36", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 7 × 2?",
+                    "answers": [
+                        { "text": "12", "correct": false },
+                        { "text": "14", "correct": true },
+                        { "text": "16", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 8 × 2?",
+                    "answers": [
+                        { "text": "14", "correct": false },
+                        { "text": "16", "correct": true },
+                        { "text": "18", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 9 × 2?",
+                    "answers": [
+                        { "text": "16", "correct": false },
+                        { "text": "18", "correct": true },
+                        { "text": "20", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 10 × 2?",
+                    "answers": [
+                        { "text": "18", "correct": false },
+                        { "text": "20", "correct": true },
+                        { "text": "22", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 2 × 2?",
+                    "answers": [
+                        { "text": "2", "correct": false },
+                        { "text": "4", "correct": true },
+                        { "text": "6", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 5 × 5?",
+                    "answers": [
+                        { "text": "20", "correct": false },
+                        { "text": "25", "correct": true },
+                        { "text": "30", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 3 × 5?",
+                    "answers": [
+                        { "text": "12", "correct": false },
+                        { "text": "15", "correct": true },
+                        { "text": "18", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 4 × 2?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "8", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 6 × 2?",
+                    "answers": [
+                        { "text": "10", "correct": false },
+                        { "text": "12", "correct": true },
+                        { "text": "14", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 10 × 5?",
+                    "answers": [
+                        { "text": "45", "correct": false },
+                        { "text": "50", "correct": true },
+                        { "text": "55", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 7 × 5?",
+                    "answers": [
+                        { "text": "30", "correct": false },
+                        { "text": "35", "correct": true },
+                        { "text": "40", "correct": false }
+                    ]
+                }
             ],
             4: [
-                { question: "What is 100 + 50?", answers: [{ text: "140", correct: false }, { text: "150", correct: true }, { text: "160", correct: false }] },
-                { question: "What is 200 - 80?", answers: [{ text: "110", correct: false }, { text: "120", correct: true }, { text: "130", correct: false }] },
-                { question: "What is 150 + 150?", answers: [{ text: "290", correct: false }, { text: "300", correct: true }, { text: "310", correct: false }] },
-                { question: "What is 350 - 100?", answers: [{ text: "240", correct: false }, { text: "250", correct: true }, { text: "260", correct: false }] },
-                { question: "What is 175 + 25?", answers: [{ text: "190", correct: false }, { text: "200", correct: true }, { text: "210", correct: false }] },
-                { question: "What is 400 - 150?", answers: [{ text: "240", correct: false }, { text: "250", correct: true }, { text: "260", correct: false }] },
-                { question: "What is 225 + 75?", answers: [{ text: "290", correct: false }, { text: "300", correct: true }, { text: "310", correct: false }] },
-                { question: "What is 500 - 250?", answers: [{ text: "240", correct: false }, { text: "250", correct: true }, { text: "260", correct: false }] },
-                { question: "What is 125 + 125?", answers: [{ text: "240", correct: false }, { text: "250", correct: true }, { text: "260", correct: false }] },
-                { question: "What is 450 - 200?", answers: [{ text: "240", correct: false }, { text: "250", correct: true }, { text: "260", correct: false }] },
-                { question: "What is 300 + 100?", answers: [{ text: "390", correct: false }, { text: "400", correct: true }, { text: "410", correct: false }] },
-                { question: "What is 380 - 80?", answers: [{ text: "290", correct: false }, { text: "300", correct: true }, { text: "310", correct: false }] },
-                { question: "What is 275 + 25?", answers: [{ text: "290", correct: false }, { text: "300", correct: true }, { text: "310", correct: false }] },
-                { question: "What is 420 - 120?", answers: [{ text: "290", correct: false }, { text: "300", correct: true }, { text: "310", correct: false }] },
-                { question: "What is 325 + 75?", answers: [{ text: "390", correct: false }, { text: "400", correct: true }, { text: "410", correct: false }] }
+                {
+                    "question": "What is 100 + 50?",
+                    "answers": [
+                        { "text": "140", "correct": false },
+                        { "text": "150", "correct": true },
+                        { "text": "160", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 200 - 80?",
+                    "answers": [
+                        { "text": "110", "correct": false },
+                        { "text": "120", "correct": true },
+                        { "text": "130", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 150 + 150?",
+                    "answers": [
+                        { "text": "290", "correct": false },
+                        { "text": "300", "correct": true },
+                        { "text": "310", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 350 - 100?",
+                    "answers": [
+                        { "text": "240", "correct": false },
+                        { "text": "250", "correct": true },
+                        { "text": "260", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 175 + 25?",
+                    "answers": [
+                        { "text": "190", "correct": false },
+                        { "text": "200", "correct": true },
+                        { "text": "210", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 400 - 150?",
+                    "answers": [
+                        { "text": "240", "correct": false },
+                        { "text": "250", "correct": true },
+                        { "text": "260", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 225 + 75?",
+                    "answers": [
+                        { "text": "290", "correct": false },
+                        { "text": "300", "correct": true },
+                        { "text": "310", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 500 - 250?",
+                    "answers": [
+                        { "text": "240", "correct": false },
+                        { "text": "250", "correct": true },
+                        { "text": "260", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 125 + 125?",
+                    "answers": [
+                        { "text": "240", "correct": false },
+                        { "text": "250", "correct": true },
+                        { "text": "260", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 450 - 200?",
+                    "answers": [
+                        { "text": "240", "correct": false },
+                        { "text": "250", "correct": true },
+                        { "text": "260", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 300 + 100?",
+                    "answers": [
+                        { "text": "390", "correct": false },
+                        { "text": "400", "correct": true },
+                        { "text": "410", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 380 - 80?",
+                    "answers": [
+                        { "text": "290", "correct": false },
+                        { "text": "300", "correct": true },
+                        { "text": "310", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 275 + 25?",
+                    "answers": [
+                        { "text": "290", "correct": false },
+                        { "text": "300", "correct": true },
+                        { "text": "310", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 420 - 120?",
+                    "answers": [
+                        { "text": "290", "correct": false },
+                        { "text": "300", "correct": true },
+                        { "text": "310", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is 325 + 75?",
+                    "answers": [
+                        { "text": "390", "correct": false },
+                        { "text": "400", "correct": true },
+                        { "text": "410", "correct": false }
+                    ]
+                }
             ],
             5: [
                 { question: "What fraction is shaded? ██░░ (4 out of 6)", answers: [{ text: "1/3", correct: false }, { text: "2/3", correct: true }, { text: "1/2", correct: false }] },
