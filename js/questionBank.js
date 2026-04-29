@@ -2489,110 +2489,739 @@ const questionBank = {
         },
         english: {
             1: [
-                { question: "Which is a noun?", answers: [{ text: "Run", correct: false }, { text: "Dog", correct: true }, { text: "Fast", correct: false }] },
-                { question: "Which word starts with 'C'?", answers: [{ text: "Apple", correct: false }, { text: "Cat", correct: true }, { text: "Dog", correct: false }] },
-                { question: "Which word is spelled correctly?", answers: [{ text: "Kat", correct: false }, { text: "Cat", correct: true }, { text: "Catt", correct: false }] },
-                { question: "Which word means the opposite of big?", answers: [{ text: "Small", correct: true }, { text: "Tall", correct: false }, { text: "Short", correct: false }] },
-                { question: "Which is a verb?", answers: [{ text: "Happy", correct: false }, { text: "Run", correct: true }, { text: "Tree", correct: false }] },
-                { question: "Which word rhymes with 'cat'?", answers: [{ text: "Bat", correct: true }, { text: "Dog", correct: false }, { text: "Tree", correct: false }] },
-                { question: "Which word starts with 'B'?", answers: [{ text: "Apple", correct: false }, { text: "Ball", correct: true }, { text: "Cat", correct: false }] },
-                { question: "Which word is a color?", answers: [{ text: "Happy", correct: false }, { text: "Run", correct: false }, { text: "Blue", correct: true }] },
-                { question: "Which word means to move fast?", answers: [{ text: "Sleep", correct: false }, { text: "Run", correct: true }, { text: "Sit", correct: false }] },
-                { question: "Which word rhymes with 'dog'?", answers: [{ text: "Log", correct: true }, { text: "Cat", correct: false }, { text: "Hat", correct: false }] },
-                { question: "Which is an adjective?", answers: [{ text: "Happy", correct: true }, { text: "Run", correct: false }, { text: "Jump", correct: false }] },
-                { question: "Which word starts with 'S'?", answers: [{ text: "Apple", correct: false }, { text: "Ball", correct: false }, { text: "Sun", correct: true }] },
-                { question: "How many vowels does 'apple' have?", answers: [{ text: "1", correct: false }, { text: "2", correct: true }, { text: "3", correct: false }] },
-                { question: "Which word is a number?", answers: [{ text: "Three", correct: true }, { text: "Dog", correct: false }, { text: "Blue", correct: false }] },
-                { question: "Which word means the opposite of sad?", answers: [{ text: "Happy", correct: true }, { text: "Tired", correct: false }, { text: "Angry", correct: false }] }
+                {
+                    "question": "Which is a noun?",
+                    "answers": [
+                        { "text": "Run", "correct": false },
+                        { "text": "Dog", "correct": true },
+                        { "text": "Fast", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word starts with 'C'?",
+                    "answers": [
+                        { "text": "Apple", "correct": false },
+                        { "text": "Cat", "correct": true },
+                        { "text": "Dog", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word is spelled correctly?",
+                    "answers": [
+                        { "text": "Kat", "correct": false },
+                        { "text": "Cat", "correct": true },
+                        { "text": "Catt", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word means the opposite of big?",
+                    "answers": [
+                        { "text": "Small", "correct": true },
+                        { "text": "Tall", "correct": false },
+                        { "text": "Short", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which is a verb?",
+                    "answers": [
+                        { "text": "Happy", "correct": false },
+                        { "text": "Run", "correct": true },
+                        { "text": "Tree", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word rhymes with 'cat'?",
+                    "answers": [
+                        { "text": "Bat", "correct": true },
+                        { "text": "Dog", "correct": false },
+                        { "text": "Tree", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word starts with 'B'?",
+                    "answers": [
+                        { "text": "Apple", "correct": false },
+                        { "text": "Ball", "correct": true },
+                        { "text": "Cat", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word is a color?",
+                    "answers": [
+                        { "text": "Happy", "correct": false },
+                        { "text": "Run", "correct": false },
+                        { "text": "Blue", "correct": true }
+                    ]
+                },
+                {
+                    "question": "Which word means to move fast?",
+                    "answers": [
+                        { "text": "Sleep", "correct": false },
+                        { "text": "Run", "correct": true },
+                        { "text": "Sit", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word rhymes with 'dog'?",
+                    "answers": [
+                        { "text": "Log", "correct": true },
+                        { "text": "Cat", "correct": false },
+                        { "text": "Hat", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which is an adjective?",
+                    "answers": [
+                        { "text": "Happy", "correct": true },
+                        { "text": "Run", "correct": false },
+                        { "text": "Jump", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word starts with 'S'?",
+                    "answers": [
+                        { "text": "Apple", "correct": false },
+                        { "text": "Ball", "correct": false },
+                        { "text": "Sun", "correct": true }
+                    ]
+                },
+                {
+                    "question": "How many vowels does 'apple' have?",
+                    "answers": [
+                        { "text": "1", "correct": false },
+                        { "text": "2", "correct": true },
+                        { "text": "3", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word is a number?",
+                    "answers": [
+                        { "text": "Three", "correct": true },
+                        { "text": "Dog", "correct": false },
+                        { "text": "Blue", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word means the opposite of sad?",
+                    "answers": [
+                        { "text": "Happy", "correct": true },
+                        { "text": "Tired", "correct": false },
+                        { "text": "Angry", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "What is the plural of 'cat'?", answers: [{ text: "Cates", correct: false }, { text: "Cats", correct: true }, { text: "Catz", correct: false }] },
-                { question: "What is the plural of 'dog'?", answers: [{ text: "Dogs", correct: true }, { text: "Doges", correct: false }, { text: "Dogz", correct: false }] },
-                { question: "Which sentence is correct?", answers: [{ text: "She go to school", correct: false }, { text: "She goes to school", correct: true }, { text: "She going to school", correct: false }] },
-                { question: "What is the past tense of 'play'?", answers: [{ text: "Playing", correct: false }, { text: "Played", correct: true }, { text: "Will play", correct: false }] },
-                { question: "Which word is spelled correctly?", answers: [{ text: "Recieve", correct: false }, { text: "Receive", correct: true }, { text: "Recive", correct: false }] },
-                { question: "What comes at the end of a sentence?", answers: [{ text: "Period", correct: true }, { text: "Comma", correct: false }, { text: "Colon", correct: false }] },
-                { question: "How many letters in the word 'school'?", answers: [{ text: "5", correct: false }, { text: "6", correct: true }, { text: "7", correct: false }] },
-                { question: "Which is a proper noun?", answers: [{ text: "John", correct: true }, { text: "Boy", correct: false }, { text: "Girl", correct: false }] },
-                { question: "What is the opposite of 'big'?", answers: [{ text: "Small", correct: true }, { text: "Tall", correct: false }, { text: "Long", correct: false }] },
-                { question: "Which word has 2 syllables?", answers: [{ text: "Elephant", correct: false }, { text: "Dog", correct: false }, { text: "Butter", correct: true }] },
-                { question: "What is the plural of 'box'?", answers: [{ text: "Boxs", correct: false }, { text: "Boxes", correct: true }, { text: "Boxez", correct: false }] },
-                { question: "Which sentence makes sense?", answers: [{ text: "The cat is blue", correct: true }, { text: "The cat is running slow", correct: false }, { text: "The cat are sleeping", correct: false }] },
-                { question: "What is the past tense of 'run'?", answers: [{ text: "Running", correct: false }, { text: "Ran", correct: true }, { text: "Will run", correct: false }] },
-                { question: "Which word rhymes with 'book'?", answers: [{ text: "Look", correct: true }, { text: "Cat", correct: false }, { text: "Dog", correct: false }] },
-                { question: "How many syllables in 'banana'?", answers: [{ text: "2", correct: false }, { text: "3", correct: true }, { text: "4", correct: false }] }
+                {
+                    "question": "What is the plural of 'cat'?",
+                    "answers": [
+                        { "text": "Cates", "correct": false },
+                        { "text": "Cats", "correct": true },
+                        { "text": "Catz", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the plural of 'dog'?",
+                    "answers": [
+                        { "text": "Dogs", "correct": true },
+                        { "text": "Doges", "correct": false },
+                        { "text": "Dogz", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which sentence is correct?",
+                    "answers": [
+                        { "text": "She go to school", "correct": false },
+                        { "text": "She goes to school", "correct": true },
+                        { "text": "She going to school", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the past tense of 'play'?",
+                    "answers": [
+                        { "text": "Playing", "correct": false },
+                        { "text": "Played", "correct": true },
+                        { "text": "Will play", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word is spelled correctly?",
+                    "answers": [
+                        { "text": "Recieve", "correct": false },
+                        { "text": "Receive", "correct": true },
+                        { "text": "Recive", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What comes at the end of a sentence?",
+                    "answers": [
+                        { "text": "Period", "correct": true },
+                        { "text": "Comma", "correct": false },
+                        { "text": "Colon", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many letters in the word 'school'?",
+                    "answers": [
+                        { "text": "5", "correct": false },
+                        { "text": "6", "correct": true },
+                        { "text": "7", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which is a proper noun?",
+                    "answers": [
+                        { "text": "John", "correct": true },
+                        { "text": "Boy", "correct": false },
+                        { "text": "Girl", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the opposite of 'big'?",
+                    "answers": [
+                        { "text": "Small", "correct": true },
+                        { "text": "Tall", "correct": false },
+                        { "text": "Long", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word has 2 syllables?",
+                    "answers": [
+                        { "text": "Elephant", "correct": false },
+                        { "text": "Dog", "correct": false },
+                        { "text": "Butter", "correct": true }
+                    ]
+                },
+                {
+                    "question": "What is the plural of 'box'?",
+                    "answers": [
+                        { "text": "Boxs", "correct": false },
+                        { "text": "Boxes", "correct": true },
+                        { "text": "Boxez", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which sentence makes sense?",
+                    "answers": [
+                        { "text": "The cat is blue", "correct": true },
+                        { "text": "The cat is running slow", "correct": false },
+                        { "text": "The cat are sleeping", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the past tense of 'run'?",
+                    "answers": [
+                        { "text": "Running", "correct": false },
+                        { "text": "Ran", "correct": true },
+                        { "text": "Will run", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which word rhymes with 'book'?",
+                    "answers": [
+                        { "text": "Look", "correct": true },
+                        { "text": "Cat", "correct": false },
+                        { "text": "Dog", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many syllables in 'banana'?",
+                    "answers": [
+                        { "text": "2", "correct": false },
+                        { "text": "3", "correct": true },
+                        { "text": "4", "correct": false }
+                    ]
+                }
             ]
         },
         social: {
             1: [
-                { question: "Which country are we in?", answers: [{ text: "Canada", correct: false }, { text: "United States", correct: true }, { text: "Mexico", correct: false }] },
-                { question: "What is the capital of the United States?", answers: [{ text: "New York", correct: false }, { text: "Washington, D.C.", correct: true }, { text: "Los Angeles", correct: false }] },
-                { question: "How many continents are there?", answers: [{ text: "5", correct: false }, { text: "6", correct: false }, { text: "7", correct: true }] },
-                { question: "What color is our flag?", answers: [{ text: "Red, white, and blue", correct: true }, { text: "Red and white", correct: false }, { text: "Blue and white", correct: false }] },
-                { question: "Which ocean is on the west coast?", answers: [{ text: "Atlantic", correct: false }, { text: "Pacific", correct: true }, { text: "Arctic", correct: false }] },
-                { question: "How many states are in the USA?", answers: [{ text: "48", correct: false }, { text: "50", correct: true }, { text: "52", correct: false }] },
-                { question: "What do we celebrate on July 4th?", answers: [{ text: "Thanksgiving", correct: false }, { text: "Independence Day", correct: true }, { text: "Christmas", correct: false }] },
-                { question: "Which country is north of us?", answers: [{ text: "Mexico", correct: false }, { text: "Canada", correct: true }, { text: "Cuba", correct: false }] },
-                { question: "What is the largest state?", answers: [{ text: "Texas", correct: false }, { text: "Alaska", correct: true }, { text: "California", correct: false }] },
-                { question: "How many people in our community?", answers: [{ text: "Depends on location", correct: true }, { text: "1 million", correct: false }, { text: "500 people", correct: false }] },
-                { question: "What are people who live together called?", answers: [{ text: "Community", correct: true }, { text: "City", correct: false }, { text: "Country", correct: false }] },
-                { question: "Which ocean is on the east coast?", answers: [{ text: "Atlantic", correct: true }, { text: "Pacific", correct: false }, { text: "Arctic", correct: false }] },
-                { question: "What is a map?", answers: [{ text: "A drawing of an area", correct: true }, { text: "A type of food", correct: false }, { text: "A book", correct: false }] },
-                { question: "What month is Thanksgiving?", answers: [{ text: "October", correct: false }, { text: "November", correct: true }, { text: "December", correct: false }] },
-                { question: "What do we use to know directions?", answers: [{ text: "Compass", correct: true }, { text: "Clock", correct: false }, { text: "Ruler", correct: false }] }
+                {
+                    "question": "Which country are we in?",
+                    "answers": [
+                        { "text": "Canada", "correct": false },
+                        { "text": "United States", "correct": true },
+                        { "text": "Mexico", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the capital of the United States?",
+                    "answers": [
+                        { "text": "New York", "correct": false },
+                        { "text": "Washington, D.C.", "correct": true },
+                        { "text": "Los Angeles", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many continents are there?",
+                    "answers": [
+                        { "text": "5", "correct": false },
+                        { "text": "6", "correct": false },
+                        { "text": "7", "correct": true }
+                    ]
+                },
+                {
+                    "question": "What color is our flag?",
+                    "answers": [
+                        { "text": "Red, white, and blue", "correct": true },
+                        { "text": "Red and white", "correct": false },
+                        { "text": "Blue and white", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which ocean is on the west coast?",
+                    "answers": [
+                        { "text": "Atlantic", "correct": false },
+                        { "text": "Pacific", "correct": true },
+                        { "text": "Arctic", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many states are in the USA?",
+                    "answers": [
+                        { "text": "48", "correct": false },
+                        { "text": "50", "correct": true },
+                        { "text": "52", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do we celebrate on July 4th?",
+                    "answers": [
+                        { "text": "Thanksgiving", "correct": false },
+                        { "text": "Independence Day", "correct": true },
+                        { "text": "Christmas", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which country is north of us?",
+                    "answers": [
+                        { "text": "Mexico", "correct": false },
+                        { "text": "Canada", "correct": true },
+                        { "text": "Cuba", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the largest state?",
+                    "answers": [
+                        { "text": "Texas", "correct": false },
+                        { "text": "Alaska", "correct": true },
+                        { "text": "California", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many people in our community?",
+                    "answers": [
+                        { "text": "Depends on location", "correct": true },
+                        { "text": "1 million", "correct": false },
+                        { "text": "500 people", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are people who live together called?",
+                    "answers": [
+                        { "text": "Community", "correct": true },
+                        { "text": "City", "correct": false },
+                        { "text": "Country", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Which ocean is on the east coast?",
+                    "answers": [
+                        { "text": "Atlantic", "correct": true },
+                        { "text": "Pacific", "correct": false },
+                        { "text": "Arctic", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a map?",
+                    "answers": [
+                        { "text": "A drawing of an area", "correct": true },
+                        { "text": "A type of food", "correct": false },
+                        { "text": "A book", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What month is Thanksgiving?",
+                    "answers": [
+                        { "text": "October", "correct": false },
+                        { "text": "November", "correct": true },
+                        { "text": "December", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do we use to know directions?",
+                    "answers": [
+                        { "text": "Compass", "correct": true },
+                        { "text": "Clock", "correct": false },
+                        { "text": "Ruler", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "What is a community?", answers: [{ text: "A group of people living together", correct: true }, { text: "Only one person", correct: false }, { text: "A building", correct: false }] },
-                { question: "What are natural resources?", answers: [{ text: "Things found in nature that people use", correct: true }, { text: "Man-made objects", correct: false }, { text: "Tools", correct: false }] },
-                { question: "What does a mayor do?", answers: [{ text: "Leads a city or town", correct: true }, { text: "Teaches school", correct: false }, { text: "Runs a store", correct: false }] },
-                { question: "What is a farm?", answers: [{ text: "A place where crops are grown", correct: true }, { text: "A shop", correct: false }, { text: "An office", correct: false }] },
-                { question: "What do we call people who make laws?", answers: [{ text: "Lawmakers or politicians", correct: true }, { text: "Teachers", correct: false }, { text: "Doctors", correct: false }] },
-                { question: "What is a colony?", answers: [{ text: "A settlement formed by a country overseas", correct: true }, { text: "A city", correct: false }, { text: "A farm", correct: false }] },
-                { question: "Who was the first President?", answers: [{ text: "George Washington", correct: true }, { text: "Thomas Jefferson", correct: false }, { text: "Benjamin Franklin", correct: false }] },
-                { question: "What is a celebration?", answers: [{ text: "A special event or party", correct: true }, { text: "A meal", correct: false }, { text: "A game", correct: false }] },
-                { question: "What are rules in a community for?", answers: [{ text: "To keep people safe and organized", correct: true }, { text: "To make fun", correct: false }, { text: "To confuse people", correct: false }] },
-                { question: "What is an economy?", answers: [{ text: "A system of money and jobs", correct: true }, { text: "A sport", correct: false }, { text: "A type of food", correct: false }] },
-                { question: "What do we call people who work?", answers: [{ text: "Employees", correct: true }, { text: "Players", correct: false }, { text: "Dancers", correct: false }] },
-                { question: "What are goods?", answers: [{ text: "Items that are made and sold", correct: true }, { text: "Services only", correct: false }, { text: "Money", correct: false }] },
-                { question: "What are services?", answers: [{ text: "Work done for others", correct: true }, { text: "Objects only", correct: false }, { text: "Games", correct: false }] },
-                { question: "Who are community helpers?", answers: [{ text: "Police, firefighters, teachers, doctors", correct: true }, { text: "Only teachers", correct: false }, { text: "Only police", correct: false }] },
-                { question: "What is an invention?", answers: [{ text: "Something new that is created", correct: true }, { text: "A story", correct: false }, { text: "A type of food", correct: false }] }
+                {
+                    "question": "What is a community?",
+                    "answers": [
+                        { "text": "A group of people living together", "correct": true },
+                        { "text": "Only one person", "correct": false },
+                        { "text": "A building", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are natural resources?",
+                    "answers": [
+                        { "text": "Things found in nature that people use", "correct": true },
+                        { "text": "Man-made objects", "correct": false },
+                        { "text": "Tools", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What does a mayor do?",
+                    "answers": [
+                        { "text": "Leads a city or town", "correct": true },
+                        { "text": "Teaches school", "correct": false },
+                        { "text": "Runs a store", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a farm?",
+                    "answers": [
+                        { "text": "A place where crops are grown", "correct": true },
+                        { "text": "A shop", "correct": false },
+                        { "text": "An office", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do we call people who make laws?",
+                    "answers": [
+                        { "text": "Lawmakers or politicians", "correct": true },
+                        { "text": "Teachers", "correct": false },
+                        { "text": "Doctors", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a colony?",
+                    "answers": [
+                        { "text": "A settlement formed by a country overseas", "correct": true },
+                        { "text": "A city", "correct": false },
+                        { "text": "A farm", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Who was the first President?",
+                    "answers": [
+                        { "text": "George Washington", "correct": true },
+                        { "text": "Thomas Jefferson", "correct": false },
+                        { "text": "Benjamin Franklin", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a celebration?",
+                    "answers": [
+                        { "text": "A special event or party", "correct": true },
+                        { "text": "A meal", "correct": false },
+                        { "text": "A game", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are rules in a community for?",
+                    "answers": [
+                        { "text": "To keep people safe and organized", "correct": true },
+                        { "text": "To make fun", "correct": false },
+                        { "text": "To confuse people", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is an economy?",
+                    "answers": [
+                        { "text": "A system of money and jobs", "correct": true },
+                        { "text": "A sport", "correct": false },
+                        { "text": "A type of food", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do we call people who work?",
+                    "answers": [
+                        { "text": "Employees", "correct": true },
+                        { "text": "Players", "correct": false },
+                        { "text": "Dancers", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are goods?",
+                    "answers": [
+                        { "text": "Items that are made and sold", "correct": true },
+                        { "text": "Services only", "correct": false },
+                        { "text": "Money", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are services?",
+                    "answers": [
+                        { "text": "Work done for others", "correct": true },
+                        { "text": "Objects only", "correct": false },
+                        { "text": "Games", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Who are community helpers?",
+                    "answers": [
+                        { "text": "Police, firefighters, teachers, doctors", "correct": true },
+                        { "text": "Only teachers", "correct": false },
+                        { "text": "Only police", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is an invention?",
+                    "answers": [
+                        { "text": "Something new that is created", "correct": true },
+                        { "text": "A story", "correct": false },
+                        { "text": "A type of food", "correct": false }
+                    ]
+                }
             ]
         },
         science: {
             1: [
-                { question: "What is the largest planet?", answers: [{ text: "Earth", correct: false }, { text: "Jupiter", correct: true }, { text: "Mars", correct: false }] },
-                { question: "Do all animals have backbones?", answers: [{ text: "Yes", correct: false }, { text: "No", correct: true }, { text: "Maybe", correct: false }] },
-                { question: "What do plants need to grow?", answers: [{ text: "Water, sunlight, and soil", correct: true }, { text: "Only water", correct: false }, { text: "Only sunlight", correct: false }] },
-                { question: "How many legs do insects have?", answers: [{ text: "4", correct: false }, { text: "6", correct: true }, { text: "8", correct: false }] },
-                { question: "What is the closest star to Earth?", answers: [{ text: "Moon", correct: false }, { text: "Sun", correct: true }, { text: "Venus", correct: false }] },
-                { question: "Do fish have lungs?", answers: [{ text: "Yes", correct: false }, { text: "No", correct: true }, { text: "Sometimes", correct: false }] },
-                { question: "What do bees help with?", answers: [{ text: "Pollination", correct: true }, { text: "Swimming", correct: false }, { text: "Flying higher", correct: false }] },
-                { question: "How many legs does a spider have?", answers: [{ text: "6", correct: false }, { text: "8", correct: true }, { text: "10", correct: false }] },
-                { question: "What is the main gas we breathe?", answers: [{ text: "Carbon dioxide", correct: false }, { text: "Oxygen", correct: true }, { text: "Nitrogen", correct: false }] },
-                { question: "Do all birds fly?", answers: [{ text: "Yes", correct: false }, { text: "No", correct: true }, { text: "Only some", correct: false }] },
-                { question: "What is the food chain?", answers: [{ text: "Plants and animals connected by eating", correct: true }, { text: "Only plants", correct: false }, { text: "Only animals", correct: false }] },
-                { question: "How many bones are in the human body?", answers: [{ text: "186", correct: false }, { text: "206", correct: true }, { text: "250", correct: false }] },
-                { question: "What is photosynthesis?", answers: [{ text: "How plants make food using sunlight", correct: true }, { text: "How animals eat", correct: false }, { text: "How we sleep", correct: false }] },
-                { question: "What do animals use for protection?", answers: [{ text: "Skin, fur, scales, shells", correct: true }, { text: "Only hair", correct: false }, { text: "Only skin", correct: false }] },
-                { question: "How do we hear sound?", answers: [{ text: "Through our ears", correct: true }, { text: "Through our eyes", correct: false }, { text: "Through our nose", correct: false }] }
+                {
+                    "question": "What is the largest planet?",
+                    "answers": [
+                        { "text": "Earth", "correct": false },
+                        { "text": "Jupiter", "correct": true },
+                        { "text": "Mars", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Do all animals have backbones?",
+                    "answers": [
+                        { "text": "Yes", "correct": false },
+                        { "text": "No", "correct": true },
+                        { "text": "Maybe", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do plants need to grow?",
+                    "answers": [
+                        { "text": "Water, sunlight, and soil", "correct": true },
+                        { "text": "Only water", "correct": false },
+                        { "text": "Only sunlight", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many legs do insects have?",
+                    "answers": [
+                        { "text": "4", "correct": false },
+                        { "text": "6", "correct": true },
+                        { "text": "8", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the closest star to Earth?",
+                    "answers": [
+                        { "text": "Moon", "correct": false },
+                        { "text": "Sun", "correct": true },
+                        { "text": "Venus", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Do fish have lungs?",
+                    "answers": [
+                        { "text": "Yes", "correct": false },
+                        { "text": "No", "correct": true },
+                        { "text": "Sometimes", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do bees help with?",
+                    "answers": [
+                        { "text": "Pollination", "correct": true },
+                        { "text": "Swimming", "correct": false },
+                        { "text": "Flying higher", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many legs does a spider have?",
+                    "answers": [
+                        { "text": "6", "correct": false },
+                        { "text": "8", "correct": true },
+                        { "text": "10", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the main gas we breathe?",
+                    "answers": [
+                        { "text": "Carbon dioxide", "correct": false },
+                        { "text": "Oxygen", "correct": true },
+                        { "text": "Nitrogen", "correct": false }
+                    ]
+                },
+                {
+                    "question": "Do all birds fly?",
+                    "answers": [
+                        { "text": "Yes", "correct": false },
+                        { "text": "No", "correct": true },
+                        { "text": "Only some", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the food chain?",
+                    "answers": [
+                        { "text": "Plants and animals connected by eating", "correct": true },
+                        { "text": "Only plants", "correct": false },
+                        { "text": "Only animals", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How many bones are in the human body?",
+                    "answers": [
+                        { "text": "186", "correct": false },
+                        { "text": "206", "correct": true },
+                        { "text": "250", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is photosynthesis?",
+                    "answers": [
+                        { "text": "How plants make food using sunlight", "correct": true },
+                        { "text": "How animals eat", "correct": false },
+                        { "text": "How we sleep", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do animals use for protection?",
+                    "answers": [
+                        { "text": "Skin, fur, scales, shells", "correct": true },
+                        { "text": "Only hair", "correct": false },
+                        { "text": "Only skin", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How do we hear sound?",
+                    "answers": [
+                        { "text": "Through our ears", "correct": true },
+                        { "text": "Through our eyes", "correct": false },
+                        { "text": "Through our nose", "correct": false }
+                    ]
+                }
             ],
             2: [
-                { question: "Do all animals have backbones?", answers: [{ text: "Yes", correct: false }, { text: "No", correct: true }] },
-                { question: "What are the three states of matter?", answers: [{ text: "Solid, Liquid, Gas", correct: true }, { text: "Hot, Cold, Warm", correct: false }, { text: "Big, Small, Tiny", correct: false }] },
-                { question: "What is the water cycle?", answers: [{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing only", correct: false }, { text: "Melting only", correct: false }] },
-                { question: "What is an ecosystem?", answers: [{ text: "A community of organisms and their environment", correct: true }, { text: "Only animals", correct: false }, { text: "Only plants", correct: false }] },
-                { question: "What do plants produce?", answers: [{ text: "Oxygen", correct: true }, { text: "Carbon dioxide", correct: false }, { text: "Water", correct: false }] },
-                { question: "How long is one year?", answers: [{ text: "365 days", correct: true }, { text: "360 days", correct: false }, { text: "370 days", correct: false }] },
-                { question: "What causes day and night?", answers: [{ text: "Earth's rotation", correct: true }, { text: "Sun moving", correct: false }, { text: "Moon's position", correct: false }] },
-                { question: "What is weather?", answers: [{ text: "Day-to-day atmospheric conditions", correct: true }, { text: "Long-term conditions", correct: false }, { text: "Moon phases", correct: false }] },
-                { question: "What do organisms need to survive?", answers: [{ text: "Food, water, shelter, air", correct: true }, { text: "Only food", correct: false }, { text: "Only water", correct: false }] },
-                { question: "How do mammals keep warm?", answers: [{ text: "Fur or body heat", correct: true }, { text: "Scales", correct: false }, { text: "Feathers", correct: false }] },
-                { question: "What is a habitat?", answers: [{ text: "A place where an organism lives", correct: true }, { text: "A tool", correct: false }, { text: "A food", correct: false }] },
-                { question: "What are rocks made of?", answers: [{ text: "Minerals", correct: true }, { text: "Soil", correct: false }, { text: "Clay", correct: false }] },
-                { question: "What is soil made of?", answers: [{ text: "Rocks, minerals, and dead organisms", correct: true }, { text: "Only rocks", correct: false }, { text: "Only dirt", correct: false }] },
-                { question: "How do plants reproduce?", answers: [{ text: "Seeds", correct: true }, { text: "Eggs", correct: false }, { text: "Babies", correct: false }] },
-                { question: "What is the main source of energy on Earth?", answers: [{ text: "Sun", correct: true }, { text: "Moon", correct: false }, { text: "Stars", correct: false }] }
+                {
+                    "question": "Do all animals have backbones?",
+                    "answers": [
+                        { "text": "Yes", "correct": false },
+                        { "text": "No", "correct": true }
+                    ]
+                },
+                {
+                    "question": "What are the three states of matter?",
+                    "answers": [
+                        { "text": "Solid, Liquid, Gas", "correct": true },
+                        { "text": "Hot, Cold, Warm", "correct": false },
+                        { "text": "Big, Small, Tiny", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the water cycle?",
+                    "answers": [
+                        { "text": "Evaporation, Condensation, Precipitation", "correct": true },
+                        { "text": "Freezing only", "correct": false },
+                        { "text": "Melting only", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is an ecosystem?",
+                    "answers": [
+                        { "text": "A community of organisms and their environment", "correct": true },
+                        { "text": "Only animals", "correct": false },
+                        { "text": "Only plants", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do plants produce?",
+                    "answers": [
+                        { "text": "Oxygen", "correct": true },
+                        { "text": "Carbon dioxide", "correct": false },
+                        { "text": "Water", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How long is one year?",
+                    "answers": [
+                        { "text": "365 days", "correct": true },
+                        { "text": "360 days", "correct": false },
+                        { "text": "370 days", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What causes day and night?",
+                    "answers": [
+                        { "text": "Earth's rotation", "correct": true },
+                        { "text": "Sun moving", "correct": false },
+                        { "text": "Moon's position", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is weather?",
+                    "answers": [
+                        { "text": "Day-to-day atmospheric conditions", "correct": true },
+                        { "text": "Long-term conditions", "correct": false },
+                        { "text": "Moon phases", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What do organisms need to survive?",
+                    "answers": [
+                        { "text": "Food, water, shelter, air", "correct": true },
+                        { "text": "Only food", "correct": false },
+                        { "text": "Only water", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How do mammals keep warm?",
+                    "answers": [
+                        { "text": "Fur or body heat", "correct": true },
+                        { "text": "Scales", "correct": false },
+                        { "text": "Feathers", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is a habitat?",
+                    "answers": [
+                        { "text": "A place where an organism lives", "correct": true },
+                        { "text": "A tool", "correct": false },
+                        { "text": "A food", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What are rocks made of?",
+                    "answers": [
+                        { "text": "Minerals", "correct": true },
+                        { "text": "Soil", "correct": false },
+                        { "text": "Clay", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is soil made of?",
+                    "answers": [
+                        { "text": "Rocks, minerals, and dead organisms", "correct": true },
+                        { "text": "Only rocks", "correct": false },
+                        { "text": "Only dirt", "correct": false }
+                    ]
+                },
+                {
+                    "question": "How do plants reproduce?",
+                    "answers": [
+                        { "text": "Seeds", "correct": true },
+                        { "text": "Eggs", "correct": false },
+                        { "text": "Babies", "correct": false }
+                    ]
+                },
+                {
+                    "question": "What is the main source of energy on Earth?",
+                    "answers": [
+                        { "text": "Sun", "correct": true },
+                        { "text": "Moon", "correct": false },
+                        { "text": "Stars", "correct": false }
+                    ]
+                }
             ]
         }
     },
