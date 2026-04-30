@@ -68,25 +68,103 @@ const grade4Questions = {
             ]
         ],
         3: [
-            { question: "What is 567 + 234 + 189?", answers: [{ text: "990", correct: true }, { text: "991", correct: false }, { text: "989", correct: false }] },
-            { question: "What is 1000 - 456 - 234?", answers: [{ text: "310", correct: true }, { text: "311", correct: false }, { text: "309", correct: false }] },
-            { question: "What is 15 × 24?", answers: [{ text: "360", correct: true }, { text: "359", correct: false }, { text: "361", correct: false }] },
-            { question: "What is 5/6 - 1/3?", answers: [{ text: "1/2", correct: true }, { text: "1/3", correct: false }, { text: "2/3", correct: false }] },
-            { question: "What is 0.5 + 0.25 + 0.1?", answers: [{ text: "0.85", correct: true }, { text: "0.86", correct: false }, { text: "0.84", correct: false }] }
+            [
+                { question: "What is 567 + 234 + 189?", answers: [{ text: "990", correct: true }, { text: "991", correct: false }, { text: "989", correct: false }] },
+                { question: "What is 1000 - 456 - 234?", answers: [{ text: "310", correct: true }, { text: "311", correct: false }, { text: "309", correct: false }] },
+                { question: "What is 15 × 24?", answers: [{ text: "360", correct: true }, { text: "359", correct: false }, { text: "361", correct: false }] },
+                { question: "What is 5/6 - 1/3?", answers: [{ text: "1/2", correct: true }, { text: "1/3", correct: false }, { text: "2/3", correct: false }] },
+                { question: "What is 0.5 + 0.25 + 0.1?", answers: [{ text: "0.85", correct: true }, { text: "0.86", correct: false }, { text: "0.84", correct: false }] },
+
+                { question: "What is 345 + 123 + 222?", answers: [{ text: "690", correct: true }, { text: "689", correct: false }, { text: "691", correct: false }] },
+                { question: "What is 900 - 300 - 250?", answers: [{ text: "350", correct: true }, { text: "351", correct: false }, { text: "349", correct: false }] },
+                { question: "What is 18 × 12?", answers: [{ text: "216", correct: true }, { text: "215", correct: false }, { text: "217", correct: false }] },
+                { question: "What is 7/8 - 3/4?", answers: [{ text: "1/8", correct: true }, { text: "1/4", correct: false }, { text: "1/2", correct: false }] },
+                { question: "What is 0.2 + 0.3 + 0.4?", answers: [{ text: "0.9", correct: true }, { text: "1.0", correct: false }, { text: "0.8", correct: false }] },
+
+                { question: "What is 678 + 111 + 211?", answers: [{ text: "1000", correct: true }, { text: "999", correct: false }, { text: "1001", correct: false }] },
+                { question: "What is 800 - 200 - 150?", answers: [{ text: "450", correct: true }, { text: "449", correct: false }, { text: "451", correct: false }] },
+                { question: "What is 14 × 25?", answers: [{ text: "350", correct: true }, { text: "349", correct: false }, { text: "351", correct: false }] },
+                { question: "What is 3/4 - 1/4?", answers: [{ text: "1/2", correct: true }, { text: "1/4", correct: false }, { text: "3/4", correct: false }] },
+                { question: "What is 0.6 + 0.2 + 0.1?", answers: [{ text: "0.9", correct: true }, { text: "0.8", correct: false }, { text: "1.0", correct: false }] },
+
+                { question: "What is 400 + 350 + 250?", answers: [{ text: "1000", correct: true }, { text: "999", correct: false }, { text: "1001", correct: false }] },
+                { question: "What is 700 - 100 - 275?", answers: [{ text: "325", correct: true }, { text: "326", correct: false }, { text: "324", correct: false }] },
+                { question: "What is 16 × 15?", answers: [{ text: "240", correct: true }, { text: "239", correct: false }, { text: "241", correct: false }] },
+                { question: "What is 2/3 - 1/6?", answers: [{ text: "1/2", correct: true }, { text: "1/3", correct: false }, { text: "2/3", correct: false }] },
+                { question: "What is 0.7 + 0.1 + 0.05?", answers: [{ text: "0.85", correct: true }, { text: "0.86", correct: false }, { text: "0.84", correct: false }] },
+
+                { question: "What is 555 + 222 + 123?", answers: [{ text: "900", correct: true }, { text: "899", correct: false }, { text: "901", correct: false }] },
+                { question: "What is 950 - 300 - 400?", answers: [{ text: "250", correct: true }, { text: "249", correct: false }, { text: "251", correct: false }] },
+                { question: "What is 20 × 18?", answers: [{ text: "360", correct: true }, { text: "359", correct: false }, { text: "361", correct: false }] },
+                { question: "What is 5/8 - 1/8?", answers: [{ text: "1/2", correct: true }, { text: "4/8", correct: false }, { text: "3/8", correct: false }] },
+                { question: "What is 0.9 + 0.05 + 0.05?", answers: [{ text: "1.0", correct: true }, { text: "0.95", correct: false }, { text: "1.05", correct: false }] }
+            ]
         ],
         4: [
-            { question: "If a book costs $12.50 and you buy 3, how much do you spend?", answers: [{ text: "$37.50", correct: true }, { text: "$36.50", correct: false }, { text: "$38.50", correct: false }] },
-            { question: "What is the area of a rectangle with length 8 and width 6?", answers: [{ text: "48", correct: true }, { text: "28", correct: false }, { text: "56", correct: false }] },
-            { question: "What is 7/8 × 4/5?", answers: [{ text: "7/10", correct: true }, { text: "3/4", correct: false }, { text: "4/5", correct: false }] },
-            { question: "What is 144 ÷ 12?", answers: [{ text: "12", correct: true }, { text: "11", correct: false }, { text: "13", correct: false }] },
-            { question: "If you have 2.5 liters of water and add 1.75 liters, how much total?", answers: [{ text: "4.25", correct: true }, { text: "4.24", correct: false }, { text: "4.26", correct: false }] }
+            [
+                { question: "If a book costs $12.50 and you buy 3, how much do you spend?", answers: [{ text: "$37.50", correct: true }, { text: "$36.50", correct: false }, { text: "$38.50", correct: false }] },
+                { question: "What is the area of a rectangle with length 8 and width 6?", answers: [{ text: "48", correct: true }, { text: "28", correct: false }, { text: "56", correct: false }] },
+                { question: "What is 7/8 × 4/5?", answers: [{ text: "7/10", correct: true }, { text: "3/4", correct: false }, { text: "4/5", correct: false }] },
+                { question: "What is 144 ÷ 12?", answers: [{ text: "12", correct: true }, { text: "11", correct: false }, { text: "13", correct: false }] },
+                { question: "If you have 2.5 liters of water and add 1.75 liters, how much total?", answers: [{ text: "4.25", correct: true }, { text: "4.24", correct: false }, { text: "4.26", correct: false }] },
+
+                { question: "If a pen costs $2.25 and you buy 4, how much do you spend?", answers: [{ text: "$9.00", correct: true }, { text: "$8.75", correct: false }, { text: "$9.25", correct: false }] },
+                { question: "What is the area of a rectangle with length 10 and width 5?", answers: [{ text: "50", correct: true }, { text: "45", correct: false }, { text: "55", correct: false }] },
+                { question: "What is 3/5 × 2/3?", answers: [{ text: "2/5", correct: true }, { text: "1/2", correct: false }, { text: "3/5", correct: false }] },
+                { question: "What is 96 ÷ 8?", answers: [{ text: "12", correct: true }, { text: "11", correct: false }, { text: "13", correct: false }] },
+                { question: "If you have 1.5 liters and add 2.25 liters, what is the total?", answers: [{ text: "3.75", correct: true }, { text: "3.5", correct: false }, { text: "4.0", correct: false }] },
+
+                { question: "If a notebook costs $5.75 and you buy 2, how much do you spend?", answers: [{ text: "$11.50", correct: true }, { text: "$10.50", correct: false }, { text: "$12.50", correct: false }] },
+                { question: "What is the area of a rectangle with length 7 and width 9?", answers: [{ text: "63", correct: true }, { text: "56", correct: false }, { text: "72", correct: false }] },
+                { question: "What is 5/6 × 1/2?", answers: [{ text: "5/12", correct: true }, { text: "1/2", correct: false }, { text: "5/6", correct: false }] },
+                { question: "What is 81 ÷ 9?", answers: [{ text: "9", correct: true }, { text: "8", correct: false }, { text: "10", correct: false }] },
+                { question: "If you have 3.2 liters and add 1.3 liters, what is the total?", answers: [{ text: "4.5", correct: true }, { text: "4.4", correct: false }, { text: "4.6", correct: false }] },
+
+                { question: "If a toy costs $7.20 and you buy 5, how much do you spend?", answers: [{ text: "$36.00", correct: true }, { text: "$35.00", correct: false }, { text: "$37.00", correct: false }] },
+                { question: "What is the area of a rectangle with length 12 and width 4?", answers: [{ text: "48", correct: true }, { text: "44", correct: false }, { text: "52", correct: false }] },
+                { question: "What is 4/9 × 3/4?", answers: [{ text: "1/3", correct: true }, { text: "3/4", correct: false }, { text: "4/9", correct: false }] },
+                { question: "What is 120 ÷ 10?", answers: [{ text: "12", correct: true }, { text: "10", correct: false }, { text: "14", correct: false }] },
+                { question: "If you have 0.75 liters and add 0.25 liters, what is the total?", answers: [{ text: "1.0", correct: true }, { text: "0.9", correct: false }, { text: "1.1", correct: false }] },
+
+                { question: "If a snack costs $1.50 and you buy 6, how much do you spend?", answers: [{ text: "$9.00", correct: true }, { text: "$8.00", correct: false }, { text: "$10.00", correct: false }] },
+                { question: "What is the area of a rectangle with length 9 and width 3?", answers: [{ text: "27", correct: true }, { text: "24", correct: false }, { text: "30", correct: false }] },
+                { question: "What is 2/7 × 7/8?", answers: [{ text: "1/4", correct: true }, { text: "2/8", correct: false }, { text: "7/2", correct: false }] },
+                { question: "What is 64 ÷ 8?", answers: [{ text: "8", correct: true }, { text: "7", correct: false }, { text: "9", correct: false }] },
+                { question: "If you have 4.5 liters and add 0.5 liters, what is the total?", answers: [{ text: "5.0", correct: true }, { text: "4.9", correct: false }, { text: "5.1", correct: false }] }
+            ]
         ],
         5: [
-            { question: "What is 35% of 240?", answers: [{ text: "84", correct: true }, { text: "83", correct: false }, { text: "85", correct: false }] },
-            { question: "What is the perimeter of a square with side 7?", answers: [{ text: "28", correct: true }, { text: "27", correct: false }, { text: "29", correct: false }] },
-            { question: "If 3/4 of a number is 36, what is the number?", answers: [{ text: "48", correct: true }, { text: "47", correct: false }, { text: "49", correct: false }] },
-            { question: "What is 2.5 × 4.2?", answers: [{ text: "10.5", correct: true }, { text: "10.4", correct: false }, { text: "10.6", correct: false }] },
-            { question: "If a ruler is 12 inches and you need 5 rulers, how many inches total?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] }
+            [
+                { question: "What is 35% of 240?", answers: [{ text: "84", correct: true }, { text: "83", correct: false }, { text: "85", correct: false }] },
+                { question: "What is the perimeter of a square with side 7?", answers: [{ text: "28", correct: true }, { text: "27", correct: false }, { text: "29", correct: false }] },
+                { question: "If 3/4 of a number is 36, what is the number?", answers: [{ text: "48", correct: true }, { text: "47", correct: false }, { text: "49", correct: false }] },
+                { question: "What is 2.5 × 4.2?", answers: [{ text: "10.5", correct: true }, { text: "10.4", correct: false }, { text: "10.6", correct: false }] },
+                { question: "If a ruler is 12 inches and you need 5 rulers, how many inches total?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+
+                { question: "What is 25% of 200?", answers: [{ text: "50", correct: true }, { text: "49", correct: false }, { text: "51", correct: false }] },
+                { question: "What is the perimeter of a square with side 9?", answers: [{ text: "36", correct: true }, { text: "35", correct: false }, { text: "37", correct: false }] },
+                { question: "If 1/2 of a number is 30, what is the number?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+                { question: "What is 3.5 × 2?", answers: [{ text: "7", correct: true }, { text: "6.5", correct: false }, { text: "7.5", correct: false }] },
+                { question: "If a rope is 15 inches and you need 4 ropes, how many inches total?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+
+                { question: "What is 10% of 450?", answers: [{ text: "45", correct: true }, { text: "44", correct: false }, { text: "46", correct: false }] },
+                { question: "What is the perimeter of a square with side 5?", answers: [{ text: "20", correct: true }, { text: "19", correct: false }, { text: "21", correct: false }] },
+                { question: "If 2/3 of a number is 40, what is the number?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+                { question: "What is 1.2 × 5?", answers: [{ text: "6", correct: true }, { text: "5.5", correct: false }, { text: "6.5", correct: false }] },
+                { question: "If a board is 8 inches and you need 7 boards, how many inches total?", answers: [{ text: "56", correct: true }, { text: "55", correct: false }, { text: "57", correct: false }] },
+
+                { question: "What is 50% of 120?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+                { question: "What is the perimeter of a square with side 11?", answers: [{ text: "44", correct: true }, { text: "43", correct: false }, { text: "45", correct: false }] },
+                { question: "If 5/6 of a number is 50, what is the number?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+                { question: "What is 4.5 × 2?", answers: [{ text: "9", correct: true }, { text: "8.5", correct: false }, { text: "9.5", correct: false }] },
+                { question: "If a stick is 9 inches and you need 6 sticks, how many inches total?", answers: [{ text: "54", correct: true }, { text: "53", correct: false }, { text: "55", correct: false }] },
+
+                { question: "What is 20% of 300?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+                { question: "What is the perimeter of a square with side 6?", answers: [{ text: "24", correct: true }, { text: "23", correct: false }, { text: "25", correct: false }] },
+                { question: "If 4/5 of a number is 48, what is the number?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
+                { question: "What is 6.3 × 2?", answers: [{ text: "12.6", correct: true }, { text: "12.5", correct: false }, { text: "12.7", correct: false }] },
+                { question: "If a cable is 20 inches and you need 3 cables, how many inches total?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] }
+            ]
         ]
     },
     english: {
