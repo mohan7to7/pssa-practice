@@ -2,11 +2,37 @@
 const grade4Questions = {
     math: {
         1: [
-            { question: "What is 234 + 156?", answers: [{ text: "389", correct: false }, { text: "390", correct: true }, { text: "391", correct: false }] },
-            { question: "What is 500 - 234?", answers: [{ text: "265", correct: false }, { text: "266", correct: true }, { text: "267", correct: false }] },
-            { question: "What is 12 × 12?", answers: [{ text: "143", correct: false }, { text: "144", correct: true }, { text: "145", correct: false }] },
-            { question: "What is 96 ÷ 8?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
-            { question: "What is 345 + 455?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] }
+            [
+                { question: "What is 234 + 156?", answers: [{ text: "389", correct: false }, { text: "390", correct: true }, { text: "391", correct: false }] },
+                { question: "What is 500 - 234?", answers: [{ text: "265", correct: false }, { text: "266", correct: true }, { text: "267", correct: false }] },
+                { question: "What is 12 × 12?", answers: [{ text: "143", correct: false }, { text: "144", correct: true }, { text: "145", correct: false }] },
+                { question: "What is 96 ÷ 8?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
+                { question: "What is 345 + 455?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
+
+                { question: "What is 678 + 122?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
+                { question: "What is 900 - 450?", answers: [{ text: "449", correct: false }, { text: "450", correct: true }, { text: "451", correct: false }] },
+                { question: "What is 15 × 10?", answers: [{ text: "140", correct: false }, { text: "150", correct: true }, { text: "160", correct: false }] },
+                { question: "What is 81 ÷ 9?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
+                { question: "What is 432 + 368?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
+
+                { question: "What is 700 - 399?", answers: [{ text: "300", correct: false }, { text: "301", correct: true }, { text: "302", correct: false }] },
+                { question: "What is 14 × 11?", answers: [{ text: "153", correct: false }, { text: "154", correct: true }, { text: "155", correct: false }] },
+                { question: "What is 100 ÷ 4?", answers: [{ text: "24", correct: false }, { text: "25", correct: true }, { text: "26", correct: false }] },
+                { question: "What is 567 + 233?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
+                { question: "What is 850 - 275?", answers: [{ text: "574", correct: false }, { text: "575", correct: true }, { text: "576", correct: false }] },
+
+                { question: "What is 13 × 12?", answers: [{ text: "155", correct: false }, { text: "156", correct: true }, { text: "157", correct: false }] },
+                { question: "What is 144 ÷ 12?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
+                { question: "What is 299 + 501?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
+                { question: "What is 1000 - 650?", answers: [{ text: "349", correct: false }, { text: "350", correct: true }, { text: "351", correct: false }] },
+                { question: "What is 16 × 8?", answers: [{ text: "127", correct: false }, { text: "128", correct: true }, { text: "129", correct: false }] },
+
+                { question: "What is 72 ÷ 6?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
+                { question: "What is 615 + 185?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
+                { question: "What is 920 - 120?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
+                { question: "What is 11 × 11?", answers: [{ text: "120", correct: false }, { text: "121", correct: true }, { text: "122", correct: false }] },
+                { question: "What is 63 ÷ 7?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] }
+            ]
         ],
         2: [
             { question: "What is 1/2 + 1/4?", answers: [{ text: "1/2", correct: false }, { text: "3/4", correct: true }, { text: "1", correct: false }] },
