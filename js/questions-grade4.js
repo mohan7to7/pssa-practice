@@ -35,11 +35,37 @@ const grade4Questions = {
             ]
         ],
         2: [
-            { question: "What is 1/2 + 1/4?", answers: [{ text: "1/2", correct: false }, { text: "3/4", correct: true }, { text: "1", correct: false }] },
-            { question: "What is 3/4 - 1/2?", answers: [{ text: "1/4", correct: true }, { text: "1/2", correct: false }, { text: "1", correct: false }] },
-            { question: "What is 2/3 × 3/4?", answers: [{ text: "1/2", correct: true }, { text: "1", correct: false }, { text: "2/7", correct: false }] },
-            { question: "What is 1/2 ÷ 1/4?", answers: [{ text: "2", correct: true }, { text: "1/2", correct: false }, { text: "4", correct: false }] },
-            { question: "What is the decimal for 1/4?", answers: [{ text: "0.25", correct: true }, { text: "0.5", correct: false }, { text: "0.75", correct: false }] }
+            [
+                { question: "What is 1/2 + 1/4?", answers: [{ text: "1/2", correct: false }, { text: "3/4", correct: true }, { text: "1", correct: false }] },
+                { question: "What is 3/4 - 1/2?", answers: [{ text: "1/4", correct: true }, { text: "1/2", correct: false }, { text: "1", correct: false }] },
+                { question: "What is 2/3 × 3/4?", answers: [{ text: "1/2", correct: true }, { text: "1", correct: false }, { text: "2/7", correct: false }] },
+                { question: "What is 1/2 ÷ 1/4?", answers: [{ text: "2", correct: true }, { text: "1/2", correct: false }, { text: "4", correct: false }] },
+                { question: "What is the decimal for 1/4?", answers: [{ text: "0.25", correct: true }, { text: "0.5", correct: false }, { text: "0.75", correct: false }] },
+
+                { question: "What is 1/3 + 1/6?", answers: [{ text: "1/2", correct: true }, { text: "2/3", correct: false }, { text: "1/3", correct: false }] },
+                { question: "What is 5/6 - 1/3?", answers: [{ text: "1/2", correct: true }, { text: "2/3", correct: false }, { text: "1/3", correct: false }] },
+                { question: "What is 3/5 × 2/3?", answers: [{ text: "2/5", correct: true }, { text: "1/2", correct: false }, { text: "3/8", correct: false }] },
+                { question: "What is 3/4 ÷ 1/2?", answers: [{ text: "3/2", correct: true }, { text: "1/2", correct: false }, { text: "2", correct: false }] },
+                { question: "What is the decimal for 1/2?", answers: [{ text: "0.5", correct: true }, { text: "0.25", correct: false }, { text: "0.75", correct: false }] },
+
+                { question: "What is 2/5 + 1/5?", answers: [{ text: "3/5", correct: true }, { text: "2/10", correct: false }, { text: "4/5", correct: false }] },
+                { question: "What is 7/8 - 3/8?", answers: [{ text: "1/2", correct: true }, { text: "4/8", correct: false }, { text: "3/8", correct: false }] },
+                { question: "What is 4/7 × 7/8?", answers: [{ text: "1/2", correct: true }, { text: "4/8", correct: false }, { text: "7/4", correct: false }] },
+                { question: "What is 5/6 ÷ 5/6?", answers: [{ text: "1", correct: true }, { text: "0", correct: false }, { text: "5/6", correct: false }] },
+                { question: "What is the decimal for 3/4?", answers: [{ text: "0.75", correct: true }, { text: "0.5", correct: false }, { text: "0.25", correct: false }] },
+
+                { question: "What is 1/8 + 3/8?", answers: [{ text: "1/2", correct: true }, { text: "4/16", correct: false }, { text: "3/8", correct: false }] },
+                { question: "What is 9/10 - 4/10?", answers: [{ text: "1/2", correct: true }, { text: "5/10", correct: false }, { text: "4/10", correct: false }] },
+                { question: "What is 2/9 × 3/4?", answers: [{ text: "1/6", correct: true }, { text: "2/13", correct: false }, { text: "3/8", correct: false }] },
+                { question: "What is 6/7 ÷ 3/7?", answers: [{ text: "2", correct: true }, { text: "3", correct: false }, { text: "1/2", correct: false }] },
+                { question: "What is the decimal for 1/5?", answers: [{ text: "0.2", correct: true }, { text: "0.25", correct: false }, { text: "0.1", correct: false }] },
+
+                { question: "What is 3/10 + 2/10?", answers: [{ text: "1/2", correct: true }, { text: "5/10", correct: false }, { text: "3/10", correct: false }] },
+                { question: "What is 4/5 - 2/5?", answers: [{ text: "2/5", correct: true }, { text: "1/5", correct: false }, { text: "3/5", correct: false }] },
+                { question: "What is 5/9 × 3/5?", answers: [{ text: "1/3", correct: true }, { text: "3/9", correct: false }, { text: "5/15", correct: false }] },
+                { question: "What is 8/9 ÷ 4/9?", answers: [{ text: "2", correct: true }, { text: "4", correct: false }, { text: "1/2", correct: false }] },
+                { question: "What is the decimal for 1/10?", answers: [{ text: "0.1", correct: true }, { text: "0.01", correct: false }, { text: "1.0", correct: false }] }
+            ]
         ],
         3: [
             { question: "What is 567 + 234 + 189?", answers: [{ text: "990", correct: true }, { text: "991", correct: false }, { text: "989", correct: false }] },
