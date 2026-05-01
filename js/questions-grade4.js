@@ -266,14 +266,62 @@ const grade4Questions = {
             { question: "What are transitional words?", answers: [{ text: "Words that connect ideas between sentences", correct: true }, { text: "Words that start sentences", correct: false }, { text: "Words that end paragraphs", correct: false }] },
             { question: "What is a dependent clause?", answers: [{ text: "A clause that cannot stand alone as a sentence", correct: true }, { text: "A main clause", correct: false }, { text: "A long clause", correct: false }] },
             { question: "What does 'inference' mean in reading?", answers: [{ text: "Making a conclusion based on clues in the text", correct: true }, { text: "Reading every word slowly", correct: false }, { text: "Quoting the text", correct: false }] },
-            { question: "What is an antonym?", answers: [{ text: "A word with the opposite meaning", correct: true }, { text: "A word with the same meaning", correct: false }, { text: "A word that rhymes", correct: false }] }
+            { question: "What is an antonym?", answers: [{ text: "A word with the opposite meaning", correct: true }, { text: "A word with the same meaning", correct: false }, { text: "A word that rhymes", correct: false }] },
+
+            { question: "What is a synonym?", answers: [{ text: "A word with the same meaning", correct: true }, { text: "A word with the opposite meaning", correct: false }, { text: "A word that rhymes", correct: false }] },
+            { question: "What is context clue?", answers: [{ text: "Hints in the text to understand meaning", correct: true }, { text: "The title of a story", correct: false }, { text: "A definition list", correct: false }] },
+            { question: "What is the main idea?", answers: [{ text: "The most important point of a text", correct: true }, { text: "A small detail", correct: false }, { text: "The ending", correct: false }] },
+            { question: "What is a supporting detail?", answers: [{ text: "Information that explains the main idea", correct: true }, { text: "The title", correct: false }, { text: "The first word", correct: false }] },
+            { question: "What is a summary?", answers: [{ text: "A short version of the text", correct: true }, { text: "A long explanation", correct: false }, { text: "A title", correct: false }] },
+
+            { question: "What is a fact?", answers: [{ text: "Something that can be proven true", correct: true }, { text: "A personal belief", correct: false }, { text: "A guess", correct: false }] },
+            { question: "What is an opinion?", answers: [{ text: "What someone thinks or feels", correct: true }, { text: "A proven fact", correct: false }, { text: "A definition", correct: false }] },
+            { question: "What is cause and effect?", answers: [{ text: "Why something happens and what happens", correct: true }, { text: "A type of sentence", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is compare and contrast?", answers: [{ text: "Finding similarities and differences", correct: true }, { text: "Telling a story", correct: false }, { text: "Giving directions", correct: false }] },
+            { question: "What is sequence?", answers: [{ text: "The order of events", correct: true }, { text: "A single idea", correct: false }, { text: "A title", correct: false }] },
+
+            { question: "Which is an antonym for 'hot'?", answers: [{ text: "cold", correct: true }, { text: "warm", correct: false }, { text: "heat", correct: false }] },
+            { question: "Which is a synonym for 'happy'?", answers: [{ text: "joyful", correct: true }, { text: "sad", correct: false }, { text: "angry", correct: false }] },
+            { question: "What is a prefix?", answers: [{ text: "A word part added to the beginning", correct: true }, { text: "A word part added to the end", correct: false }, { text: "A full sentence", correct: false }] },
+            { question: "What is a suffix?", answers: [{ text: "A word part added to the end", correct: true }, { text: "A word part added to the beginning", correct: false }, { text: "A sentence", correct: false }] },
+            { question: "What is root word?", answers: [{ text: "The base word without prefixes or suffixes", correct: true }, { text: "A long word", correct: false }, { text: "A sentence", correct: false }] },
+
+            { question: "What is a question word?", answers: [{ text: "Words like who, what, where, when, why", correct: true }, { text: "Words like run and jump", correct: false }, { text: "Words like big and small", correct: false }] },
+            { question: "What is a heading?", answers: [{ text: "A title of a section", correct: true }, { text: "A sentence in the middle", correct: false }, { text: "A detail", correct: false }] },
+            { question: "What is a caption?", answers: [{ text: "Text that explains a picture", correct: true }, { text: "A title", correct: false }, { text: "A paragraph", correct: false }] },
+            { question: "What is a glossary?", answers: [{ text: "A list of word meanings", correct: true }, { text: "A story", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is a table of contents?", answers: [{ text: "A list of sections in a book", correct: true }, { text: "A story summary", correct: false }, { text: "A picture", correct: false }] }
         ],
         5: [
             { question: "What is the difference between 'to', 'too', and 'two'?", answers: [{ text: "'To' = direction, 'too' = also/excessive, 'two' = number 2", correct: true }, { text: "They all mean the same thing", correct: false }, { text: "They are interchangeable", correct: false }] },
             { question: "What does 'cite' mean in writing?", answers: [{ text: "To quote or reference a source", correct: true }, { text: "To write about", correct: false }, { text: "To summarize", correct: false }] },
             { question: "What is a primary source?", answers: [{ text: "Original material created during an event", correct: true }, { text: "A book about an event", correct: false }, { text: "A summary of an event", correct: false }] },
             { question: "What is paraphrasing?", answers: [{ text: "Restating information in your own words", correct: true }, { text: "Copying word for word", correct: false }, { text: "Quoting a source", correct: false }] },
-            { question: "What is a counterargument?", answers: [{ text: "An opposing point of view to your argument", correct: true }, { text: "Supporting your main idea", correct: false }, { text: "Introducing a new topic", correct: false }] }
+            { question: "What is a counterargument?", answers: [{ text: "An opposing point of view to your argument", correct: true }, { text: "Supporting your main idea", correct: false }, { text: "Introducing a new topic", correct: false }] },
+
+            { question: "What is plagiarism?", answers: [{ text: "Using someone else's work without credit", correct: true }, { text: "Writing your own ideas", correct: false }, { text: "Summarizing a text", correct: false }] },
+            { question: "What is a secondary source?", answers: [{ text: "A source that explains or analyzes a primary source", correct: true }, { text: "An original document", correct: false }, { text: "A personal story", correct: false }] },
+            { question: "What is quoting?", answers: [{ text: "Using the exact words from a source", correct: true }, { text: "Changing the words", correct: false }, { text: "Summarizing briefly", correct: false }] },
+            { question: "What is summarizing?", answers: [{ text: "Giving the main points in a shorter form", correct: true }, { text: "Copying everything", correct: false }, { text: "Adding new ideas", correct: false }] },
+            { question: "What is evidence in writing?", answers: [{ text: "Facts or examples that support an idea", correct: true }, { text: "A title", correct: false }, { text: "A question", correct: false }] },
+
+            { question: "What is a claim?", answers: [{ text: "A statement you try to prove", correct: true }, { text: "A question", correct: false }, { text: "A summary", correct: false }] },
+            { question: "What is an argument?", answers: [{ text: "A reasoned opinion supported by evidence", correct: true }, { text: "A fight", correct: false }, { text: "A question", correct: false }] },
+            { question: "What is a source?", answers: [{ text: "Where information comes from", correct: true }, { text: "A question", correct: false }, { text: "A sentence", correct: false }] },
+            { question: "What is a bibliography?", answers: [{ text: "A list of sources used", correct: true }, { text: "A summary", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is research?", answers: [{ text: "Finding information about a topic", correct: true }, { text: "Guessing answers", correct: false }, { text: "Writing a story", correct: false }] },
+
+            { question: "What is editing for grammar?", answers: [{ text: "Checking for correct language use", correct: true }, { text: "Adding new ideas", correct: false }, { text: "Deleting everything", correct: false }] },
+            { question: "What is revising for clarity?", answers: [{ text: "Making ideas easier to understand", correct: true }, { text: "Adding mistakes", correct: false }, { text: "Skipping parts", correct: false }] },
+            { question: "What is a draft?", answers: [{ text: "A version of writing", correct: true }, { text: "A final copy", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is proofreading?", answers: [{ text: "Checking for spelling and punctuation errors", correct: true }, { text: "Writing a new story", correct: false }, { text: "Adding details", correct: false }] },
+            { question: "What is a citation?", answers: [{ text: "Giving credit to a source", correct: true }, { text: "Copying text", correct: false }, { text: "Writing a title", correct: false }] },
+
+            { question: "Which is an example of paraphrasing?", answers: [{ text: "Restating a sentence in your own words", correct: true }, { text: "Copying the sentence exactly", correct: false }, { text: "Ignoring the sentence", correct: false }] },
+            { question: "Which is a primary source?", answers: [{ text: "A diary entry", correct: true }, { text: "A textbook", correct: false }, { text: "An article summary", correct: false }] },
+            { question: "Which is a secondary source?", answers: [{ text: "A history book", correct: true }, { text: "A letter", correct: false }, { text: "A speech", correct: false }] },
+            { question: "Which shows correct use of 'too'?", answers: [{ text: "I want to go too", correct: true }, { text: "I want too go", correct: false }, { text: "I want go too", correct: false }] },
+            { question: "Which shows correct use of 'two'?", answers: [{ text: "I have two apples", correct: true }, { text: "I have too apples", correct: false }, { text: "I have to apples", correct: false }] }
         ]
     },
     social: {
