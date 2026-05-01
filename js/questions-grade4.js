@@ -320,35 +320,155 @@ const grade4Questions = {
             { question: "What are checks and balances?", answers: [{ text: "A system that keeps one branch from having too much power", correct: true }, { text: "Banking concepts", correct: false }, { text: "A military system", correct: false }] },
             { question: "What are the three branches of government?", answers: [{ text: "Legislative, Executive, Judicial", correct: true }, { text: "Army, Navy, Air Force", correct: false }, { text: "State, Federal, Local", correct: false }] },
             { question: "What does the legislative branch do?", answers: [{ text: "Makes laws", correct: true }, { text: "Enforces laws", correct: false }, { text: "Interprets laws", correct: false }] },
-            { question: "What does the executive branch do?", answers: [{ text: "Enforces laws", correct: true }, { text: "Makes laws", correct: false }, { text: "Interprets laws", correct: false }] }
+            { question: "What does the executive branch do?", answers: [{ text: "Enforces laws", correct: true }, { text: "Makes laws", correct: false }, { text: "Interprets laws", correct: false }] },
+
+            { question: "What does the judicial branch do?", answers: [{ text: "Interprets laws", correct: true }, { text: "Makes laws", correct: false }, { text: "Enforces laws", correct: false }] },
+            { question: "Who is the head of the executive branch?", answers: [{ text: "The President", correct: true }, { text: "The Judge", correct: false }, { text: "The Senator", correct: false }] },
+            { question: "What is a law?", answers: [{ text: "A rule made by the government", correct: true }, { text: "A suggestion", correct: false }, { text: "A story", correct: false }] },
+            { question: "What is the Constitution?", answers: [{ text: "The main set of laws for a country", correct: true }, { text: "A book of stories", correct: false }, { text: "A list of people", correct: false }] },
+            { question: "What is a citizen?", answers: [{ text: "A person who belongs to a country", correct: true }, { text: "A visitor", correct: false }, { text: "A tourist", correct: false }] },
+
+            { question: "What is voting?", answers: [{ text: "Choosing a leader or decision", correct: true }, { text: "Writing a story", correct: false }, { text: "Paying money", correct: false }] },
+            { question: "What is an election?", answers: [{ text: "A process of choosing leaders", correct: true }, { text: "A holiday", correct: false }, { text: "A meeting", correct: false }] },
+            { question: "What is a right?", answers: [{ text: "A freedom people have", correct: true }, { text: "A rule to follow", correct: false }, { text: "A job", correct: false }] },
+            { question: "What is a responsibility?", answers: [{ text: "A duty or job to do", correct: true }, { text: "A freedom", correct: false }, { text: "A game", correct: false }] },
+            { question: "What is freedom?", answers: [{ text: "The power to act or speak freely", correct: true }, { text: "A rule", correct: false }, { text: "A law", correct: false }] },
+
+            { question: "What is government?", answers: [{ text: "A group that makes and enforces rules", correct: true }, { text: "A school", correct: false }, { text: "A family", correct: false }] },
+            { question: "What is a state government?", answers: [{ text: "Government of a state", correct: true }, { text: "Government of a country", correct: false }, { text: "Government of a city", correct: false }] },
+            { question: "What is a local government?", answers: [{ text: "Government of a city or town", correct: true }, { text: "Government of a country", correct: false }, { text: "Government of a state", correct: false }] },
+            { question: "What is a capital city?", answers: [{ text: "The main city where government is located", correct: true }, { text: "The biggest city", correct: false }, { text: "A small town", correct: false }] },
+            { question: "What is a leader?", answers: [{ text: "A person who guides others", correct: true }, { text: "A follower", correct: false }, { text: "A visitor", correct: false }] },
+
+            { question: "What is a rule?", answers: [{ text: "Something people must follow", correct: true }, { text: "A choice", correct: false }, { text: "A story", correct: false }] },
+            { question: "Why are laws important?", answers: [{ text: "They keep people safe and organized", correct: true }, { text: "They make things confusing", correct: false }, { text: "They are not useful", correct: false }] },
+            { question: "What is fairness?", answers: [{ text: "Treating people equally", correct: true }, { text: "Ignoring rules", correct: false }, { text: "Breaking laws", correct: false }] },
+            { question: "What is equality?", answers: [{ text: "Everyone is treated the same", correct: true }, { text: "Only some people matter", correct: false }, { text: "Following rules", correct: false }] },
+            { question: "What is a community?", answers: [{ text: "A group of people living together", correct: true }, { text: "A single person", correct: false }, { text: "A country", correct: false }] }
         ],
         2: [
             { question: "What are continents?", answers: [{ text: "The seven large areas of land", correct: true }, { text: "Countries", correct: false }, { text: "States", correct: false }] },
             { question: "What is a prime meridian?", answers: [{ text: "The line at 0 degrees longitude", correct: true }, { text: "The equator", correct: false }, { text: "A mountain range", correct: false }] },
             { question: "What is the equator?", answers: [{ text: "An imaginary line dividing Earth into North and South", correct: true }, { text: "A continent", correct: false }, { text: "A country", correct: false }] },
             { question: "What are latitude lines?", answers: [{ text: "Lines running east and west", correct: true }, { text: "Lines running north and south", correct: false }, { text: "Mountain ranges", correct: false }] },
-            { question: "What are longitude lines?", answers: [{ text: "Lines running north and south", correct: true }, { text: "Lines running east and west", correct: false }, { text: "Equator lines", correct: false }] }
+            { question: "What are longitude lines?", answers: [{ text: "Lines running north and south", correct: true }, { text: "Lines running east and west", correct: false }, { text: "Equator lines", correct: false }] },
+
+            { question: "How many continents are there?", answers: [{ text: "Seven", correct: true }, { text: "Five", correct: false }, { text: "Six", correct: false }] },
+            { question: "Which is the largest continent?", answers: [{ text: "Asia", correct: true }, { text: "Africa", correct: false }, { text: "Europe", correct: false }] },
+            { question: "Which is the smallest continent?", answers: [{ text: "Australia", correct: true }, { text: "Antarctica", correct: false }, { text: "Europe", correct: false }] },
+            { question: "What is a map?", answers: [{ text: "A drawing of a place", correct: true }, { text: "A type of story", correct: false }, { text: "A building", correct: false }] },
+            { question: "What is a globe?", answers: [{ text: "A model of Earth", correct: true }, { text: "A flat map", correct: false }, { text: "A book", correct: false }] },
+
+            { question: "What is a hemisphere?", answers: [{ text: "Half of the Earth", correct: true }, { text: "A country", correct: false }, { text: "A continent", correct: false }] },
+            { question: "What is the Northern Hemisphere?", answers: [{ text: "The half of Earth north of the equator", correct: true }, { text: "The half south of the equator", correct: false }, { text: "The middle of Earth", correct: false }] },
+            { question: "What is the Southern Hemisphere?", answers: [{ text: "The half of Earth south of the equator", correct: true }, { text: "The half north of the equator", correct: false }, { text: "The center of Earth", correct: false }] },
+            { question: "What is a compass?", answers: [{ text: "A tool that shows direction", correct: true }, { text: "A map", correct: false }, { text: "A globe", correct: false }] },
+            { question: "What are cardinal directions?", answers: [{ text: "North, South, East, West", correct: true }, { text: "Up, Down, Left, Right", correct: false }, { text: "Hot, Cold, Warm, Cool", correct: false }] },
+
+            { question: "What is a scale on a map?", answers: [{ text: "Shows distance on a map", correct: true }, { text: "Shows colors", correct: false }, { text: "Shows directions", correct: false }] },
+            { question: "What is a legend on a map?", answers: [{ text: "Explains symbols on a map", correct: true }, { text: "Shows directions", correct: false }, { text: "Shows distance", correct: false }] },
+            { question: "What is a symbol on a map?", answers: [{ text: "A picture that represents something", correct: true }, { text: "A word", correct: false }, { text: "A number", correct: false }] },
+            { question: "What is an ocean?", answers: [{ text: "A large body of salt water", correct: true }, { text: "A small lake", correct: false }, { text: "A river", correct: false }] },
+            { question: "Which is the largest ocean?", answers: [{ text: "Pacific Ocean", correct: true }, { text: "Atlantic Ocean", correct: false }, { text: "Indian Ocean", correct: false }] },
+
+            { question: "What is a country?", answers: [{ text: "A land with its own government", correct: true }, { text: "A city", correct: false }, { text: "A continent", correct: false }] },
+            { question: "What is a state?", answers: [{ text: "A part of a country", correct: true }, { text: "A continent", correct: false }, { text: "An ocean", correct: false }] },
+            { question: "What is a city?", answers: [{ text: "A large town where people live", correct: true }, { text: "A country", correct: false }, { text: "An ocean", correct: false }] },
+            { question: "What is landform?", answers: [{ text: "A natural feature of Earth’s surface", correct: true }, { text: "A map", correct: false }, { text: "A country", correct: false }] },
+            { question: "Which is a landform?", answers: [{ text: "Mountain", correct: true }, { text: "Road", correct: false }, { text: "Building", correct: false }] }
         ],
         3: [
             { question: "What is an amendment?", answers: [{ text: "A change or addition to the Constitution", correct: true }, { text: "A type of law", correct: false }, { text: "A court decision", correct: false }] },
             { question: "What is the Bill of Rights?", answers: [{ text: "The first ten amendments to the Constitution", correct: true }, { text: "A list of laws", correct: false }, { text: "The preamble", correct: false }] },
             { question: "What is a citizen?", answers: [{ text: "A member of a state or nation", correct: true }, { text: "A visitor", correct: false }, { text: "A tourist", correct: false }] },
             { question: "What are natural resources?", answers: [{ text: "Materials from Earth that humans use", correct: true }, { text: "Man-made products", correct: false }, { text: "Sports equipment", correct: false }] },
-            { question: "What is an economy?", answers: [{ text: "A system of production and trade", correct: true }, { text: "A type of government", correct: false }, { text: "A country", correct: false }] }
+            { question: "What is an economy?", answers: [{ text: "A system of production and trade", correct: true }, { text: "A type of government", correct: false }, { text: "A country", correct: false }] },
+
+            { question: "What is the Constitution?", answers: [{ text: "The main set of laws of a country", correct: true }, { text: "A storybook", correct: false }, { text: "A newspaper", correct: false }] },
+            { question: "What is a right?", answers: [{ text: "A freedom protected by law", correct: true }, { text: "A rule to follow", correct: false }, { text: "A punishment", correct: false }] },
+            { question: "What is a responsibility?", answers: [{ text: "A duty or job citizens should do", correct: true }, { text: "A freedom", correct: false }, { text: "A reward", correct: false }] },
+            { question: "What is a resource?", answers: [{ text: "Something people use to meet needs", correct: true }, { text: "A rule", correct: false }, { text: "A law", correct: false }] },
+            { question: "What is a producer?", answers: [{ text: "A person who makes goods or services", correct: true }, { text: "A person who buys goods", correct: false }, { text: "A traveler", correct: false }] },
+
+            { question: "What is a consumer?", answers: [{ text: "A person who buys or uses goods", correct: true }, { text: "A person who makes goods", correct: false }, { text: "A worker only", correct: false }] },
+            { question: "What is a good?", answers: [{ text: "An item that people can buy", correct: true }, { text: "A service", correct: false }, { text: "A rule", correct: false }] },
+            { question: "What is a service?", answers: [{ text: "Work done for others", correct: true }, { text: "A product", correct: false }, { text: "A law", correct: false }] },
+            { question: "What is trade?", answers: [{ text: "The exchange of goods and services", correct: true }, { text: "A type of government", correct: false }, { text: "A law", correct: false }] },
+            { question: "What is money?", answers: [{ text: "Something used to buy goods and services", correct: true }, { text: "A rule", correct: false }, { text: "A service", correct: false }] },
+
+            { question: "What is saving?", answers: [{ text: "Keeping money for future use", correct: true }, { text: "Spending all money", correct: false }, { text: "Trading goods", correct: false }] },
+            { question: "What is spending?", answers: [{ text: "Using money to buy things", correct: true }, { text: "Saving money", correct: false }, { text: "Earning money", correct: false }] },
+            { question: "What is a job?", answers: [{ text: "Work people do to earn money", correct: true }, { text: "A game", correct: false }, { text: "A rule", correct: false }] },
+            { question: "What is income?", answers: [{ text: "Money people earn", correct: true }, { text: "Money spent", correct: false }, { text: "Goods traded", correct: false }] },
+            { question: "What is a market?", answers: [{ text: "A place where people buy and sell goods", correct: true }, { text: "A school", correct: false }, { text: "A government office", correct: false }] },
+
+            { question: "What is supply?", answers: [{ text: "The amount of goods available", correct: true }, { text: "The amount people want", correct: false }, { text: "The price of goods", correct: false }] },
+            { question: "What is demand?", answers: [{ text: "The amount of goods people want", correct: true }, { text: "The amount available", correct: false }, { text: "The cost", correct: false }] },
+            { question: "What is a tax?", answers: [{ text: "Money paid to the government", correct: true }, { text: "A reward", correct: false }, { text: "A gift", correct: false }] },
+            { question: "What is a government service?", answers: [{ text: "A service provided by the government", correct: true }, { text: "A product sold in stores", correct: false }, { text: "A private job", correct: false }] },
+            { question: "What is a community?", answers: [{ text: "A group of people living in one place", correct: true }, { text: "A single person", correct: false }, { text: "A country only", correct: false }] }
         ],
         4: [
             { question: "What is the Supreme Court?", answers: [{ text: "The highest court in the U.S. judicial system", correct: true }, { text: "A lower court", correct: false }, { text: "A police department", correct: false }] },
             { question: "What is a cultural tradition?", answers: [{ text: "A custom or belief passed down through generations", correct: true }, { text: "A new invention", correct: false }, { text: "A type of music", correct: false }] },
             { question: "What is an export?", answers: [{ text: "Goods sent to another country for sale", correct: true }, { text: "Goods received from another country", correct: false }, { text: "A tax", correct: false }] },
             { question: "What is history?", answers: [{ text: "The study of past events", correct: true }, { text: "The study of geography", correct: false }, { text: "The study of culture", correct: false }] },
-            { question: "What is a treaty?", answers: [{ text: "An agreement between countries", correct: true }, { text: "A type of document", correct: false }, { text: "A law", correct: false }] }
+            { question: "What is a treaty?", answers: [{ text: "An agreement between countries", correct: true }, { text: "A type of document", correct: false }, { text: "A law", correct: false }] },
+
+            { question: "What is an import?", answers: [{ text: "Goods brought into a country", correct: true }, { text: "Goods sent out", correct: false }, { text: "A tax", correct: false }] },
+            { question: "What is culture?", answers: [{ text: "The beliefs and traditions of a group", correct: true }, { text: "A law", correct: false }, { text: "A map", correct: false }] },
+            { question: "What is a tradition?", answers: [{ text: "A custom followed over time", correct: true }, { text: "A new idea", correct: false }, { text: "A rule", correct: false }] },
+            { question: "What is a holiday?", answers: [{ text: "A special day of celebration", correct: true }, { text: "A workday", correct: false }, { text: "A school subject", correct: false }] },
+            { question: "What is a landmark?", answers: [{ text: "An important place or building", correct: true }, { text: "A rule", correct: false }, { text: "A law", correct: false }] },
+
+            { question: "What is a monument?", answers: [{ text: "A structure built to remember something", correct: true }, { text: "A store", correct: false }, { text: "A house", correct: false }] },
+            { question: "What is a timeline?", answers: [{ text: "A line showing events in order", correct: true }, { text: "A map", correct: false }, { text: "A story", correct: false }] },
+            { question: "What is a decade?", answers: [{ text: "A period of 10 years", correct: true }, { text: "A period of 5 years", correct: false }, { text: "A period of 100 years", correct: false }] },
+            { question: "What is a century?", answers: [{ text: "A period of 100 years", correct: true }, { text: "A period of 10 years", correct: false }, { text: "A period of 50 years", correct: false }] },
+            { question: "What is a historian?", answers: [{ text: "A person who studies history", correct: true }, { text: "A scientist", correct: false }, { text: "A teacher only", correct: false }] },
+
+            { question: "What is an artifact?", answers: [{ text: "An object from the past", correct: true }, { text: "A new tool", correct: false }, { text: "A law", correct: false }] },
+            { question: "What is exploration?", answers: [{ text: "Traveling to discover new places", correct: true }, { text: "Staying at home", correct: false }, { text: "Reading books", correct: false }] },
+            { question: "What is a colony?", answers: [{ text: "A place settled by people from another land", correct: true }, { text: "A city", correct: false }, { text: "A country", correct: false }] },
+            { question: "What is independence?", answers: [{ text: "Freedom from control of another country", correct: true }, { text: "Following rules", correct: false }, { text: "Trading goods", correct: false }] },
+            { question: "What is a revolution?", answers: [{ text: "A big change in government or society", correct: true }, { text: "A small event", correct: false }, { text: "A type of law", correct: false }] },
+
+            { question: "What is a leader?", answers: [{ text: "A person who guides others", correct: true }, { text: "A follower", correct: false }, { text: "A visitor", correct: false }] },
+            { question: "What is a government?", answers: [{ text: "A group that makes rules for a country", correct: true }, { text: "A school", correct: false }, { text: "A business", correct: false }] },
+            { question: "What is a law?", answers: [{ text: "A rule made by the government", correct: true }, { text: "A suggestion", correct: false }, { text: "A story", correct: false }] },
+            { question: "What is justice?", answers: [{ text: "Fair treatment under the law", correct: true }, { text: "Breaking rules", correct: false }, { text: "Ignoring laws", correct: false }] },
+            { question: "What is equality?", answers: [{ text: "Treating everyone the same", correct: true }, { text: "Treating people differently", correct: false }, { text: "Ignoring rules", correct: false }] }
         ],
         5: [
             { question: "What is a federal system of government?", answers: [{ text: "Power is shared between central and state governments", correct: true }, { text: "All power is with the central government", correct: false }, { text: "All power is with state governments", correct: false }] },
             { question: "What is the role of the Senate?", answers: [{ text: "To represent states and make federal laws", correct: true }, { text: "To enforce laws", correct: false }, { text: "To interpret laws", correct: false }] },
             { question: "What is an immigration policy?", answers: [{ text: "Rules about who can enter and stay in a country", correct: true }, { text: "Rules about travel", correct: false }, { text: "Rules about trade", correct: false }] },
             { question: "What is colonization?", answers: [{ text: "The establishment of new settlements or territories", correct: true }, { text: "A type of government", correct: false }, { text: "A military strategy", correct: false }] },
-            { question: "What is the difference between a nation and a state?", answers: [{ text: "Nation = people with same culture, State = political organization", correct: true }, { text: "They are the same", correct: false }, { text: "Nation is larger", correct: false }] }
+            { question: "What is the difference between a nation and a state?", answers: [{ text: "Nation = people with same culture, State = political organization", correct: true }, { text: "They are the same", correct: false }, { text: "Nation is larger", correct: false }] },
+
+            { question: "What is the House of Representatives?", answers: [{ text: "A group that makes laws based on population", correct: true }, { text: "A court system", correct: false }, { text: "A military group", correct: false }] },
+            { question: "What is Congress?", answers: [{ text: "The lawmaking branch of government", correct: true }, { text: "The court system", correct: false }, { text: "The police force", correct: false }] },
+            { question: "What is the role of the President?", answers: [{ text: "To enforce laws and lead the country", correct: true }, { text: "To make laws only", correct: false }, { text: "To judge laws", correct: false }] },
+            { question: "What is the role of the courts?", answers: [{ text: "To interpret laws", correct: true }, { text: "To make laws", correct: false }, { text: "To enforce laws", correct: false }] },
+            { question: "What is a constitution?", answers: [{ text: "A document that outlines government rules", correct: true }, { text: "A list of citizens", correct: false }, { text: "A storybook", correct: false }] },
+
+            { question: "What is citizenship?", answers: [{ text: "Being a legal member of a country", correct: true }, { text: "Traveling to a country", correct: false }, { text: "Visiting a place", correct: false }] },
+            { question: "What is immigration?", answers: [{ text: "Moving into a country to live", correct: true }, { text: "Leaving a country", correct: false }, { text: "Traveling for fun", correct: false }] },
+            { question: "What is emigration?", answers: [{ text: "Leaving a country to live elsewhere", correct: true }, { text: "Entering a country", correct: false }, { text: "Visiting a country", correct: false }] },
+            { question: "What is a border?", answers: [{ text: "A line that separates countries", correct: true }, { text: "A river", correct: false }, { text: "A city", correct: false }] },
+            { question: "What is a lawmaker?", answers: [{ text: "A person who creates laws", correct: true }, { text: "A judge", correct: false }, { text: "A police officer", correct: false }] },
+
+            { question: "What is voting age?", answers: [{ text: "The legal age to vote", correct: true }, { text: "Any age", correct: false }, { text: "Only for leaders", correct: false }] },
+            { question: "What is a political party?", answers: [{ text: "A group with similar ideas about government", correct: true }, { text: "A celebration", correct: false }, { text: "A school group", correct: false }] },
+            { question: "What is a campaign?", answers: [{ text: "Activities to get elected", correct: true }, { text: "A war", correct: false }, { text: "A law", correct: false }] },
+            { question: "What is a ballot?", answers: [{ text: "A paper or system used to vote", correct: true }, { text: "A law", correct: false }, { text: "A meeting", correct: false }] },
+            { question: "What is a majority?", answers: [{ text: "More than half", correct: true }, { text: "Less than half", correct: false }, { text: "Exactly half", correct: false }] },
+
+            { question: "What is a minority?", answers: [{ text: "Less than half", correct: true }, { text: "More than half", correct: false }, { text: "Exactly half", correct: false }] },
+            { question: "What is public policy?", answers: [{ text: "Government plans and actions", correct: true }, { text: "A private rule", correct: false }, { text: "A personal opinion", correct: false }] },
+            { question: "What is a reform?", answers: [{ text: "A change to improve something", correct: true }, { text: "Keeping things the same", correct: false }, { text: "A law only", correct: false }] },
+            { question: "What is diplomacy?", answers: [{ text: "Working with other countries to solve problems", correct: true }, { text: "Fighting wars", correct: false }, { text: "Making laws", correct: false }] },
+            { question: "What is an alliance?", answers: [{ text: "A partnership between countries", correct: true }, { text: "A disagreement", correct: false }, { text: "A border", correct: false }] }
         ]
     },
     science: {
