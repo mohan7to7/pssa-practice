@@ -2,7 +2,6 @@
 const grade4Questions = {
     math: {
         1: [
-            [
                 { question: "What is 234 + 156?", answers: [{ text: "389", correct: false }, { text: "390", correct: true }, { text: "391", correct: false }] },
                 { question: "What is 500 - 234?", answers: [{ text: "265", correct: false }, { text: "266", correct: true }, { text: "267", correct: false }] },
                 { question: "What is 12 × 12?", answers: [{ text: "143", correct: false }, { text: "144", correct: true }, { text: "145", correct: false }] },
@@ -32,10 +31,8 @@ const grade4Questions = {
                 { question: "What is 920 - 120?", answers: [{ text: "799", correct: false }, { text: "800", correct: true }, { text: "801", correct: false }] },
                 { question: "What is 11 × 11?", answers: [{ text: "120", correct: false }, { text: "121", correct: true }, { text: "122", correct: false }] },
                 { question: "What is 63 ÷ 7?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] }
-            ]
         ],
         2: [
-            [
                 { question: "What is 1/2 + 1/4?", answers: [{ text: "1/2", correct: false }, { text: "3/4", correct: true }, { text: "1", correct: false }] },
                 { question: "What is 3/4 - 1/2?", answers: [{ text: "1/4", correct: true }, { text: "1/2", correct: false }, { text: "1", correct: false }] },
                 { question: "What is 2/3 × 3/4?", answers: [{ text: "1/2", correct: true }, { text: "1", correct: false }, { text: "2/7", correct: false }] },
@@ -65,10 +62,8 @@ const grade4Questions = {
                 { question: "What is 5/9 × 3/5?", answers: [{ text: "1/3", correct: true }, { text: "3/9", correct: false }, { text: "5/15", correct: false }] },
                 { question: "What is 8/9 ÷ 4/9?", answers: [{ text: "2", correct: true }, { text: "4", correct: false }, { text: "1/2", correct: false }] },
                 { question: "What is the decimal for 1/10?", answers: [{ text: "0.1", correct: true }, { text: "0.01", correct: false }, { text: "1.0", correct: false }] }
-            ]
         ],
         3: [
-            [
                 { question: "What is 567 + 234 + 189?", answers: [{ text: "990", correct: true }, { text: "991", correct: false }, { text: "989", correct: false }] },
                 { question: "What is 1000 - 456 - 234?", answers: [{ text: "310", correct: true }, { text: "311", correct: false }, { text: "309", correct: false }] },
                 { question: "What is 15 × 24?", answers: [{ text: "360", correct: true }, { text: "359", correct: false }, { text: "361", correct: false }] },
@@ -98,10 +93,8 @@ const grade4Questions = {
                 { question: "What is 20 × 18?", answers: [{ text: "360", correct: true }, { text: "359", correct: false }, { text: "361", correct: false }] },
                 { question: "What is 5/8 - 1/8?", answers: [{ text: "1/2", correct: true }, { text: "4/8", correct: false }, { text: "3/8", correct: false }] },
                 { question: "What is 0.9 + 0.05 + 0.05?", answers: [{ text: "1.0", correct: true }, { text: "0.95", correct: false }, { text: "1.05", correct: false }] }
-            ]
         ],
         4: [
-            [
                 { question: "If a book costs $12.50 and you buy 3, how much do you spend?", answers: [{ text: "$37.50", correct: true }, { text: "$36.50", correct: false }, { text: "$38.50", correct: false }] },
                 { question: "What is the area of a rectangle with length 8 and width 6?", answers: [{ text: "48", correct: true }, { text: "28", correct: false }, { text: "56", correct: false }] },
                 { question: "What is 7/8 × 4/5?", answers: [{ text: "7/10", correct: true }, { text: "3/4", correct: false }, { text: "4/5", correct: false }] },
@@ -131,10 +124,8 @@ const grade4Questions = {
                 { question: "What is 2/7 × 7/8?", answers: [{ text: "1/4", correct: true }, { text: "2/8", correct: false }, { text: "7/2", correct: false }] },
                 { question: "What is 64 ÷ 8?", answers: [{ text: "8", correct: true }, { text: "7", correct: false }, { text: "9", correct: false }] },
                 { question: "If you have 4.5 liters and add 0.5 liters, what is the total?", answers: [{ text: "5.0", correct: true }, { text: "4.9", correct: false }, { text: "5.1", correct: false }] }
-            ]
         ],
         5: [
-            [
                 { question: "What is 35% of 240?", answers: [{ text: "84", correct: true }, { text: "83", correct: false }, { text: "85", correct: false }] },
                 { question: "What is the perimeter of a square with side 7?", answers: [{ text: "28", correct: true }, { text: "27", correct: false }, { text: "29", correct: false }] },
                 { question: "If 3/4 of a number is 36, what is the number?", answers: [{ text: "48", correct: true }, { text: "47", correct: false }, { text: "49", correct: false }] },
@@ -164,7 +155,6 @@ const grade4Questions = {
                 { question: "If 4/5 of a number is 48, what is the number?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] },
                 { question: "What is 6.3 × 2?", answers: [{ text: "12.6", correct: true }, { text: "12.5", correct: false }, { text: "12.7", correct: false }] },
                 { question: "If a cable is 20 inches and you need 3 cables, how many inches total?", answers: [{ text: "60", correct: true }, { text: "59", correct: false }, { text: "61", correct: false }] }
-            ]
         ]
     },
     english: {
