@@ -235,7 +235,31 @@ const grade4Questions = {
             { question: "What is a simile?", answers: [{ text: "A comparison using 'like' or 'as'", correct: true }, { text: "A type of poem", correct: false }, { text: "An action word", correct: false }] },
             { question: "What is personification?", answers: [{ text: "Giving human qualities to non-human things", correct: true }, { text: "A type of comparison", correct: false }, { text: "Repeating words", correct: false }] },
             { question: "What is alliteration?", answers: [{ text: "Repetition of beginning sounds in nearby words", correct: true }, { text: "Rhyming words", correct: false }, { text: "A type of poem", correct: false }] },
-            { question: "What is an idiom?", answers: [{ text: "A phrase that means something different from each word", correct: true }, { text: "A type of sentence", correct: false }, { text: "A rhyming pattern", correct: false }] }
+            { question: "What is an idiom?", answers: [{ text: "A phrase that means something different from each word", correct: true }, { text: "A type of sentence", correct: false }, { text: "A rhyming pattern", correct: false }] },
+
+            { question: "What is imagery?", answers: [{ text: "Words that create pictures in the reader's mind", correct: true }, { text: "A type of sentence", correct: false }, { text: "A naming word", correct: false }] },
+            { question: "What is rhyme?", answers: [{ text: "Words that have the same ending sound", correct: true }, { text: "Words that start the same", correct: false }, { text: "A long sentence", correct: false }] },
+            { question: "What is rhythm in poetry?", answers: [{ text: "The beat or flow of a poem", correct: true }, { text: "A type of word", correct: false }, { text: "A sentence", correct: false }] },
+            { question: "What is a stanza?", answers: [{ text: "A group of lines in a poem", correct: true }, { text: "A single word", correct: false }, { text: "A paragraph in a story", correct: false }] },
+            { question: "What is a poem?", answers: [{ text: "Writing that often has rhythm and rhyme", correct: true }, { text: "A list of facts", correct: false }, { text: "A sentence only", correct: false }] },
+
+            { question: "Which is a simile?", answers: [{ text: "He is as fast as a cheetah", correct: true }, { text: "He is a cheetah", correct: false }, { text: "He runs fast", correct: false }] },
+            { question: "Which is a metaphor?", answers: [{ text: "Time is a thief", correct: true }, { text: "Time is like a thief", correct: false }, { text: "Time runs fast", correct: false }] },
+            { question: "Which is personification?", answers: [{ text: "The wind whispered softly", correct: true }, { text: "The wind is strong", correct: false }, { text: "The wind blows", correct: false }] },
+            { question: "Which is alliteration?", answers: [{ text: "Peter Piper picked peppers", correct: true }, { text: "The dog ran fast", correct: false }, { text: "She is happy", correct: false }] },
+            { question: "Which is an idiom?", answers: [{ text: "It's raining cats and dogs", correct: true }, { text: "It is raining heavily", correct: false }, { text: "The rain is cold", correct: false }] },
+
+            { question: "What is onomatopoeia?", answers: [{ text: "Words that sound like the noise they make", correct: true }, { text: "A comparison", correct: false }, { text: "A type of sentence", correct: false }] },
+            { question: "Which is onomatopoeia?", answers: [{ text: "buzz", correct: true }, { text: "run", correct: false }, { text: "happy", correct: false }] },
+            { question: "What is repetition in poetry?", answers: [{ text: "Repeating words for effect", correct: true }, { text: "A single sentence", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is a line in a poem?", answers: [{ text: "A row of words in a poem", correct: true }, { text: "A paragraph", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is figurative language?", answers: [{ text: "Language that uses comparisons or creative meaning", correct: true }, { text: "Simple literal meaning", correct: false }, { text: "Only action words", correct: false }] },
+
+            { question: "Which is figurative language?", answers: [{ text: "The stars danced in the sky", correct: true }, { text: "Stars are in the sky", correct: false }, { text: "The sky is dark", correct: false }] },
+            { question: "What is hyperbole?", answers: [{ text: "An exaggerated statement", correct: true }, { text: "A comparison using like", correct: false }, { text: "A repeated sound", correct: false }] },
+            { question: "Which is a hyperbole?", answers: [{ text: "I am so hungry I could eat a horse", correct: true }, { text: "I am hungry", correct: false }, { text: "I ate lunch", correct: false }] },
+            { question: "What is tone in writing?", answers: [{ text: "The feeling or attitude of the writer", correct: true }, { text: "A type of sentence", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is mood in writing?", answers: [{ text: "The feeling the reader gets", correct: true }, { text: "The title", correct: false }, { text: "A single word", correct: false }] }
         ],
         4: [
             { question: "What is the purpose of a thesis statement?", answers: [{ text: "To state the main argument or idea of a paper", correct: true }, { text: "To introduce the topic", correct: false }, { text: "To conclude the paper", correct: false }] },
