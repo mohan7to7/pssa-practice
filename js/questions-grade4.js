@@ -173,14 +173,62 @@ const grade4Questions = {
             { question: "What is a conjunction?", answers: [{ text: "A word that connects", correct: true }, { text: "A describing word", correct: false }, { text: "An action word", correct: false }] },
             { question: "What are common conjunctions?", answers: [{ text: "and, but, or", correct: true }, { text: "the, a, an", correct: false }, { text: "in, on, at", correct: false }] },
             { question: "What is a pronoun?", answers: [{ text: "A word that replaces a noun", correct: true }, { text: "A naming word", correct: false }, { text: "An action word", correct: false }] },
-            { question: "What are common pronouns?", answers: [{ text: "he, she, it, they", correct: true }, { text: "run, walk, jump", correct: false }, { text: "happy, sad, big", correct: false }] }
+            { question: "What are common pronouns?", answers: [{ text: "he, she, it, they", correct: true }, { text: "run, walk, jump", correct: false }, { text: "happy, sad, big", correct: false }] },
+
+            { question: "What is a noun?", answers: [{ text: "A naming word", correct: true }, { text: "An action word", correct: false }, { text: "A connecting word", correct: false }] },
+            { question: "What is a verb?", answers: [{ text: "An action word", correct: true }, { text: "A naming word", correct: false }, { text: "A describing word", correct: false }] },
+            { question: "What is an adjective?", answers: [{ text: "A describing word", correct: true }, { text: "An action word", correct: false }, { text: "A naming word", correct: false }] },
+            { question: "What is an adverb?", answers: [{ text: "A word that describes a verb", correct: true }, { text: "A naming word", correct: false }, { text: "A connecting word", correct: false }] },
+            { question: "What is an article?", answers: [{ text: "A word like a, an, the", correct: true }, { text: "An action word", correct: false }, { text: "A joining word", correct: false }] },
+
+            { question: "Which is a proper noun?", answers: [{ text: "New York", correct: true }, { text: "city", correct: false }, { text: "dog", correct: false }] },
+            { question: "Which is a common noun?", answers: [{ text: "school", correct: true }, { text: "India", correct: false }, { text: "Monday", correct: false }] },
+            { question: "Which word is a verb?", answers: [{ text: "run", correct: true }, { text: "blue", correct: false }, { text: "table", correct: false }] },
+            { question: "Which word is an adjective?", answers: [{ text: "happy", correct: true }, { text: "jump", correct: false }, { text: "car", correct: false }] },
+            { question: "Which word is an adverb?", answers: [{ text: "quickly", correct: true }, { text: "quick", correct: false }, { text: "run", correct: false }] },
+
+            { question: "Which sentence uses a pronoun?", answers: [{ text: "She is my friend", correct: true }, { text: "The dog barked", correct: false }, { text: "Birds fly", correct: false }] },
+            { question: "Which sentence has a conjunction?", answers: [{ text: "I like apples and bananas", correct: true }, { text: "She runs fast", correct: false }, { text: "The sky is blue", correct: false }] },
+            { question: "Which sentence has a preposition?", answers: [{ text: "The book is on the table", correct: true }, { text: "She sings well", correct: false }, { text: "He runs fast", correct: false }] },
+            { question: "Which word is a preposition?", answers: [{ text: "under", correct: true }, { text: "run", correct: false }, { text: "happy", correct: false }] },
+            { question: "Which word is a conjunction?", answers: [{ text: "but", correct: true }, { text: "in", correct: false }, { text: "big", correct: false }] },
+
+            { question: "Which word is a pronoun?", answers: [{ text: "they", correct: true }, { text: "dog", correct: false }, { text: "run", correct: false }] },
+            { question: "Which word is an article?", answers: [{ text: "the", correct: true }, { text: "and", correct: false }, { text: "quickly", correct: false }] },
+            { question: "Which is a sentence?", answers: [{ text: "The cat is sleeping.", correct: true }, { text: "cat sleeping", correct: false }, { text: "sleeping cat", correct: false }] },
+            { question: "What is a sentence?", answers: [{ text: "A group of words with a complete thought", correct: true }, { text: "Just one word", correct: false }, { text: "A naming word", correct: false }] },
+            { question: "Which sentence is correct?", answers: [{ text: "He is playing.", correct: true }, { text: "He playing.", correct: false }, { text: "Is he playing", correct: false }] }
         ],
         2: [
             { question: "What is a complex sentence?", answers: [{ text: "A sentence with independent and dependent clauses", correct: true }, { text: "A short sentence", correct: false }, { text: "A sentence with many words", correct: false }] },
             { question: "What is a topic sentence?", answers: [{ text: "The sentence that states the main idea", correct: true }, { text: "The last sentence", correct: false }, { text: "Any sentence", correct: false }] },
             { question: "What are supporting details?", answers: [{ text: "Information that supports the main idea", correct: true }, { text: "The conclusion", correct: false }, { text: "The title", correct: false }] },
             { question: "What is a conclusion?", answers: [{ text: "The final thought or summary", correct: true }, { text: "The beginning", correct: false }, { text: "The middle", correct: false }] },
-            { question: "What is an outline?", answers: [{ text: "A plan for writing", correct: true }, { text: "A final draft", correct: false }, { text: "A rough sketch", correct: false }] }
+            { question: "What is an outline?", answers: [{ text: "A plan for writing", correct: true }, { text: "A final draft", correct: false }, { text: "A rough sketch", correct: false }] },
+
+            { question: "What is a paragraph?", answers: [{ text: "A group of sentences about one idea", correct: true }, { text: "A single word", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is the main idea?", answers: [{ text: "What the text is mostly about", correct: true }, { text: "A small detail", correct: false }, { text: "The ending", correct: false }] },
+            { question: "What is a detail?", answers: [{ text: "Extra information about the main idea", correct: true }, { text: "The title", correct: false }, { text: "The topic sentence", correct: false }] },
+            { question: "What is a draft?", answers: [{ text: "A first version of writing", correct: true }, { text: "The final copy", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is editing?", answers: [{ text: "Fixing mistakes in writing", correct: true }, { text: "Writing a story", correct: false }, { text: "Reading only", correct: false }] },
+
+            { question: "What is revising?", answers: [{ text: "Improving ideas and content", correct: true }, { text: "Adding a title", correct: false }, { text: "Skipping mistakes", correct: false }] },
+            { question: "What is a simple sentence?", answers: [{ text: "A sentence with one complete thought", correct: true }, { text: "A sentence with many clauses", correct: false }, { text: "A question only", correct: false }] },
+            { question: "What is a compound sentence?", answers: [{ text: "Two sentences joined by a conjunction", correct: true }, { text: "A very short sentence", correct: false }, { text: "A question", correct: false }] },
+            { question: "What is a clause?", answers: [{ text: "A group of words with a subject and verb", correct: true }, { text: "A single word", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is an independent clause?", answers: [{ text: "A clause that can stand alone", correct: true }, { text: "A clause that cannot stand alone", correct: false }, { text: "A phrase", correct: false }] },
+
+            { question: "What is a dependent clause?", answers: [{ text: "A clause that cannot stand alone", correct: true }, { text: "A complete sentence", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is a transition word?", answers: [{ text: "A word that connects ideas", correct: true }, { text: "A naming word", correct: false }, { text: "An action word", correct: false }] },
+            { question: "Which is a transition word?", answers: [{ text: "however", correct: true }, { text: "dog", correct: false }, { text: "run", correct: false }] },
+            { question: "What is a title?", answers: [{ text: "The name of a piece of writing", correct: true }, { text: "A sentence in the middle", correct: false }, { text: "A detail", correct: false }] },
+            { question: "What is a summary?", answers: [{ text: "A short version of the text", correct: true }, { text: "A long paragraph", correct: false }, { text: "A title", correct: false }] },
+
+            { question: "What is brainstorming?", answers: [{ text: "Thinking of ideas before writing", correct: true }, { text: "Writing the final copy", correct: false }, { text: "Checking spelling", correct: false }] },
+            { question: "What is a rough draft?", answers: [{ text: "An early version of writing", correct: true }, { text: "The final copy", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is a final draft?", answers: [{ text: "The completed and corrected writing", correct: true }, { text: "The first version", correct: false }, { text: "A list of ideas", correct: false }] },
+            { question: "What is a sequence?", answers: [{ text: "The order of events", correct: true }, { text: "A single idea", correct: false }, { text: "A title", correct: false }] },
+            { question: "What is a narrative?", answers: [{ text: "A story", correct: true }, { text: "A list", correct: false }, { text: "A title", correct: false }] }
         ],
         3: [
             { question: "What does 'metaphor' mean?", answers: [{ text: "A comparison between two things without using 'like' or 'as'", correct: true }, { text: "A comparison using 'like' or 'as'", correct: false }, { text: "A repeated sound in words", correct: false }] },
