@@ -541,14 +541,12 @@
                 quizState.score,
                 quizState.questions.length
             );
-
             if (passed) {
                 document.getElementById('certificateDiv').classList.remove('hide');
                 document.getElementById('nextLevelBtn').style.display = quizState.level < 10 ? 'inline-block' : 'none';
             } else {
                 document.getElementById('retryDiv').classList.remove('hide');
             }
-
             // Clear timer when quiz is finished
             clearTimer();
         }
