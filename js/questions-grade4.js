@@ -477,35 +477,155 @@ const grade4Questions = {
             { question: "What is an ecosystem?", answers: [{ text: "Community of organisms and their environment", correct: true }, { text: "Only animals", correct: false }, { text: "Only plants", correct: false }] },
             { question: "What is a food web?", answers: [{ text: "Multiple food chains connected", correct: true }, { text: "A single food chain", correct: false }, { text: "Animals eating plants", correct: false }] },
             { question: "What are decomposers?", answers: [{ text: "Organisms that break down dead material", correct: true }, { text: "Producers", correct: false }, { text: "Consumers", correct: false }] },
-            { question: "What is biodiversity?", answers: [{ text: "Variety of life in an ecosystem", correct: true }, { text: "Same species", correct: false }, { text: "One type of organism", correct: false }] }
+            { question: "What is biodiversity?", answers: [{ text: "Variety of life in an ecosystem", correct: true }, { text: "Same species", correct: false }, { text: "One type of organism", correct: false }] },
+
+            { question: "What are producers?", answers: [{ text: "Organisms that make their own food", correct: true }, { text: "Animals that hunt", correct: false }, { text: "Organisms that decompose", correct: false }] },
+            { question: "What are consumers?", answers: [{ text: "Organisms that eat other organisms", correct: true }, { text: "Plants only", correct: false }, { text: "Decomposers", correct: false }] },
+            { question: "What is a habitat?", answers: [{ text: "The natural home of an organism", correct: true }, { text: "A type of food", correct: false }, { text: "A weather pattern", correct: false }] },
+            { question: "What is a population?", answers: [{ text: "A group of the same species in one area", correct: true }, { text: "Different species together", correct: false }, { text: "A single organism", correct: false }] },
+            { question: "What is a community?", answers: [{ text: "Different populations living together", correct: true }, { text: "One species only", correct: false }, { text: "A single plant", correct: false }] },
+
+            { question: "What is a food chain?", answers: [{ text: "A sequence of who eats whom", correct: true }, { text: "A group of animals", correct: false }, { text: "A plant system", correct: false }] },
+            { question: "What is energy in an ecosystem?", answers: [{ text: "Power from the sun used by organisms", correct: true }, { text: "Water only", correct: false }, { text: "Soil only", correct: false }] },
+            { question: "What is the main source of energy for Earth?", answers: [{ text: "The Sun", correct: true }, { text: "The Moon", correct: false }, { text: "The soil", correct: false }] },
+            { question: "What is adaptation?", answers: [{ text: "A trait that helps an organism survive", correct: true }, { text: "A type of food", correct: false }, { text: "A weather change", correct: false }] },
+            { question: "What is extinction?", answers: [{ text: "When a species no longer exists", correct: true }, { text: "When species grow", correct: false }, { text: "When animals move", correct: false }] },
+
+            { question: "What is a predator?", answers: [{ text: "An animal that hunts others", correct: true }, { text: "An animal that is hunted", correct: false }, { text: "A plant", correct: false }] },
+            { question: "What is prey?", answers: [{ text: "An animal that is hunted", correct: true }, { text: "An animal that hunts", correct: false }, { text: "A producer", correct: false }] },
+            { question: "What is camouflage?", answers: [{ text: "Blending in with surroundings", correct: true }, { text: "Making noise", correct: false }, { text: "Changing food", correct: false }] },
+            { question: "What is a herbivore?", answers: [{ text: "An animal that eats plants", correct: true }, { text: "An animal that eats meat", correct: false }, { text: "An animal that eats both", correct: false }] },
+            { question: "What is a carnivore?", answers: [{ text: "An animal that eats meat", correct: true }, { text: "An animal that eats plants", correct: false }, { text: "An animal that eats both", correct: false }] },
+
+            { question: "What is an omnivore?", answers: [{ text: "An animal that eats plants and animals", correct: true }, { text: "Only plants", correct: false }, { text: "Only meat", correct: false }] },
+            { question: "What is the environment?", answers: [{ text: "Everything around living things", correct: true }, { text: "Only animals", correct: false }, { text: "Only plants", correct: false }] },
+            { question: "What is pollution?", answers: [{ text: "Harmful substances in the environment", correct: true }, { text: "Clean air", correct: false }, { text: "Healthy soil", correct: false }] },
+            { question: "What is conservation?", answers: [{ text: "Protecting natural resources", correct: true }, { text: "Using everything quickly", correct: false }, { text: "Destroying habitats", correct: false }] },
+            { question: "Why are ecosystems important?", answers: [{ text: "They support life on Earth", correct: true }, { text: "They are not important", correct: false }, { text: "Only animals need them", correct: false }] }
         ],
         2: [
             { question: "What are the planets?", answers: [{ text: "8 bodies orbiting the sun", correct: true }, { text: "9 bodies", correct: false }, { text: "7 bodies", correct: false }] },
             { question: "What is the largest planet?", answers: [{ text: "Jupiter", correct: true }, { text: "Saturn", correct: false }, { text: "Neptune", correct: false }] },
             { question: "What is the closest planet to the sun?", answers: [{ text: "Mercury", correct: true }, { text: "Venus", correct: false }, { text: "Earth", correct: false }] },
             { question: "What is the water cycle?", answers: [{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing only", correct: false }, { text: "Melting only", correct: false }] },
-            { question: "What is weather?", answers: [{ text: "Day-to-day atmospheric conditions", correct: true }, { text: "Long-term patterns", correct: false }, { text: "Climate", correct: false }] }
+            { question: "What is weather?", answers: [{ text: "Day-to-day atmospheric conditions", correct: true }, { text: "Long-term patterns", correct: false }, { text: "Climate", correct: false }] },
+
+            { question: "What is climate?", answers: [{ text: "Long-term weather patterns", correct: true }, { text: "Daily weather", correct: false }, { text: "Wind only", correct: false }] },
+            { question: "What is the sun?", answers: [{ text: "A star at the center of our solar system", correct: true }, { text: "A planet", correct: false }, { text: "A moon", correct: false }] },
+            { question: "What is Earth?", answers: [{ text: "The planet we live on", correct: true }, { text: "A star", correct: false }, { text: "A moon", correct: false }] },
+            { question: "What is the moon?", answers: [{ text: "Earth’s natural satellite", correct: true }, { text: "A star", correct: false }, { text: "A planet", correct: false }] },
+            { question: "What is gravity?", answers: [{ text: "A force that pulls objects toward Earth", correct: true }, { text: "A type of energy", correct: false }, { text: "A gas", correct: false }] },
+
+            { question: "What is precipitation?", answers: [{ text: "Rain, snow, sleet, or hail", correct: true }, { text: "Only wind", correct: false }, { text: "Only heat", correct: false }] },
+            { question: "What is evaporation?", answers: [{ text: "Liquid turning into gas", correct: true }, { text: "Gas turning into liquid", correct: false }, { text: "Solid turning into liquid", correct: false }] },
+            { question: "What is condensation?", answers: [{ text: "Gas turning into liquid", correct: true }, { text: "Liquid turning into gas", correct: false }, { text: "Solid turning into gas", correct: false }] },
+            { question: "What is a cloud?", answers: [{ text: "Tiny water droplets in the air", correct: true }, { text: "Smoke", correct: false }, { text: "Dust", correct: false }] },
+            { question: "What is wind?", answers: [{ text: "Moving air", correct: true }, { text: "Still air", correct: false }, { text: "Water movement", correct: false }] },
+
+            { question: "What is temperature?", answers: [{ text: "How hot or cold something is", correct: true }, { text: "Air movement", correct: false }, { text: "Rain amount", correct: false }] },
+            { question: "What tool measures temperature?", answers: [{ text: "Thermometer", correct: true }, { text: "Barometer", correct: false }, { text: "Compass", correct: false }] },
+            { question: "What tool measures wind direction?", answers: [{ text: "Weather vane", correct: true }, { text: "Thermometer", correct: false }, { text: "Ruler", correct: false }] },
+            { question: "What tool measures rainfall?", answers: [{ text: "Rain gauge", correct: true }, { text: "Scale", correct: false }, { text: "Thermometer", correct: false }] },
+            { question: "What is a season?", answers: [{ text: "A time of year with certain weather", correct: true }, { text: "A single day", correct: false }, { text: "A type of storm", correct: false }] },
+
+            { question: "How many seasons are there?", answers: [{ text: "Four", correct: true }, { text: "Three", correct: false }, { text: "Five", correct: false }] },
+            { question: "Which season is the coldest?", answers: [{ text: "Winter", correct: true }, { text: "Summer", correct: false }, { text: "Spring", correct: false }] },
+            { question: "Which season is the warmest?", answers: [{ text: "Summer", correct: true }, { text: "Winter", correct: false }, { text: "Fall", correct: false }] },
+            { question: "What is a storm?", answers: [{ text: "Severe weather with strong wind and rain", correct: true }, { text: "A sunny day", correct: false }, { text: "A calm day", correct: false }] },
+            { question: "What is lightning?", answers: [{ text: "A flash of electricity in the sky", correct: true }, { text: "A type of rain", correct: false }, { text: "A cloud", correct: false }] }
         ],
         3: [
             { question: "What is photosynthesis?", answers: [{ text: "Process where plants make food using sunlight", correct: true }, { text: "Process where plants breathe", correct: false }, { text: "Process of plant growth", correct: false }] },
             { question: "What are the four basic needs of animals?", answers: [{ text: "Food, water, shelter, and air", correct: true }, { text: "Only food and water", correct: false }, { text: "Only shelter", correct: false }] },
             { question: "What is erosion?", answers: [{ text: "The wearing down of Earth's surface", correct: true }, { text: "Creating new land", correct: false }, { text: "Earthquake activity", correct: false }] },
             { question: "What types of rocks are there?", answers: [{ text: "Igneous, Sedimentary, Metamorphic", correct: true }, { text: "Hard and soft", correct: false }, { text: "Big and small", correct: false }] },
-            { question: "What is an adaptation?", answers: [{ text: "A trait that helps an animal survive", correct: true }, { text: "A habitat", correct: false }, { text: "A food source", correct: false }] }
+            { question: "What is an adaptation?", answers: [{ text: "A trait that helps an animal survive", correct: true }, { text: "A habitat", correct: false }, { text: "A food source", correct: false }] },
+
+            { question: "What is a plant?", answers: [{ text: "A living thing that makes its own food", correct: true }, { text: "An animal", correct: false }, { text: "A rock", correct: false }] },
+            { question: "What do plants need to grow?", answers: [{ text: "Sunlight, water, air, and nutrients", correct: true }, { text: "Only sunlight", correct: false }, { text: "Only water", correct: false }] },
+            { question: "What is a root?", answers: [{ text: "Part of a plant that absorbs water", correct: true }, { text: "Part that makes food", correct: false }, { text: "Part that makes seeds", correct: false }] },
+            { question: "What is a stem?", answers: [{ text: "Supports the plant and carries water", correct: true }, { text: "Makes food", correct: false }, { text: "Absorbs sunlight", correct: false }] },
+            { question: "What is a leaf?", answers: [{ text: "Part of a plant that makes food", correct: true }, { text: "Absorbs water", correct: false }, { text: "Holds seeds", correct: false }] },
+
+            { question: "What is a flower?", answers: [{ text: "Part of a plant that helps reproduction", correct: true }, { text: "Part that absorbs water", correct: false }, { text: "Part that makes roots", correct: false }] },
+            { question: "What is soil?", answers: [{ text: "Top layer of Earth where plants grow", correct: true }, { text: "Only sand", correct: false }, { text: "Only rocks", correct: false }] },
+            { question: "What is weathering?", answers: [{ text: "Breaking down of rocks", correct: true }, { text: "Building mountains", correct: false }, { text: "Moving water", correct: false }] },
+            { question: "What is a fossil?", answers: [{ text: "Remains of ancient plants or animals", correct: true }, { text: "A new plant", correct: false }, { text: "A type of rock only", correct: false }] },
+            { question: "What is magma?", answers: [{ text: "Molten rock under Earth's surface", correct: true }, { text: "Solid rock", correct: false }, { text: "Water", correct: false }] },
+
+            { question: "What is lava?", answers: [{ text: "Molten rock on Earth's surface", correct: true }, { text: "Solid rock", correct: false }, { text: "Air", correct: false }] },
+            { question: "What is a volcano?", answers: [{ text: "An opening where lava comes out", correct: true }, { text: "A mountain only", correct: false }, { text: "A river", correct: false }] },
+            { question: "What is a mineral?", answers: [{ text: "A natural, non-living solid", correct: true }, { text: "A plant", correct: false }, { text: "An animal", correct: false }] },
+            { question: "What is an earthquake?", answers: [{ text: "Shaking of Earth's surface", correct: true }, { text: "Strong wind", correct: false }, { text: "Heavy rain", correct: false }] },
+            { question: "What is a habitat?", answers: [{ text: "The home of an organism", correct: true }, { text: "A food chain", correct: false }, { text: "A rock", correct: false }] },
+
+            { question: "What is a life cycle?", answers: [{ text: "Stages of growth of a living thing", correct: true }, { text: "A type of weather", correct: false }, { text: "A type of rock", correct: false }] },
+            { question: "What is reproduction?", answers: [{ text: "Making more of the same kind", correct: true }, { text: "Growing bigger", correct: false }, { text: "Eating food", correct: false }] },
+            { question: "What is energy?", answers: [{ text: "The ability to do work", correct: true }, { text: "A type of plant", correct: false }, { text: "A type of rock", correct: false }] },
+            { question: "What is heat?", answers: [{ text: "A form of energy that warms things", correct: true }, { text: "A solid", correct: false }, { text: "A liquid", correct: false }] },
+            { question: "What is light?", answers: [{ text: "A form of energy we can see", correct: true }, { text: "A solid object", correct: false }, { text: "A gas", correct: false }] }
         ],
         4: [
             { question: "What is the difference between weather and climate?", answers: [{ text: "Weather is short-term, climate is long-term patterns", correct: true }, { text: "They are the same", correct: false }, { text: "Climate changes daily", correct: false }] },
             { question: "What is a fossil?", answers: [{ text: "Remains or trace of an ancient organism", correct: true }, { text: "A type of rock", correct: false }, { text: "A type of animal", correct: false }] },
             { question: "What is the speed of light?", answers: [{ text: "About 186,000 miles per second", correct: true }, { text: "About 100 miles per second", correct: false }, { text: "About 500 miles per second", correct: false }] },
             { question: "What causes seasons?", answers: [{ text: "Earth's tilt as it orbits the sun", correct: true }, { text: "Distance from the sun", correct: false }, { text: "Moon's position", correct: false }] },
-            { question: "What is a predator?", answers: [{ text: "An animal that hunts other animals", correct: true }, { text: "An animal that eats plants", correct: false }, { text: "An animal that eats dead matter", correct: false }] }
+            { question: "What is a predator?", answers: [{ text: "An animal that hunts other animals", correct: true }, { text: "An animal that eats plants", correct: false }, { text: "An animal that eats dead matter", correct: false }] },
+
+            { question: "What is prey?", answers: [{ text: "An animal that is hunted", correct: true }, { text: "An animal that hunts", correct: false }, { text: "A plant", correct: false }] },
+            { question: "What is a herbivore?", answers: [{ text: "An animal that eats plants", correct: true }, { text: "An animal that eats meat", correct: false }, { text: "An animal that eats both", correct: false }] },
+            { question: "What is a carnivore?", answers: [{ text: "An animal that eats meat", correct: true }, { text: "An animal that eats plants", correct: false }, { text: "An animal that eats both", correct: false }] },
+            { question: "What is an omnivore?", answers: [{ text: "An animal that eats plants and animals", correct: true }, { text: "Only plants", correct: false }, { text: "Only meat", correct: false }] },
+            { question: "What is an ecosystem?", answers: [{ text: "Living and nonliving things interacting", correct: true }, { text: "Only animals", correct: false }, { text: "Only plants", correct: false }] },
+
+            { question: "What is a food chain?", answers: [{ text: "A sequence of energy transfer", correct: true }, { text: "A group of animals", correct: false }, { text: "A plant system", correct: false }] },
+            { question: "What is energy?", answers: [{ text: "The ability to do work", correct: true }, { text: "A type of rock", correct: false }, { text: "A plant", correct: false }] },
+            { question: "What is kinetic energy?", answers: [{ text: "Energy of motion", correct: true }, { text: "Stored energy", correct: false }, { text: "Heat only", correct: false }] },
+            { question: "What is potential energy?", answers: [{ text: "Stored energy", correct: true }, { text: "Energy of motion", correct: false }, { text: "Light energy", correct: false }] },
+            { question: "What is gravity?", answers: [{ text: "Force that pulls objects toward Earth", correct: true }, { text: "Pushes objects away", correct: false }, { text: "A type of energy", correct: false }] },
+
+            { question: "What is friction?", answers: [{ text: "Force that slows movement", correct: true }, { text: "Force that speeds up movement", correct: false }, { text: "A type of energy", correct: false }] },
+            { question: "What is a force?", answers: [{ text: "A push or pull", correct: true }, { text: "A type of energy", correct: false }, { text: "A material", correct: false }] },
+            { question: "What is matter?", answers: [{ text: "Anything that has mass and takes up space", correct: true }, { text: "Only liquids", correct: false }, { text: "Only solids", correct: false }] },
+            { question: "What are the three states of matter?", answers: [{ text: "Solid, liquid, gas", correct: true }, { text: "Hot, cold, warm", correct: false }, { text: "Big, medium, small", correct: false }] },
+            { question: "What is a solid?", answers: [{ text: "Matter with a fixed shape", correct: true }, { text: "Flows easily", correct: false }, { text: "Takes shape of container", correct: false }] },
+
+            { question: "What is a liquid?", answers: [{ text: "Matter that takes the shape of its container", correct: true }, { text: "Has a fixed shape", correct: false }, { text: "Has no volume", correct: false }] },
+            { question: "What is a gas?", answers: [{ text: "Matter that spreads out to fill space", correct: true }, { text: "Has fixed shape", correct: false }, { text: "Has fixed volume", correct: false }] },
+            { question: "What is evaporation?", answers: [{ text: "Liquid changing to gas", correct: true }, { text: "Gas to liquid", correct: false }, { text: "Solid to liquid", correct: false }] },
+            { question: "What is condensation?", answers: [{ text: "Gas changing to liquid", correct: true }, { text: "Liquid to gas", correct: false }, { text: "Solid to gas", correct: false }] },
+            { question: "What is melting?", answers: [{ text: "Solid changing to liquid", correct: true }, { text: "Liquid to gas", correct: false }, { text: "Gas to solid", correct: false }] }
         ],
         5: [
             { question: "What is the nitrogen cycle?", answers: [{ text: "The movement of nitrogen through the environment", correct: true }, { text: "A type of reaction", correct: false }, { text: "A gas explosion", correct: false }] },
             { question: "What is oxidation?", answers: [{ text: "Chemical reaction involving oxygen", correct: true }, { text: "Burning only", correct: false }, { text: "Rusting only", correct: false }] },
             { question: "What are the steps of cellular respiration?", answers: [{ text: "Glycolysis, Citric Acid Cycle, Electron Transport", correct: true }, { text: "Photosynthesis steps", correct: false }, { text: "Digestion steps", correct: false }] },
             { question: "What is genetic variation?", answers: [{ text: "Differences in traits among individuals", correct: true }, { text: "Same traits for all", correct: false }, { text: "Mutations only", correct: false }] },
-            { question: "What is an ecosystem's carrying capacity?", answers: [{ text: "The maximum population an area can support", correct: true }, { text: "The amount of food available", correct: false }, { text: "The size of the area", correct: false }] }
+            { question: "What is an ecosystem's carrying capacity?", answers: [{ text: "The maximum population an area can support", correct: true }, { text: "The amount of food available", correct: false }, { text: "The size of the area", correct: false }] },
+
+            { question: "What is photosynthesis?", answers: [{ text: "Plants making food using sunlight", correct: true }, { text: "Animals breathing", correct: false }, { text: "Water cycle step", correct: false }] },
+            { question: "What is a cell?", answers: [{ text: "The basic unit of life", correct: true }, { text: "A type of tissue", correct: false }, { text: "An organ", correct: false }] },
+            { question: "What is a tissue?", answers: [{ text: "A group of similar cells working together", correct: true }, { text: "A single cell", correct: false }, { text: "A whole organism", correct: false }] },
+            { question: "What is an organ?", answers: [{ text: "A group of tissues working together", correct: true }, { text: "A single cell", correct: false }, { text: "A type of molecule", correct: false }] },
+            { question: "What is an organism?", answers: [{ text: "A living thing", correct: true }, { text: "A nonliving thing", correct: false }, { text: "A chemical", correct: false }] },
+
+            { question: "What is a habitat?", answers: [{ text: "The place where an organism lives", correct: true }, { text: "A type of food", correct: false }, { text: "A climate pattern", correct: false }] },
+            { question: "What is a niche?", answers: [{ text: "The role of an organism in its environment", correct: true }, { text: "Its size", correct: false }, { text: "Its color", correct: false }] },
+            { question: "What is competition?", answers: [{ text: "Organisms fighting for resources", correct: true }, { text: "Helping each other", correct: false }, { text: "Sleeping", correct: false }] },
+            { question: "What is symbiosis?", answers: [{ text: "A close relationship between organisms", correct: true }, { text: "A type of weather", correct: false }, { text: "A chemical reaction", correct: false }] },
+            { question: "What is mutualism?", answers: [{ text: "Both organisms benefit", correct: true }, { text: "One benefits, one harmed", correct: false }, { text: "Both harmed", correct: false }] },
+
+            { question: "What is commensalism?", answers: [{ text: "One benefits, the other is unaffected", correct: true }, { text: "Both benefit", correct: false }, { text: "Both harmed", correct: false }] },
+            { question: "What is parasitism?", answers: [{ text: "One benefits, the other is harmed", correct: true }, { text: "Both benefit", correct: false }, { text: "Neither benefits", correct: false }] },
+            { question: "What is a food pyramid?", answers: [{ text: "A diagram showing energy levels", correct: true }, { text: "A building", correct: false }, { text: "A plant structure", correct: false }] },
+            { question: "What is energy transfer?", answers: [{ text: "Movement of energy through organisms", correct: true }, { text: "Creation of energy", correct: false }, { text: "Stopping energy", correct: false }] },
+            { question: "What is a renewable resource?", answers: [{ text: "A resource that can be replaced", correct: true }, { text: "A resource that runs out", correct: false }, { text: "A type of rock", correct: false }] },
+
+            { question: "What is a nonrenewable resource?", answers: [{ text: "A resource that cannot be replaced quickly", correct: true }, { text: "Always available", correct: false }, { text: "A plant resource", correct: false }] },
+            { question: "What is pollution?", answers: [{ text: "Harmful substances in the environment", correct: true }, { text: "Clean air", correct: false }, { text: "Healthy water", correct: false }] },
+            { question: "What is conservation?", answers: [{ text: "Protecting natural resources", correct: true }, { text: "Using all resources", correct: false }, { text: "Destroying habitats", correct: false }] },
+            { question: "What is climate change?", answers: [{ text: "Long-term changes in Earth's climate", correct: true }, { text: "Daily weather changes", correct: false }, { text: "Seasonal change only", correct: false }] },
+            { question: "Why are ecosystems important?", answers: [{ text: "They support life on Earth", correct: true }, { text: "They are not needed", correct: false }, { text: "Only animals need them", correct: false }] }
         ]
     }
 };
