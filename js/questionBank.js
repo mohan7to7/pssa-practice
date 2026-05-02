@@ -609,7 +609,7 @@ if (typeof window !== 'undefined') {
     window.getQuestionsForLevel = getQuestionsForLevel;
     window.generatePlaceholderQuestions = generatePlaceholderQuestions;
 }
-                "answers": [
+                "answers" : [
                     { "text": "2", "correct": false },
                     { "text": "5", "correct": true }
                 ]
@@ -4625,8 +4625,7 @@ if (typeof window !== 'undefined') {
             ]
         }
     },
-                { question: "What is acceleration?", answers: [{ text: "Change in speed or direction", correct: true }, { text: "Going faster", correct: false }, { text: "Going slower", correct: false }] }
-            ],
+]
             2: [
                 { question: "What is the water cycle?", answers: [{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing only", correct: false }, { text: "Melting only", correct: false }] },
                 { question: "What is evaporation?", answers: [{ text: "Water turning into vapor", correct: true }, { text: "Freezing water", correct: false }, { text: "Boiling water", correct: false }] },
@@ -5601,7 +5600,8 @@ if (typeof window !== 'undefined') {
                 { question: "What is 900 - 567?", answers: [{ text: "332", correct: false }, { text: "333", correct: true }, { text: "334", correct: false }] },
                 { question: "What is 78 × 9?", answers: [{ text: "701", correct: false }, { text: "702", correct: true }, { text: "703", correct: false }] }
             ],
-            2: [
+            2:
+            [
                 { question: "What is 50% of 200?", answers: [{ text: "100", correct: true }, { text: "150", correct: false }, { text: "200", correct: false }] },
                 { question: "What is 25% of 400?", answers: [{ text: "100", correct: true }, { text: "150", correct: false }, { text: "200", correct: false }] },
                 { question: "What is 75% of 800?", answers: [{ text: "500", correct: false }, { text: "600", correct: true }, { text: "700", correct: false }] },
@@ -5727,7 +5727,6 @@ if (typeof window !== 'undefined') {
                 { question: "What is the speed of light?", answers: [{ text: "Fastest thing in universe", correct: true }, { text: "Slower than sound", correct: false }, { text: "Variable", correct: false }] }
             ]
         }
-    }
 };
 
 // Get questions for a specific grade, subject, and levelNum

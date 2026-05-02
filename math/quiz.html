@@ -128,6 +128,13 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+        #controls-new {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
         .btn-action {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -251,12 +258,12 @@
         <div id="quiz-container">
             <div id="question-container" class="question-container">
                 <div class="question-number" id="questionNumber">Question 1</div>
-                <h2 id="question">Loading question...</h2>
+                <h2 id="question">Loading question.......</h2>
                 <div id="answer-buttons" class="btn-grid">
                     <!-- Answer buttons will be inserted here -->
                 </div>
             </div>
-            <div id="controls">
+            <div id="controls-new">
                 <button class="btn-action" id="next-btn" disabled>Next Question</button>
                 <button class="btn-action" style="background-color: #95a5a6;" onclick="goBack()">Back to Dashboard</button>
             </div>
@@ -322,7 +329,7 @@
 
             // Get parameters from URL
             const urlParams = new URLSearchParams(window.location.search);
-            quizState.grade = urlParams.get('grade') || quizState.currentUser.gradeLevel;
+            quizState.grade = (urlParams.get('grade') || quizState.currentUser.gradeLevel).toUpperCase();
             quizState.level = parseInt(urlParams.get('level')) || 1;
 
             // Get subject from current URL
