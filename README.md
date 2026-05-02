@@ -195,3 +195,5 @@ No export functionality
 🎓 Get Started
 
 Open login.html in your browser and begin learning!
+
+##### Need to fix a bug or want to contribute? Check out the GitHub repository and submit a pull request!
