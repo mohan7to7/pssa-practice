@@ -204,7 +204,6 @@ class UserManager {
         sessionStorage.removeItem(this.currentUserKey);
     }
 }
-
 // Initialize global user manager
 const userManager = new UserManager();
 
