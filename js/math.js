@@ -129,7 +129,5 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     showQuestion();
 });
-
 restartButton.addEventListener('click', startQuiz);
-
 startQuiz();
