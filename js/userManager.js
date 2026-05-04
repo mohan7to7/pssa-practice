@@ -188,7 +188,6 @@ class UserManager {
             nextLevelUnlocked: percentage >= passingPercentage && levelNum < 10
         };
     }
-
     // Get level statistics
     getLevelStats(userId, grade, subject, levelNum) {
         const progress = this.getUserProgress(userId);
@@ -196,7 +195,6 @@ class UserManager {
 
         return progress.grades[grade]?.[subject]?.levels.find(l => l.levelNum === levelNum) || null;
     }
-
     // Clear all user data (for testing)
     clearAllData() {
         localStorage.removeItem(this.storageKey);
@@ -206,4 +204,3 @@ class UserManager {
 }
 // Initialize global user manager
 const userManager = new UserManager();
-
