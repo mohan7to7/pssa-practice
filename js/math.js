@@ -43,7 +43,232 @@ const questions = [
             { text: "14", correct: false },
             { text: "24", correct: false }
         ]
-    }
+    },
+        {
+            "question": "What is 6 + 4?",
+            "answers": [
+                { "text": "9", "correct": false },
+                { "text": "10", "correct": true },
+                { "text": "11", "correct": false },
+                { "text": "12", "correct": false }
+            ]
+        },
+            {
+                "question": "What is 7 + 2?",
+                "answers": [
+                    { "text": "8", "correct": false },
+                    { "text": "9", "correct": true },
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 9 + 1?",
+                "answers": [
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": true },
+                    { "text": "11", "correct": false },
+                    { "text": "12", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 8 + 5?",
+                "answers": [
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": true },
+                    { "text": "14", "correct": false },
+                    { "text": "15", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 3 + 6?",
+                "answers": [
+                    { "text": "8", "correct": false },
+                    { "text": "9", "correct": true },
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 4 + 7?",
+                "answers": [
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": true },
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 2 + 9?",
+                "answers": [
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": true },
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 10 + 3?",
+                "answers": [
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": true },
+                    { "text": "14", "correct": false },
+                    { "text": "15", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 5 + 6?",
+                "answers": [
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": true },
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 7 + 7?",
+                "answers": [
+                    { "text": "13", "correct": false },
+                    { "text": "14", "correct": true },
+                    { "text": "15", "correct": false },
+                    { "text": "16", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 6 + 6?",
+                "answers": [
+                    { "text": "11", "correct": false },
+                    { "text": "12", "correct": true },
+                    { "text": "13", "correct": false },
+                    { "text": "14", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 8 + 3?",
+                "answers": [
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": true },
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 9 + 4?",
+                "answers": [
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": true },
+                    { "text": "14", "correct": false },
+                    { "text": "15", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 3 + 8?",
+                "answers": [
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": true },
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 2 + 5?",
+                "answers": [
+                    { "text": "6", "correct": false },
+                    { "text": "7", "correct": true },
+                    { "text": "8", "correct": false },
+                    { "text": "9", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 4 + 4?",
+                "answers": [
+                    { "text": "7", "correct": false },
+                    { "text": "8", "correct": true },
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 1 + 9?",
+                "answers": [
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": true },
+                    { "text": "11", "correct": false },
+                    { "text": "12", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 6 + 2?",
+                "answers": [
+                    { "text": "7", "correct": false },
+                    { "text": "8", "correct": true },
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 5 + 5?",
+                "answers": [
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": true },
+                    { "text": "11", "correct": false },
+                    { "text": "12", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 7 + 3?",
+                "answers": [
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": true },
+                    { "text": "11", "correct": false },
+                    { "text": "12", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 8 + 1?",
+                "answers": [
+                    { "text": "8", "correct": false },
+                    { "text": "9", "correct": true },
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 9 + 2?",
+                "answers": [
+                    { "text": "10", "correct": false },
+                    { "text": "11", "correct": true },
+                    { "text": "12", "correct": false },
+                    { "text": "13", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 10 + 5?",
+                "answers": [
+                    { "text": "14", "correct": false },
+                    { "text": "15", "correct": true },
+                    { "text": "16", "correct": false },
+                    { "text": "17", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 3 + 7?",
+                "answers": [
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": true },
+                    { "text": "11", "correct": false },
+                    { "text": "12", "correct": false }
+                ]
+            },
+            {
+                "question": "What is 4 + 6?",
+                "answers": [
+                    { "text": "9", "correct": false },
+                    { "text": "10", "correct": true },
+                    { "text": "11", "correct": false },
+                    { "text": "12", "correct": false }
+                ]
+            }
 ];
 
 // ...existing code...
