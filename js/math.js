@@ -268,7 +268,232 @@ const questions = [
                     { "text": "11", "correct": false },
                     { "text": "12", "correct": false }
                 ]
-            }
+            },
+        {
+            "question": "What is 11 + 2?",
+            "answers": [
+                { "text": "12", "correct": false },
+                { "text": "13", "correct": true },
+                { "text": "14", "correct": false },
+                { "text": "15", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 12 + 3?",
+            "answers": [
+                { "text": "14", "correct": false },
+                { "text": "15", "correct": true },
+                { "text": "16", "correct": false },
+                { "text": "17", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 13 + 4?",
+            "answers": [
+                { "text": "16", "correct": false },
+                { "text": "17", "correct": true },
+                { "text": "18", "correct": false },
+                { "text": "19", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 14 + 5?",
+            "answers": [
+                { "text": "18", "correct": false },
+                { "text": "19", "correct": true },
+                { "text": "20", "correct": false },
+                { "text": "21", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 15 + 3?",
+            "answers": [
+                { "text": "17", "correct": false },
+                { "text": "18", "correct": true },
+                { "text": "19", "correct": false },
+                { "text": "20", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 16 + 2?",
+            "answers": [
+                { "text": "17", "correct": false },
+                { "text": "18", "correct": true },
+                { "text": "19", "correct": false },
+                { "text": "20", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 17 + 1?",
+            "answers": [
+                { "text": "17", "correct": false },
+                { "text": "18", "correct": true },
+                { "text": "19", "correct": false },
+                { "text": "20", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 18 + 2?",
+            "answers": [
+                { "text": "19", "correct": false },
+                { "text": "20", "correct": true },
+                { "text": "21", "correct": false },
+                { "text": "22", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 19 + 3?",
+            "answers": [
+                { "text": "21", "correct": false },
+                { "text": "22", "correct": true },
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 20 + 4?",
+            "answers": [
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": true },
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 11 + 5?",
+            "answers": [
+                { "text": "15", "correct": false },
+                { "text": "16", "correct": true },
+                { "text": "17", "correct": false },
+                { "text": "18", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 12 + 6?",
+            "answers": [
+                { "text": "17", "correct": false },
+                { "text": "18", "correct": true },
+                { "text": "19", "correct": false },
+                { "text": "20", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 13 + 7?",
+            "answers": [
+                { "text": "19", "correct": false },
+                { "text": "20", "correct": true },
+                { "text": "21", "correct": false },
+                { "text": "22", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 14 + 8?",
+            "answers": [
+                { "text": "21", "correct": false },
+                { "text": "22", "correct": true },
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 15 + 9?",
+            "answers": [
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": true },
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 16 + 4?",
+            "answers": [
+                { "text": "19", "correct": false },
+                { "text": "20", "correct": true },
+                { "text": "21", "correct": false },
+                { "text": "22", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 17 + 5?",
+            "answers": [
+                { "text": "21", "correct": false },
+                { "text": "22", "correct": true },
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 18 + 6?",
+            "answers": [
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": true },
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 19 + 7?",
+            "answers": [
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": true },
+                { "text": "27", "correct": false },
+                { "text": "28", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 20 + 8?",
+            "answers": [
+                { "text": "27", "correct": false },
+                { "text": "28", "correct": true },
+                { "text": "29", "correct": false },
+                { "text": "30", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 21 + 3?",
+            "answers": [
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": true },
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 22 + 2?",
+            "answers": [
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": true },
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 23 + 1?",
+            "answers": [
+                { "text": "23", "correct": false },
+                { "text": "24", "correct": true },
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 24 + 2?",
+            "answers": [
+                { "text": "25", "correct": false },
+                { "text": "26", "correct": true },
+                { "text": "27", "correct": false },
+                { "text": "28", "correct": false }
+            ]
+        },
+        {
+            "question": "What is 25 + 3?",
+            "answers": [
+                { "text": "27", "correct": false },
+                { "text": "28", "correct": true },
+                { "text": "29", "correct": false },
+                { "text": "30", "correct": false }
+            ]
+        }
 ];
 
 // ...existing code...
