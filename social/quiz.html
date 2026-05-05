@@ -286,7 +286,6 @@
             window.location.href = '../login.html';
             return;
         }
-
         // Get parameters from URL
         const urlParams = new URLSearchParams(window.location.search);
         quizState.grade = urlParams.get('grade') || quizState.currentUser.gradeLevel;
@@ -515,3 +514,5 @@
 </script>
 </body>
 </html>
+
+
