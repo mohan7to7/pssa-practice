@@ -34,16 +34,8 @@ const questions = [
             { text: "1800", correct: false },
             { text: "1812", correct: false }
         ]
-    },
-    {
-        question: "What is the currency used in the United States?",
-        answers: [
-            { text: "Euro", correct: false },
-            { text: "Dollar", correct: true },
-            { text: "Pound", correct: false },
-            { text: "Yen", correct: false }
-        ]
     }
+
 ];
 
 // ...existing code...
