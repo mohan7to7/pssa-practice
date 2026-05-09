@@ -194,8 +194,12 @@ No export functionality
 ❌ Teacher Dashboard
 ❌ Mobile App
 ❌ API Integration
-🎓 Get Started
+
 
 Open login.html in your browser and begin learning!
 
 ##### Need to fix a bug or want to contribute? Check out the GitHub repository and submit a pull request!
+
+
+
+
