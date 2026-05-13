@@ -7,13 +7,6 @@ const grade2Questions = {
             { question: "What is 6 × 3?", answers: [{ text: "17", correct: false }, { text: "18", correct: true }, { text: "19", correct: false }] },
             { question: "What is 20 ÷ 4?", answers: [{ text: "4", correct: false }, { text: "5", correct: true }, { text: "6", correct: false }] },
             { question: "What is 45 + 35?", answers: [{ text: "79", correct: false }, { text: "80", correct: true }, { text: "81", correct: false }] }
-        ],
-        2: [
-            { question: "What is 50 + 50?", answers: [{ text: "99", correct: false }, { text: "100", correct: true }, { text: "101", correct: false }] },
-            { question: "What is 100 - 25?", answers: [{ text: "74", correct: false }, { text: "75", correct: true }, { text: "76", correct: false }] },
-            { question: "What is 7 × 7?", answers: [{ text: "48", correct: false }, { text: "49", correct: true }, { text: "50", correct: false }] },
-            { question: "What is 36 ÷ 6?", answers: [{ text: "5", correct: false }, { text: "6", correct: true }, { text: "7", correct: false }] },
-            { question: "What is 88 + 12?", answers: [{ text: "99", correct: false }, { text: "100", correct: true }, { text: "101", correct: false }] }
         ]
     },
     english: {
