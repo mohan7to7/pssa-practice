@@ -7,13 +7,6 @@ const grade1Questions = {
             { question: "What is 2 × 4?", answers: [{ text: "6", correct: false }, { text: "8", correct: true }, { text: "10", correct: false }] },
             { question: "What is 12 ÷ 3?", answers: [{ text: "3", correct: false }, { text: "4", correct: true }, { text: "5", correct: false }] },
             { question: "What is 7 + 5?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] }
-        ],
-        2: [
-            { question: "What is 15 + 7?", answers: [{ text: "21", correct: false }, { text: "22", correct: true }, { text: "23", correct: false }] },
-            { question: "What is 20 - 8?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
-            { question: "What is 3 × 5?", answers: [{ text: "14", correct: false }, { text: "15", correct: true }, { text: "16", correct: false }] },
-            { question: "What is 18 ÷ 2?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
-            { question: "What is 9 + 9?", answers: [{ text: "17", correct: false }, { text: "18", correct: true }, { text: "19", correct: false }] }
         ]
     },
     english: {
