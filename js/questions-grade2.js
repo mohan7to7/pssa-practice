@@ -23,13 +23,6 @@ const grade2Questions = {
             { question: "What is an adjective?", answers: [{ text: "A describing word", correct: true }, { text: "An action word", correct: false }, { text: "A naming word", correct: false }] },
             { question: "What is a compound word?", answers: [{ text: "Two words joined", correct: true }, { text: "A long word", correct: false }, { text: "A short word", correct: false }] },
             { question: "What is a contraction?", answers: [{ text: "Two words combined", correct: true }, { text: "A sentence", correct: false }, { text: "A paragraph", correct: false }] }
-        ],
-        2: [
-            { question: "What is the main idea?", answers: [{ text: "What a story is about", correct: true }, { text: "A detail", correct: false }, { text: "The ending", correct: false }] },
-            { question: "What are details?", answers: [{ text: "Extra information", correct: true }, { text: "The main idea", correct: false }, { text: "The title", correct: false }] },
-            { question: "What is a paragraph?", answers: [{ text: "Group of sentences", correct: true }, { text: "A single sentence", correct: false }, { text: "A word", correct: false }] },
-            { question: "What is a story problem?", answers: [{ text: "A math story", correct: true }, { text: "A book", correct: false }, { text: "A picture", correct: false }] },
-            { question: "What is sequence?", answers: [{ text: "Order of events", correct: true }, { text: "A type of word", correct: false }, { text: "A type of sentence", correct: false }] }
         ]
     },
     social: {
