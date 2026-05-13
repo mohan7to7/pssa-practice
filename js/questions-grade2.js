@@ -55,13 +55,6 @@ const grade2Questions = {
             { question: "What is a liquid?", answers: [{ text: "Takes container shape", correct: true }, { text: "Has definite shape", correct: false }, { text: "Fills entire space", correct: false }] },
             { question: "What is a gas?", answers: [{ text: "Fills entire space", correct: true }, { text: "Has definite shape", correct: false }, { text: "Takes container shape", correct: false }] },
             { question: "What is energy?", answers: [{ text: "Ability to do work", correct: true }, { text: "A type of matter", correct: false }, { text: "A type of rock", correct: false }] }
-        ],
-        2: [
-            { question: "What is the water cycle?", answers: [{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing and melting", correct: false }, { text: "Only evaporation", correct: false }] },
-            { question: "What is evaporation?", answers: [{ text: "Liquid to gas", correct: true }, { text: "Gas to liquid", correct: false }, { text: "Liquid to solid", correct: false }] },
-            { question: "What is condensation?", answers: [{ text: "Gas to liquid", correct: true }, { text: "Liquid to gas", correct: false }, { text: "Liquid to solid", correct: false }] },
-            { question: "What is precipitation?", answers: [{ text: "Water falling", correct: true }, { text: "Water evaporating", correct: false }, { text: "Water boiling", correct: false }] },
-            { question: "What is a life cycle?", answers: [{ text: "Stages of life", correct: true }, { text: "A type of wheel", correct: false }, { text: "A circle", correct: false }] }
         ]
     }
 };
