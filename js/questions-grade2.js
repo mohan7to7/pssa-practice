@@ -39,13 +39,6 @@ const grade2Questions = {
             { question: "What is a globe?", answers: [{ text: "Model of Earth", correct: true }, { text: "A map", correct: false }, { text: "A star", correct: false }] },
             { question: "What is a continent?", answers: [{ text: "Large area of land", correct: true }, { text: "A country", correct: false }, { text: "A city", correct: false }] },
             { question: "What is an ocean?", answers: [{ text: "Large body of water", correct: true }, { text: "A lake", correct: false }, { text: "A river", correct: false }] }
-        ],
-        2: [
-            { question: "What is a citizen?", answers: [{ text: "Member of a country", correct: true }, { text: "A visitor", correct: false }, { text: "A tourist", correct: false }] },
-            { question: "What is a responsibility?", answers: [{ text: "A duty to do", correct: true }, { text: "A right", correct: false }, { text: "A choice", correct: false }] },
-            { question: "What is a right?", answers: [{ text: "A freedom we have", correct: true }, { text: "A duty", correct: false }, { text: "A rule", correct: false }] },
-            { question: "What is a community helper?", answers: [{ text: "Someone who helps others", correct: true }, { text: "A student", correct: false }, { text: "A parent", correct: false }] },
-            { question: "What is a good citizen?", answers: [{ text: "Follows rules and helps", correct: true }, { text: "Breaks rules", correct: false }, { text: "Only looks out for self", correct: false }] }
         ]
     },
     science: {
