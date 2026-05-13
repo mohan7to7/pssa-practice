@@ -23,13 +23,6 @@ const grade1Questions = {
             { question: "What is an adjective?", answers: [{ text: "A describing word", correct: true }, { text: "An action word", correct: false }, { text: "A naming word", correct: false }] },
             { question: "What is a sentence?", answers: [{ text: "A complete thought", correct: true }, { text: "A single word", correct: false }, { text: "A letter", correct: false }] },
             { question: "What is a period?", answers: [{ text: "Ends a sentence", correct: true }, { text: "Starts a sentence", correct: false }, { text: "In the middle", correct: false }] }
-        ],
-        2: [
-            { question: "What is a story?", answers: [{ text: "A tale about events", correct: true }, { text: "A math problem", correct: false }, { text: "A song", correct: false }] },
-            { question: "What is a character?", answers: [{ text: "A person in a story", correct: true }, { text: "A letter", correct: false }, { text: "A number", correct: false }] },
-            { question: "What is the setting?", answers: [{ text: "Where a story happens", correct: true }, { text: "Who is in the story", correct: false }, { text: "What happens", correct: false }] },
-            { question: "What is a question?", answers: [{ text: "Asks for information", correct: true }, { text: "Makes a statement", correct: false }, { text: "Gives a command", correct: false }] },
-            { question: "What is a capital letter?", answers: [{ text: "Uppercase letter", correct: true }, { text: "Lowercase letter", correct: false }, { text: "A number", correct: false }] }
         ]
     },
     social: {
