@@ -39,13 +39,6 @@ const grade1Questions = {
             { question: "What are rules?", answers: [{ text: "Things to follow", correct: true }, { text: "Games to play", correct: false }, { text: "Food to eat", correct: false }] },
             { question: "What is a citizen?", answers: [{ text: "Member of a community", correct: true }, { text: "A teacher", correct: false }, { text: "A visitor", correct: false }] },
             { question: "What is a leader?", answers: [{ text: "Someone who guides", correct: true }, { text: "Someone who follows", correct: false }, { text: "Someone who watches", correct: false }] }
-        ],
-        2: [
-            { question: "What is a country?", answers: [{ text: "A land with its own government", correct: true }, { text: "A city", correct: false }, { text: "A street", correct: false }] },
-            { question: "What is a flag?", answers: [{ text: "Symbol of a country", correct: true }, { text: "A flower", correct: false }, { text: "A bird", correct: false }] },
-            { question: "What is a holiday?", answers: [{ text: "A special day to celebrate", correct: true }, { text: "A school day", correct: false }, { text: "A regular day", correct: false }] },
-            { question: "What is a tradition?", answers: [{ text: "Custom passed down", correct: true }, { text: "A new idea", correct: false }, { text: "A game", correct: false }] },
-            { question: "What is diversity?", answers: [{ text: "Different kinds of people", correct: true }, { text: "Same people", correct: false }, { text: "One type of person", correct: false }] }
         ]
     },
     science: {
