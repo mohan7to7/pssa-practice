@@ -55,13 +55,6 @@ const grade1Questions = {
             { question: "What do plants need?", answers: [{ text: "Water, sun, soil", correct: true }, { text: "Only water", correct: false }, { text: "Only sun", correct: false }] },
             { question: "What is weather?", answers: [{ text: "What's happening outside", correct: true }, { text: "Inside temperature", correct: false }, { text: "A type of animal", correct: false }] },
             { question: "What are animals?", answers: [{ text: "Living things that move", correct: true }, { text: "Plants", correct: false }, { text: "Rocks", correct: false }] }
-        ],
-        2: [
-            { question: "What is a life cycle?", answers: [{ text: "How living things grow", correct: true }, { text: "A type of wheel", correct: false }, { text: "A calendar", correct: false }] },
-            { question: "What is a habitat?", answers: [{ text: "Where an animal lives", correct: true }, { text: "A type of food", correct: false }, { text: "A type of animal", correct: false }] },
-            { question: "What is food?", answers: [{ text: "What living things eat", correct: true }, { text: "A type of rock", correct: false }, { text: "A type of plant", correct: false }] },
-            { question: "What is a seed?", answers: [{ text: "Start of a plant", correct: true }, { text: "A type of rock", correct: false }, { text: "A type of animal", correct: false }] },
-            { question: "What is the earth?", answers: [{ text: "Our planet", correct: true }, { text: "A star", correct: false }, { text: "The moon", correct: false }] }
         ]
     }
 };
