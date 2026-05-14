@@ -531,7 +531,6 @@ const grade4Questions = {
             { question: "How many seasons are there?", answers: [{ text: "Four", correct: true }, { text: "Three", correct: false }, { text: "Five", correct: false }] },
             { question: "Which season is the coldest?", answers: [{ text: "Winter", correct: true }, { text: "Summer", correct: false }, { text: "Spring", correct: false }] },
             { question: "Which season is the warmest?", answers: [{ text: "Summer", correct: true }, { text: "Winter", correct: false }, { text: "Fall", correct: false }] },
-            { question: "What is a storm?", answers: [{ text: "Severe weather with strong wind and rain", correct: true }, { text: "A sunny day", correct: false }, { text: "A calm day", correct: false }] },
             { question: "What is lightning?", answers: [{ text: "A flash of electricity in the sky", correct: true }, { text: "A type of rain", correct: false }, { text: "A cloud", correct: false }] }
         ],
         3: [
