@@ -39,13 +39,6 @@ const grade3Questions = {
             { question: "What is a compass rose?", answers: [{ text: "Shows directions on a map", correct: true }, { text: "A flower", correct: false }, { text: "A decoration", correct: false }] },
             { question: "What direction is between north and east?", answers: [{ text: "Northeast", correct: true }, { text: "Southwest", correct: false }, { text: "Northwest", correct: false }] },
             { question: "What is a legend on a map?", answers: [{ text: "Explains map symbols", correct: true }, { text: "A story", correct: false }, { text: "A historical figure", correct: false }] }
-        ],
-        2: [
-            { question: "What is a need?", answers: [{ text: "Something we must have to survive", correct: true }, { text: "Something we want", correct: false }, { text: "A luxury", correct: false }] },
-            { question: "What is a want?", answers: [{ text: "Something we desire but don't need", correct: true }, { text: "Something we need", correct: false }, { text: "A requirement", correct: false }] },
-            { question: "What is an economy?", answers: [{ text: "System of money and jobs", correct: true }, { text: "A type of government", correct: false }, { text: "A business only", correct: false }] },
-            { question: "What is supply and demand?", answers: [{ text: "How much is available vs. wanted", correct: true }, { text: "Types of stores", correct: false }, { text: "Government control", correct: false }] },
-            { question: "What is a producer?", answers: [{ text: "Someone who makes goods", correct: true }, { text: "Someone who sells", correct: false }, { text: "A consumer", correct: false }] }
         ]
     },
     science: {
