@@ -625,7 +625,7 @@ const grade4Questions = {
             { question: "What is pollution?", answers: [{ text: "Harmful substances in the environment", correct: true }, { text: "Clean air", correct: false }, { text: "Healthy water", correct: false }] },
             { question: "What is conservation?", answers: [{ text: "Protecting natural resources", correct: true }, { text: "Using all resources", correct: false }, { text: "Destroying habitats", correct: false }] },
             { question: "What is climate change?", answers: [{ text: "Long-term changes in Earth's climate", correct: true }, { text: "Daily weather changes", correct: false }, { text: "Seasonal change only", correct: false }] },
-            { question: "Why are ecosystems important?", answers: [{ text: "They support life on Earth", correct: true }, { text: "They are not needed", correct: false }, { text: "Only animals need them", correct: false }] }
+
         ]
     }
 };
