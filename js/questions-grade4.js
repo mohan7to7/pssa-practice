@@ -594,8 +594,7 @@ const grade4Questions = {
             { question: "What is a gas?", answers: [{ text: "Matter that spreads out to fill space", correct: true }, { text: "Has fixed shape", correct: false }, { text: "Has fixed volume", correct: false }] },
             { question: "What is evaporation?", answers: [{ text: "Liquid changing to gas", correct: true }, { text: "Gas to liquid", correct: false }, { text: "Solid to liquid", correct: false }] },
             { question: "What is condensation?", answers: [{ text: "Gas changing to liquid", correct: true }, { text: "Liquid to gas", correct: false }, { text: "Solid to gas", correct: false }] },
-            { question: "What is melting?", answers: [{ text: "Solid changing to liquid", correct: true }, { text: "Liquid to gas", correct: false }, { text: "Gas to solid", correct: false }] }
-        ],
+         ],
         5: [
             { question: "What is the nitrogen cycle?", answers: [{ text: "The movement of nitrogen through the environment", correct: true }, { text: "A type of reaction", correct: false }, { text: "A gas explosion", correct: false }] },
             { question: "What is oxidation?", answers: [{ text: "Chemical reaction involving oxygen", correct: true }, { text: "Burning only", correct: false }, { text: "Rusting only", correct: false }] },
