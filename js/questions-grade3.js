@@ -55,13 +55,6 @@ const grade3Questions = {
             { question: "What is gravity?", answers: [{ text: "Force that pulls objects down", correct: true }, { text: "Wind", correct: false }, { text: "Heat", correct: false }] },
             { question: "What is friction?", answers: [{ text: "Force that resists motion", correct: true }, { text: "A type of energy", correct: false }, { text: "Movement", correct: false }] },
             { question: "What are simple machines?", answers: [{ text: "Tools that make work easier", correct: true }, { text: "Computers", correct: false }, { text: "Motors only", correct: false }] }
-        ],
-        2: [
-            { question: "What is the water cycle?", answers: [{ text: "Evaporation, Condensation, Precipitation", correct: true }, { text: "Freezing only", correct: false }, { text: "Melting only", correct: false }] },
-            { question: "What is evaporation?", answers: [{ text: "Water turning into vapor", correct: true }, { text: "Freezing water", correct: false }, { text: "Boiling water", correct: false }] },
-            { question: "What is condensation?", answers: [{ text: "Vapor turning into liquid", correct: true }, { text: "Liquid becoming solid", correct: false }, { text: "Freezing", correct: false }] },
-            { question: "What is precipitation?", answers: [{ text: "Water falling from clouds", correct: true }, { text: "Water evaporating", correct: false }, { text: "Cloud formation", correct: false }] },
-            { question: "What is an ecosystem?", answers: [{ text: "Community of organisms and their environment", correct: true }, { text: "Only animals", correct: false }, { text: "Only plants", correct: false }] }
         ]
     }
 };
