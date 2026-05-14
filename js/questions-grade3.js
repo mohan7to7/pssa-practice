@@ -23,13 +23,6 @@ const grade3Questions = {
             { question: "What is a noun?", answers: [{ text: "A naming word", correct: true }, { text: "An action word", correct: false }, { text: "A describing word", correct: false }] },
             { question: "What is an adjective?", answers: [{ text: "A word that describes", correct: true }, { text: "An action word", correct: false }, { text: "A naming word", correct: false }] },
             { question: "What is a subject?", answers: [{ text: "Who or what the sentence is about", correct: true }, { text: "A topic in school", correct: false }, { text: "A theme", correct: false }] }
-        ],
-        2: [
-            { question: "What is the main idea?", answers: [{ text: "The most important point", correct: true }, { text: "A detail", correct: false }, { text: "A supporting sentence", correct: false }] },
-            { question: "What are supporting details?", answers: [{ text: "Information that supports the main idea", correct: true }, { text: "The title", correct: false }, { text: "The conclusion", correct: false }] },
-            { question: "What is a topic sentence?", answers: [{ text: "The sentence that states the main idea", correct: true }, { text: "The last sentence", correct: false }, { text: "Any sentence in the paragraph", correct: false }] },
-            { question: "What is a paragraph?", answers: [{ text: "A group of sentences about one topic", correct: true }, { text: "A single sentence", correct: false }, { text: "A page", correct: false }] },
-            { question: "What is a conclusion?", answers: [{ text: "The final thought or summary", correct: true }, { text: "The beginning", correct: false }, { text: "A supporting detail", correct: false }] }
         ]
     },
     social: {
