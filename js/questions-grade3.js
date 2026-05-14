@@ -7,13 +7,6 @@ const grade3Questions = {
             { question: "What is 12 × 3?", answers: [{ text: "35", correct: false }, { text: "36", correct: true }, { text: "37", correct: false }] },
             { question: "What is 72 ÷ 8?", answers: [{ text: "8", correct: false }, { text: "9", correct: true }, { text: "10", correct: false }] },
             { question: "What is 28 + 32?", answers: [{ text: "59", correct: false }, { text: "60", correct: true }, { text: "61", correct: false }] }
-        ],
-        2: [
-            { question: "What is 125 + 175?", answers: [{ text: "299", correct: false }, { text: "300", correct: true }, { text: "301", correct: false }] },
-            { question: "What is 200 - 75?", answers: [{ text: "124", correct: false }, { text: "125", correct: true }, { text: "126", correct: false }] },
-            { question: "What is 24 × 5?", answers: [{ text: "119", correct: false }, { text: "120", correct: true }, { text: "121", correct: false }] },
-            { question: "What is 144 ÷ 12?", answers: [{ text: "11", correct: false }, { text: "12", correct: true }, { text: "13", correct: false }] },
-            { question: "What is 87 + 113?", answers: [{ text: "199", correct: false }, { text: "200", correct: true }, { text: "201", correct: false }] }
         ]
     },
     english: {
