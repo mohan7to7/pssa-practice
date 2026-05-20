@@ -28,7 +28,6 @@ pssa-practice/
 │   ├── userManager.js               # User authentication & progress tracking
 │   ├── questionBank.js              # Central question repository (all grades/subjects)
 │   ├── timerManager.js              # Quiz timer management
-│   ├── script.js                    # Global initialization script
 │   │
 │   ├── math.js                      # Math quiz logic
 │   ├── english.js                   # English quiz logic

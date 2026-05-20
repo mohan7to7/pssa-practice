@@ -83,7 +83,6 @@ pssa-practice/
 │   ├── userManager.js                         # User authentication & progress
 │   ├── questionBank.js                        # Question repository
 │   ├── timerManager.js                        # Quiz timer
-│   ├── script.js                              # Global initialization
 │   │
 │   ├── math.js                                # Math quiz logic
 │   ├── english.js                             # English quiz logic
