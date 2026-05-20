@@ -84,20 +84,12 @@ pssa-practice/
 │   ├── questionBank.js                        # Question repository
 │   ├── timerManager.js                        # Quiz timer
 │   │
-│   ├── math.js                                # Math quiz logic
-│   ├── english.js                             # English quiz logic
-│   ├── science.js                             # Science quiz logic
-│   ├── social.js                              # Social Studies quiz logic
-│   │
 │   ├── questions-k.js                         # Kindergarten questions
 │   ├── questions-grade1.js                    # Grade 1 questions
 │   ├── questions-grade2.js                    # Grade 2 questions
 │   ├── questions-grade3.js                    # Grade 3 questions
 │   ├── questions-grade4.js                    # Grade 4 questions (25 Q/level)
-│   ├── questions-grade5.js                    # Grade 5 questions
-│   │
-│   └── questionBanks/                         # Additional question storage
-│       └── grade4-questions.json
+│   └── questions-grade5.js                    # Grade 5 questions
 │
 ├── 📁 css/
 │   └── timer.css                              # Timer-specific styling

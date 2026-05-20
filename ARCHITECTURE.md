@@ -204,15 +204,6 @@ pssa-practice/
 - Auto-mark incorrect on timeout
 - Visual feedback and animations
 
-### {subject}.js Files (math.js, english.js, etc.)
-**Purpose:** Subject-specific quiz logic
-
-**Key Functions:**
-- `loadQuestions()` - Load questions from question bank
-- `renderQuestion()` - Display current question
-- `checkAnswer()` - Validate user's answer
-- `calculateScore()` - Compute final score
-- `updateProgress()` - Save progress to user data
 
 ---
 
@@ -235,7 +226,7 @@ pssa-practice/
 4. questionBank.getQuestionsForLevel() retrieves questions
 5. timerManager starts 60-second timer
 6. User answers questions
-7. {subject}.js calculates score
+7. Quiz calculates score
 8. Progress stored via userManager.updateProgress()
 9. Level unlocked if score >= 70%
 ```
@@ -311,8 +302,7 @@ Subject/
 
 ### Questions Integration
 ```html
-<script src="js/questions-grade3.js"></script>  <!-- Load questions -->
-<script src="js/math.js"></script>              <!-- Use in subject logic -->
+<script src="js/questions-grade3.js"></script>  <!-- Load questions for specific grade -->
 ```
 
 ### Configuration Usage
