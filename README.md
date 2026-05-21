@@ -78,18 +78,25 @@ pssa-practice/
 ├── 📄 style.css                               # Global styles
 │
 ├── 📁 js/
-│   ├── ⭐ config.js                           # Centralized configuration (NEW)
-│   ├── ⭐ utils.js                            # Shared utilities (NEW)
+│   ├── ⭐ config.js                           # Centralized configuration
+│   ├── ⭐ utils.js                            # Shared utilities
 │   ├── userManager.js                         # User authentication & progress
 │   ├── questionBank.js                        # Question repository
-│   ├── timerManager.js                        # Quiz timer
-│   │
-│   ├── questions-k.js                         # Kindergarten questions
-│   ├── questions-grade1.js                    # Grade 1 questions
-│   ├── questions-grade2.js                    # Grade 2 questions
-│   ├── questions-grade3.js                    # Grade 3 questions
-│   ├── questions-grade4.js                    # Grade 4 questions (25 Q/level)
-│   └── questions-grade5.js                    # Grade 5 questions
+│   └── timerManager.js                        # Quiz timer
+│
+├── 📁 grades/                                 # ⭐ Grade-based question organization
+│   ├── k/
+│   │   └── questions.js                       # Kindergarten questions (all subjects)
+│   ├── grade1/
+│   │   └── questions.js                       # Grade 1 questions (all subjects)
+│   ├── grade2/
+│   │   └── questions.js                       # Grade 2 questions (all subjects)
+│   ├── grade3/
+│   │   └── questions.js                       # Grade 3 questions (all subjects)
+│   ├── grade4/
+│   │   └── questions.js                       # Grade 4 questions (25 Q/level, all subjects)
+│   └── grade5/
+│       └── questions.js                       # Grade 5 questions (all subjects)
 │
 ├── 📁 css/
 │   └── timer.css                              # Timer-specific styling
@@ -122,7 +129,7 @@ pssa-practice/
 ├── pssa-practice.iml                          # Project configuration
 └── .git/                                      # Version control
 
-* Future: Grades 1-5 will have similar structure with /1, /2, /3, /4, /5 folders
+**KEY FEATURE:** Questions are organized by grade in separate folders for easy updates without models!
 ```
 
 ---

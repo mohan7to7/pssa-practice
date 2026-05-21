@@ -23,26 +23,25 @@ pssa-practice/
 │   └── timer.css                    # Timer-specific styling
 │
 ├── 📁 js/                           # Core JavaScript modules
-│   ├── config.js                    # ⭐ NEW: Centralized configuration
-│   ├── utils.js                     # ⭐ NEW: Shared utility functions
+│   ├── config.js                    # ⭐ Centralized configuration
+│   ├── utils.js                     # ⭐ Shared utility functions
 │   ├── userManager.js               # User authentication & progress tracking
-│   ├── questionBank.js              # Central question repository (all grades/subjects)
-│   ├── timerManager.js              # Quiz timer management
-│   │
-│   ├── math.js                      # Math quiz logic
-│   ├── english.js                   # English quiz logic
-│   ├── science.js                   # Science quiz logic
-│   ├── social.js                    # Social Studies quiz logic
-│   │
-│   ├── questions-k.js               # Kindergarten questions
-│   ├── questions-grade1.js          # Grade 1 questions
-│   ├── questions-grade2.js          # Grade 2 questions
-│   ├── questions-grade3.js          # Grade 3 questions
-│   ├── questions-grade4.js          # Grade 4 questions (Updated to 25 Q/level)
-│   ├── questions-grade5.js          # Grade 5 questions
-│   │
-│   └── questionBanks/               # Additional question storage
-│       └── grade4-questions.json    # Grade 4 data (JSON format)
+│   ├── questionBank.js              # Central question repository
+│   └── timerManager.js              # Quiz timer management
+│
+├── 📁 grades/                       # ⭐ NEW: Grade-based question organization
+│   ├── k/
+│   │   └── questions.js             # Kindergarten questions (all subjects)
+│   ├── grade1/
+│   │   └── questions.js             # Grade 1 questions (all subjects)
+│   ├── grade2/
+│   │   └── questions.js             # Grade 2 questions (all subjects)
+│   ├── grade3/
+│   │   └── questions.js             # Grade 3 questions (all subjects)
+│   ├── grade4/
+│   │   └── questions.js             # Grade 4 questions (all subjects)
+│   └── grade5/
+│       └── questions.js             # Grade 5 questions (all subjects)
 │
 ├── 📁 K/                            # Kindergarten folder
 │   └── index.html                   # Subject selection for Kindergarten
@@ -104,7 +103,7 @@ pssa-practice/
 - **script.js** - Global initialization
 
 ### 4. **Data Layer**
-- **questions-gradeX.js** - Grade-specific questions
+- **grades/*/questions.js** - Grade-specific questions (organized by grade folder)
 - **localStorage** - Client-side data persistence
 
 ---
@@ -302,7 +301,10 @@ Subject/
 
 ### Questions Integration
 ```html
-<script src="js/questions-grade3.js"></script>  <!-- Load questions for specific grade -->
+<script src="../grades/k/questions.js"></script>          <!-- K questions -->
+<script src="../grades/grade1/questions.js"></script>    <!-- Grade 1 questions -->
+<script src="../grades/grade2/questions.js"></script>    <!-- Grade 2 questions -->
+<!-- etc. Load all grades to make available to questionBank -->
 ```
 
 ### Configuration Usage
@@ -412,22 +414,24 @@ Direct file serving via HTTP/HTTPS
 ## 🔧 Adding New Content
 
 ### Adding Questions
-1. Edit `js/questions-gradeX.js`
+1. Edit `grades/gradeX/questions.js` (where X is the grade level: k, grade1, grade2, etc.)
 2. Follow existing JSON structure
 3. Ensure 25 questions per level (10 levels)
 4. Test on subject quiz page
 
 ### Adding New Grade
-1. Create `/Grade_X` folder
-2. Create `Grade_X/index.html` (copy from existing)
-3. Create question file `js/questions-gradeX.js`
-4. Add grade to CONFIG.GRADES
+1. Create `/grades/gradeX/` folder (where X is the new grade)
+2. Create `grades/gradeX/questions.js` with questions for all subjects
+3. Create `/GradeX` folder (if needed for navigation)
+4. Create `GradeX/index.html` (copy from existing)
+5. Add grade to CONFIG.GRADES
+6. Update all quiz.html files to include new grade's questions script
 
 ### Adding New Subject
 1. Create `/subject` folder with `index.html` and `quiz.html`
-2. Create `js/subject.js` with quiz logic
+2. Add subject questions to all grade files in `grades/gradeX/questions.js`
 3. Add to CONFIG.SUBJECTS
-4. Add questions to all grade files
+4. Update quiz.html files to reference new subject
 
 ---
 
@@ -459,7 +463,13 @@ localStorage.getItem('pssaProgress');
 
 ## 📝 Version History
 
-### v2.0.0 (Current)
+### v2.1.0 (Current)
+- ⭐ Reorganized question files into grade-based folders (`grades/gradeX/questions.js`)
+- Simplified file structure for easier content management
+- Updated documentation to reflect new organization
+- Enhanced maintainability - edit one grade folder without affecting others
+
+### v2.0.0
 - ⭐ Added config.js for centralized configuration
 - ⭐ Added utils.js for shared utilities
 - Enhanced documentation

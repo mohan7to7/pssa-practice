@@ -22,13 +22,31 @@ This guide will help you understand how to work with the PSSA Practice Hub codeb
 
 ### Project Structure Overview
 ```
-js/
-├── config.js          ← Centralized configuration
-├── utils.js           ← Shared utilities
-├── userManager.js     ← User/authentication logic
-├── questionBank.js    ← Question storage
-├── {subject}.js       ← Subject-specific logic
-└── questions-{grade}.js
+Project Layout:
+├── js/
+│   ├── config.js          ← Centralized configuration
+│   ├── utils.js           ← Shared utilities
+│   ├── userManager.js     ← User/authentication logic
+│   ├── questionBank.js    ← Question storage
+│   └── timerManager.js    ← Timer functionality
+│
+├── grades/                ← ⭐ Grade-based question organization
+│   ├── k/
+│   │   └── questions.js   ← Kindergarten questions (easy to update)
+│   ├── grade1/
+│   │   └── questions.js   ← Grade 1 questions
+│   ├── grade2/
+│   │   └── questions.js   ← Grade 2 questions
+│   ├── grade3/
+│   │   └── questions.js   ← Grade 3 questions
+│   ├── grade4/
+│   │   └── questions.js   ← Grade 4 questions
+│   └── grade5/
+│       └── questions.js   ← Grade 5 questions
+│
+└── {subject}/
+    ├── index.html         ← Subject selection
+    └── quiz.html          ← Quiz template (loads all grade questions)
 ```
 
 ---
@@ -134,10 +152,10 @@ const grades = ['K', '1', '2', '3', '4', '5'];
 
 ### Task 1: Add Questions to a Grade
 
-**File:** `js/questions-gradeX.js`
+**File:** `grades/gradeX/questions.js` (where X is k, grade1, grade2, etc.)
 
 **Steps:**
-1. Open `js/questions-grade3.js` (for example)
+1. Open `grades/grade3/questions.js` (for example)
 2. Find the level you want to edit
 3. Add questions following the structure:
 
