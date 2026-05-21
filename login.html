@@ -2,256 +2,372 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>PSSA Practice - Login</title>
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --success-gradient: linear-gradient(135deg, #27ae60 0%, #229954 100%);
-            --text-main: #2c3e50;
-            --text-muted: #5a6c7d;
-            --border-color: #e2e8f0;
-            --radius: 8px;
-            --transition: all 0.2s ease-in-out;
+            --app-bg: #f4f6fa;
+            --card-bg: #ffffff;
+            --brand-primary: #667eea;
+            --brand-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-light: #e2e8f0;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--app-bg);
             color: var(--text-main);
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
         }
 
-        .login-container {
-            max-width: 480px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        /* MOBILE FIRST LAYOUT (Default behavior for phones) */
+        .app-container {
+            width: 100%;
+            max-width: 100%;
+            background: var(--card-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 20px;
+            box-shadow: none;
         }
 
-        .header {
+        /* TABLET (TAB) LAYOUT */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            body {
+                padding: 40px 20px;
+                background-color: var(--app-bg);
+            }
+            .app-container {
+                max-width: 600px;
+                min-height: auto;
+                border-radius: 20px;
+                padding: 40px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                align-self: center;
+            }
+            .grade-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+
+        /* DESKTOP LAYOUT */
+        @media (min-width: 1025px) {
+            body {
+                padding: 60px 20px;
+                align-items: center;
+            }
+            .app-container {
+                max-width: 460px;
+                min-height: auto;
+                border-radius: 24px;
+                padding: 36px;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+            }
+        }
+
+        /* Brand App Header */
+        .app-header {
             text-align: center;
+            margin-top: 10px;
             margin-bottom: 28px;
         }
 
-        .header h1 {
-            font-size: 1.8rem;
-            margin: 0 0 8px 0;
+        .app-header h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 0 0 6px 0;
+            letter-spacing: -0.5px;
         }
 
-        .header h2 {
-            font-size: 1.2rem;
-            font-weight: 500;
+        .app-header h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
             color: var(--text-muted);
-            margin: 0 0 6px 0;
+            margin: 0 0 4px 0;
         }
 
         .subtitle {
-            font-size: 0.95rem;
-            color: #718096;
+            font-size: 0.85rem;
+            color: #94a3b8;
             margin: 0;
         }
 
+        /* Input Styling */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
-        label {
+        .form-label {
             display: block;
             margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--text-main);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
         }
 
-        input, select {
+        .mobile-input {
             width: 100%;
-            padding: 12px 14px;
+            padding: 14px 16px;
             font-size: 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: var(--radius);
-            box-sizing: border-box;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
             font-family: inherit;
-            background-color: #f1f5f9;
-            transition: var(--transition);
+            background-color: #f8fafc;
+            transition: all 0.2s ease;
         }
 
-        input:focus, select:focus {
+        .mobile-input:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: var(--brand-primary);
             background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
         }
 
-        .form-buttons {
-            margin-top: 25px;
+        /* Responsive Grade Pill Grid */
+        .grade-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
         }
 
-        .btn-login {
-            width: 100%;
-            background: var(--primary-gradient);
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: var(--radius);
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: var(--transition);
+        @media (max-width: 350px) {
+            .grade-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .btn-login:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn-login:active {
-            transform: translateY(1px);
-        }
-
-        .continue-container {
+        .grade-card {
+            background-color: #f8fafc;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 14px 8px;
             text-align: center;
-            margin-top: 15px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        .btn-continue {
+        /* Fixed code editor warning: Added basic fallback selector format */
+        .selected, .grade-card.selected {
+            background-color: #e0e7ff;
+            border-color: var(--brand-primary);
+            color: var(--brand-primary);
+        }
+
+        .grade-card:active {
+            transform: scale(0.96);
+        }
+
+        /* Primary Action Buttons */
+        .action-space {
+            margin-top: auto;
+            padding-top: 30px;
+        }
+
+        @media (min-width: 481px) {
+            .action-space {
+                margin-top: 24px;
+            }
+        }
+
+        .btn-app-primary {
+            width: 100%;
+            background: var(--brand-gradient);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+        }
+
+        .btn-app-primary:active {
+            transform: scale(0.98);
+            opacity: 0.95;
+        }
+
+        .btn-app-secondary {
+            display: block;
+            width: 100%;
             background: none;
             border: none;
-            color: #4a5568;
+            color: var(--text-muted);
             font-size: 0.9rem;
             font-weight: 600;
-            text-decoration: underline;
-            cursor: pointer;
-            padding: 8px;
-            transition: var(--transition);
-        }
-
-        .btn-continue:hover {
-            color: #27ae60;
-        }
-
-        .existing-users {
-            margin-top: 30px;
-            padding-top: 25px;
-            border-top: 2px dashed var(--border-color);
-        }
-
-        .existing-users h3 {
-            font-size: 1rem;
-            color: var(--text-main);
-            margin: 0 0 15px 0;
-        }
-
-        .user-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 12px;
-        }
-
-        .user-btn {
-            background-color: #f8fafc;
-            color: var(--text-main);
-            padding: 12px;
-            border: 2px solid var(--border-color);
-            border-radius: var(--radius);
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
             text-align: center;
-        }
-
-        .user-btn small {
-            display: block;
-            margin-top: 4px;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        .user-btn:hover {
-            background-color: #ffffff;
-            border-color: #667eea;
-            color: #667eea;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        .status-message {
-            font-weight: 500;
-            margin: 15px 0;
             padding: 12px;
-            border-radius: var(--radius);
-            font-size: 0.95rem;
+            margin-top: 8px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* Native App Toast Messages */
+        .app-toast {
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding: 14px 16px;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            animation: slideIn 0.2s ease-out;
         }
 
-        .error {
-            color: #c53030;
-            background-color: #fff5f5;
-            border: 1px solid #feb2b2;
+        @keyframes slideIn {
+            from { transform: translateY(-10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
-        .success {
-            color: #22543d;
-            background-color: #f0fff4;
-            border: 1px solid #9ae6b4;
+        .error { color: #991b1b; background-color: #fef2f2; border: 1px solid #fca5a5; }
+        .success { color: #065f46; background-color: #ecfdf5; border: 1px solid #6ee7b7; }
+
+        /* Existing Profiles App Row */
+        .existing-profiles {
+            margin-top: 28px;
+            border-top: 1px solid var(--border-light);
+            padding-top: 20px;
+        }
+
+        .existing-profiles h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin: 0 0 12px 0;
+        }
+
+        .profile-row {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .profile-row::-webkit-scrollbar {
+            display: none;
+        }
+
+        .profile-chip {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            min-width: 115px;
+            background-color: #f1f5f9;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 12px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .profile-chip:active {
+            transform: scale(0.95);
+        }
+
+        .profile-chip .name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+
+        .profile-chip .grade {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+            display: block;
         }
     </style>
 </head>
 <body>
-<main class="container login-container">
-    <header class="header">
+<div class="app-container">
+    <header class="app-header">
         <h1>🎓 PSSA Practice Hub</h1>
-        <h2>Welcome to Your Learning Portal</h2>
-        <p class="subtitle">Create a new account or select an existing user</p>
+        <h2>Learning Portal</h2>
+        <p class="subtitle">Set up a profile or select an existing runner</p>
     </header>
 
-    <div id="error" class="status-message error" style="display: none;" aria-live="assertive"></div>
-    <div id="success" class="status-message success" style="display: none;" aria-live="polite"></div>
+    <div id="error" class="app-toast error" style="display: none;" aria-live="assertive"></div>
+    <div id="success" class="app-toast success" style="display: none;" aria-live="polite"></div>
 
     <div id="loginForm">
         <div class="form-group">
-            <label for="userName">Your Name:</label>
-            <input type="text" id="userName" placeholder="Enter your name" required autocomplete="name">
+            <label class="form-label" for="userName">Your Name</label>
+            <input type="text" id="userName" class="mobile-input" placeholder="Enter name..." required autocomplete="name">
         </div>
 
         <div class="form-group">
-            <label for="gradeLevel">Select Your Grade:</label>
-            <select id="gradeLevel" required>
+            <span class="form-label">Select Your Grade</span>
+            <select id="gradeLevel" style="display: none;" required>
                 <option value="">-- Select a Grade --</option>
-                <option value="K">Kindergarten</option>
-                <option value="1">1st Grade</option>
-                <option value="2">2nd Grade</option>
-                <option value="3">3rd Grade</option>
-                <option value="4">4th Grade</option>
-                <option value="5">5th Grade</option>
+                <option value="K">K</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
-        </div>
 
-        <div class="form-buttons">
-            <button type="button" class="btn-login" onclick="createNewUser()">Create New User</button>
-        </div>
-
-        <div class="continue-container">
-            <button type="button" class="btn-continue" onclick="goToDashboard()">
-                Or continue with active session →
-            </button>
+            <div class="grade-grid">
+                <div class="grade-card" data-val="K" onclick="selectGradeCard(this)">Kinder</div>
+                <div class="grade-card" data-val="1" onclick="selectGradeCard(this)">1st</div>
+                <div class="grade-card" data-val="2" onclick="selectGradeCard(this)">2nd</div>
+                <div class="grade-card" data-val="3" onclick="selectGradeCard(this)">3rd</div>
+                <div class="grade-card" data-val="4" onclick="selectGradeCard(this)">4th</div>
+                <div class="grade-card" data-val="5" onclick="selectGradeCard(this)">5th</div>
+            </div>
         </div>
     </div>
 
-    <section id="existingUsersSection" class="existing-users"></section>
-</main>
+    <section id="existingUsersSection" class="existing-profiles"></section>
+
+    <div class="action-space">
+        <button type="button" class="btn-app-primary" onclick="createNewUser()">Create New Profile</button>
+        <button type="button" class="btn-app-secondary" onclick="goToDashboard()">Or resume current session →</button>
+    </div>
+</div>
 
 <script src="js/config.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/userManager.js"></script>
 <script>
-    // Load existing users on page load
+    // Custom component selection wrapper
+    function selectGradeCard(element) {
+        const containerGrid = element.parentElement;
+        containerGrid.querySelectorAll('.grade-card').forEach(card => card.classList.remove('selected'));
+
+        element.classList.add('selected');
+        document.getElementById('gradeLevel').value = element.getAttribute('data-val');
+    }
+
+    // Load existing users into responsive carousel setup
     function loadExistingUsers() {
         const users = userManager.getAllUsers();
         const section = document.getElementById('existingUsersSection');
@@ -261,14 +377,14 @@
             return;
         }
 
-        let html = '<h3>Previous Users:</h3><div class="user-list">';
+        let html = '<h3>Previous Profiles:</h3><div class="profile-row">';
 
         users.forEach(user => {
             html += `
-                    <button type="button" class="user-btn" onclick="selectExistingUser('${user.id}')">
-                        ${user.name}
-                        <small>Grade ${user.gradeLevel}</small>
-                    </button>
+                    <div class="profile-chip" onclick="selectExistingUser('${user.id}')">
+                        <span class="name">${user.name}</span>
+                        <span class="grade">Grade ${user.gradeLevel}</span>
+                    </div>
                 `;
         });
 
@@ -279,9 +395,8 @@
     // Create new user
     function createNewUser() {
         const nameInput = document.getElementById('userName');
-        const gradeSelect = document.getElementById('gradeLevel');
         const name = nameInput.value.trim();
-        const grade = gradeSelect.value;
+        const grade = document.getElementById('gradeLevel').value;
 
         const errorDiv = document.getElementById('error');
         const successDiv = document.getElementById('success');
@@ -297,15 +412,14 @@
         }
 
         if (!grade) {
-            errorDiv.textContent = '❌ Please select your grade';
+            errorDiv.textContent = '❌ Please tap to select your grade';
             errorDiv.style.display = 'flex';
-            gradeSelect.focus();
             return;
         }
 
         try {
             userManager.createUser(name, grade);
-            successDiv.textContent = `✅ Welcome, ${name}! Starting your learning journey...`;
+            successDiv.textContent = `Welcome, ${name}! Launching portal...`;
             successDiv.style.display = 'flex';
 
             setTimeout(() => {
@@ -327,7 +441,7 @@
 
         try {
             const user = userManager.setCurrentUser(userId);
-            successDiv.textContent = `✅ Welcome back, ${user.name}!`;
+            successDiv.textContent = `Welcome back, ${user.name}!`;
             successDiv.style.display = 'flex';
 
             setTimeout(() => {
@@ -344,14 +458,14 @@
         const currentUser = userManager.getCurrentUser();
         if (!currentUser) {
             const errorDiv = document.getElementById('error');
-            errorDiv.textContent = '❌ Please create a new user first or select an existing one';
+            errorDiv.textContent = '❌ Create a new profile or choose an existing option first';
             errorDiv.style.display = 'flex';
             return;
         }
         window.location.href = 'dashboard.html';
     }
 
-    // Initialize page
+    // Initialize responsive viewport check
     document.addEventListener('DOMContentLoaded', function() {
         if (userManager.getCurrentUser()) {
             window.location.href = 'dashboard.html';
