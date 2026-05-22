@@ -8,29 +8,42 @@
 .timer {
     font-size: 1.5em;
     font-weight: bold;
-    color: #e74c3c;
+    /* Neutralized base colors so status changes are meaningful */
+    color: #2c3e50;
     background-color: #f8f9fa;
     padding: 10px 20px;
     border-radius: 25px;
-    border: 2px solid #e74c3c;
+    border: 2px solid #bdc3c7;
     display: inline-block;
     min-width: 80px;
+    /* Smooth transition for when classes change */
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Warning State (e.g., 30 seconds left) */
 .timer.warning {
     color: #f39c12;
     border-color: #f39c12;
-    animation: pulse 1s infinite;
+    animation: pulse 1s infinite ease-in-out;
 }
 
+/* Danger State (e.g., 10 seconds left) */
 .timer.danger {
     color: #e74c3c;
     border-color: #e74c3c;
-    animation: pulse 0.5s infinite;
+    animation: pulse 0.5s infinite ease-in-out;
 }
 
 @keyframes pulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    50% { transform: scale(1.05); } /* Slightly reduced scale to prevent text blurriness */
     100% { transform: scale(1); }
+}
+
+/* Accessibility: Respect users who prefer no animations */
+@media (prefers-reduced-motion: reduce) {
+    .timer.warning,
+    .timer.danger {
+        animation: none;
+    }
 }
