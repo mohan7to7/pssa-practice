@@ -5,56 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Studies Practice - PSSA</title>
     <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🌍 Social Studies Practice</h1>
-            <h2>Explore History, Geography, and Society</h2>
-            <p class="subtitle">Learn about the world around you</p>
-        </div>
-
-        <div class="subject-buttons" id="levelButtons">
-            <p>Loading levels...</p>
-        </div>
-
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="../dashboard.html" class="btn" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%);">Back to Dashboard</a>
-        </div>
-    </div>
-
-    <script src="../js/userManager.js"></script>
-    <script>
-        function loadLevels() {
-            const user = userManager.getCurrentUser();
-            const container = document.getElementById('levelButtons');
-            
-            if (!user) {
-                container.innerHTML = '<p>Please <a href="../login.html">log in</a> to access levels.</p>';
-                return;
-            }
-
-            const grade = user.gradeLevel;
-            const progress = userManager.getUserProgress(user.id);
-            
-            let html = '';
-            for (let level = 1; level <= 10; level++) {
-                const isUnlocked = userManager.isLevelUnlocked(user.id, grade, 'social', level);
-                const isCompleted = progress?.grades?.[grade]?.social?.levels?.[level - 1]?.completed;
-                
-                if (isCompleted) {
-                    html += `<a href="quiz.html?grade=${grade}&level=${level}" class="btn" style="background-color: #3498db;">✓ Level ${level}</a>`;
-                } else if (isUnlocked) {
-                    html += `<a href="quiz.html?grade=${grade}&level=${level}" class="btn">Level ${level}</a>`;
-                } else {
-                    html += `<a href="#" class="btn" style="background-color: #bdc3c7; cursor: not-allowed;" onclick="alert('Complete previous levels first!'); return false;">🔒 Level ${level}</a>`;
-                }
-            }
-            
-            container.innerHTML = html;
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --success: #10b981;
+            --background: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
         }
 
-        document.addEventListener('DOMContentLoaded', loadLevels);
-    </script>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        .header h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0 0 8px 0;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .subject-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 10px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+            background-color: var(--success);
+            color: white;
+            border: 2px solid var(--success);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+        }
+
+        .btn-nav {
+            display: inline-block;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px;
+                margin: 10px;
+            }
+            .subject-buttons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🌍 Social Studies Practice</h1>
+        <h2>Explore History, Geography, and Society</h2>
+        <p class="subtitle">Learn about the world around you</p>
+    </div>
+
+    <div class="subject-buttons" id="levelButtons">
+        <p style="text-align: center; color: var(--text-muted); width: 100%;">Loading levels...</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="../dashboard.html" class="btn-nav">Back to Dashboard</a>
+    </div>
+</div>
+
+<script src="../js/userManager.js"></script>
+<script>
+    function loadLevels() {
+        const user = userManager.getCurrentUser();
+        const container = document.getElementById('levelButtons');
+
+        if (!user) {
+            container.innerHTML = '<p style="text-align:center; color:var(--text-muted); width:100%;">Please <a href="../login.html">log in</a> to access levels.</p>';
+            return;
+        }
+
+        const grade = user.gradeLevel;
+        const progress = userManager.getUserProgress(user.id);
+
+        let html = '';
+        for (let level = 1; level <= 10; level++) {
+            const isUnlocked = userManager.isLevelUnlocked(user.id, grade, 'social', level);
+            const isCompleted = progress?.grades?.[grade]?.social?.levels?.[level - 1]?.completed;
+
+            if (isCompleted) {
+                html += `<a href="quiz.html?grade=${grade}&level=${level}" class="btn" style="background-color: #3498db; border-color: #3498db;">✓ Level ${level}</a>`;
+            } else if (isUnlocked) {
+                html += `<a href="quiz.html?grade=${grade}&level=${level}" class="btn">Level ${level}</a>`;
+            } else {
+                html += `<a href="#" class="btn" style="background-color: #bdc3c7; border-color: #bdc3c7; color: #7f8c8d; cursor: not-allowed;" onclick=\"alert('Complete previous levels first!'); return false;\">🔒 Level ${level}</a>`;
+            }
+        }
+
+        container.innerHTML = html;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadLevels);
+</script>
 </body>
 </html>
