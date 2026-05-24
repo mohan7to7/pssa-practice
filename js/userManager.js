@@ -87,7 +87,7 @@ class UserManager {
             progress.grades[grade] = {};
             subjects.forEach(subject => {
                 progress.grades[grade][subject] = {
-                    levels: Array.from({ length: 10 }, (_, i) => ({
+                    levels: Array.from({ length: 25 }, (_, i) => ({
                         levelNum: i + 1,
                         completed: false,
                         score: 0,
