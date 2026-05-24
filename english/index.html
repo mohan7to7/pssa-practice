@@ -38,7 +38,7 @@
             const progress = userManager.getUserProgress(user.id);
             
             let html = '';
-            for (let level = 1; level <= 10; level++) {
+            for (let level = 1; level <= 25; level++) {
                 const isUnlocked = userManager.isLevelUnlocked(user.id, grade, 'english', level);
                 const isCompleted = progress?.grades?.[grade]?.english?.levels?.[level - 1]?.completed;
                 
