@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - PSSA Practice</title>
+    <title>Kids Learning Hub - Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            --primary: #4f46e5;
-            --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            --success: #10b981;
+            --primary: #ff6b6b;
+            --primary-gradient: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            --math-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --english-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --social-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --science-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --success: #22c55e;
             --danger: #ef4444;
-            --warning: #f59e0b;
-            --background: #f8fafc;
+            --warning: #eab308;
+            --background: #f0f7ff;
             --text-main: #1e293b;
             --text-muted: #64748b;
             --card-bg: #ffffff;
@@ -20,11 +24,15 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Ubuntu Condensed', sans-serif;
             background-color: var(--background);
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
             color: var(--text-main);
             margin: 0;
             padding: 20px;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .container {
@@ -36,9 +44,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 35px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            padding: 24px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            border: 3px solid #e2e8f0;
         }
 
         .user-info {
@@ -46,100 +57,126 @@
         }
 
         .user-name {
-            font-size: 1.4em;
+            font-size: 1.8em;
             font-weight: 700;
-            color: var(--text-main);
+            color: #4f46e5;
             margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            animation: bounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-4px); }
         }
 
         .user-grade {
-            color: var(--text-muted);
-            font-size: 0.95em;
-            margin: 6px 0 0 0;
-            font-weight: 500;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 1em;
+            padding: 6px 16px;
+            border-radius: 999px;
+            margin: 8px 0 0 0;
+            display: inline-block;
+            font-weight: bold;
+            border: 2px solid #bfdbfe;
         }
 
         .logout-btn {
             background-color: #fff;
             color: var(--danger);
-            border: 1px solid #fee2e2;
-            padding: 10px 22px;
-            border-radius: 8px;
+            border: 3px solid #fee2e2;
+            padding: 10px 24px;
+            border-radius: 16px;
             cursor: pointer;
-            font-weight: 600;
-            transition: all 0.25s ease;
+            font-weight: bold;
+            font-size: 1em;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .logout-btn:hover {
             background-color: var(--danger);
             color: white;
-            border-color: var(--danger);
+            transform: scale(1.08) rotate(-2deg);
             box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
         }
 
         .subject-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .subject-card {
             background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 25px;
-            border-radius: 16px;
+            border: 4px solid transparent;
+            padding: 24px;
+            border-radius: 28px;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.03);
             display: flex;
             flex-direction: column;
+            position: relative;
         }
 
+        .subject-card.math-card { border-color: #93c5fd; }
+        .subject-card.english-card { border-color: #fbcfe8; }
+        .subject-card.social-card { border-color: #a7f3d0; }
+        .subject-card.science-card { border-color: #fde68a; }
+
         .subject-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            border-color: #cbd5e1;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.08);
         }
 
         .subject-card h3 {
             margin: 0 0 12px 0;
-            font-size: 1.35em;
+            font-size: 1.6em;
             color: var(--text-main);
-            font-weight: 700;
+        }
+
+        .progress-container-box {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 10px;
+            border: 2px dashed #cbd5e1;
+            margin-bottom: 15px;
         }
 
         .progress-bar {
             width: 100%;
-            height: 10px;
-            background-color: #f1f5f9;
+            height: 20px;
+            background-color: #e2e8f0;
             border-radius: 999px;
-            margin-top: 8px;
             overflow: hidden;
+            border: 2px solid #cbd5e1;
         }
 
         .progress-fill {
             height: 100%;
-            background: var(--primary-gradient);
             border-radius: 999px;
-            transition: width 0.5s ease-out;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
+        .math-fill { background: var(--math-gradient); }
+        .english-fill { background: var(--english-gradient); }
+        .social-fill { background: var(--social-gradient); }
+        .science-fill { background: var(--science-gradient); }
 
         .progress-text {
-            font-size: 0.85em;
-            color: var(--text-muted);
-            margin-top: 10px;
-            font-weight: 600;
+            font-size: 0.95em;
+            color: #475569;
+            margin-top: 8px;
+            font-weight: bold;
+            text-align: center;
         }
 
         .levels-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .level-btn {
@@ -147,63 +184,91 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
             cursor: pointer;
-            font-weight: 700;
-            font-size: 0.9em;
-            transition: all 0.2s ease;
+            font-weight: 900;
+            font-size: 1.2em;
+            position: relative;
             background-color: #fff;
             color: var(--text-main);
+            box-shadow: 0 4px 0 var(--border-color);
+            transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .level-btn:hover:not(:disabled) {
-            transform: scale(1.1);
-            border-color: var(--primary);
-            color: var(--primary);
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 0 #cbd5e1;
+        }
+
+        .level-btn:active:not(:disabled) {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #cbd5e1;
         }
 
         .level-btn.unlocked {
-            background-color: var(--success);
-            border-color: var(--success);
-            color: white;
+            background: #ffffff;
+            border-color: #6366f1;
+            color: #6366f1;
+            box-shadow: 0 4px 0 #4f46e5;
+        }
+
+        .level-btn.unlocked:hover {
+            background: #e0e7ff;
+            box-shadow: 0 8px 0 #4f46e5;
         }
 
         .level-btn.completed {
-            background-color: #eef2ff;
-            border-color: #c7d2fe;
-            color: var(--primary);
+            background: #f0fdf4;
+            border-color: #22c55e;
+            color: #166534;
+            box-shadow: 0 4px 0 #16a34a;
         }
 
         .level-btn.locked {
-            background-color: #f8fafc;
-            border-color: var(--border-color);
-            color: #cbd5e1;
+            background-color: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #94a3b8;
+            box-shadow: none;
             cursor: not-allowed;
         }
 
-        .level-btn:disabled {
-            cursor: not-allowed;
+        .star-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 0.85em;
+            background: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
         }
 
         .stats-section {
             background-color: #fff;
-            border: 1px solid var(--border-color);
-            padding: 30px;
-            border-radius: 16px;
-            margin-top: 40px;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            border: 3px solid #e2e8f0;
+            padding: 24px;
+            border-radius: 28px;
+            margin-top: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.03);
         }
 
         .stats-section h2 {
             margin-top: 0;
             margin-bottom: 20px;
-            font-size: 1.4em;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 1.6em;
+            color: #1e293b;
+            text-align: center;
         }
 
         .stats-grid {
@@ -213,45 +278,40 @@
         }
 
         .stat-card {
-            background-color: #f8fafc;
-            border: 1px solid #f1f5f9;
-            padding: 24px;
-            border-radius: 12px;
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            padding: 20px;
+            border-radius: 20px;
             text-align: center;
             transition: transform 0.2s ease;
         }
 
         .stat-card:hover {
-            transform: translateY(-2px);
+            transform: scale(1.04) rotate(1deg);
         }
 
         .stat-value {
-            font-size: 2.2em;
+            font-size: 2.6em;
             font-weight: 800;
-            color: var(--primary);
-            line-height: 1;
+            color: #ff6b6b;
+            line-height: 1.1;
         }
 
         .stat-label {
             color: var(--text-muted);
-            font-size: 0.9em;
-            font-weight: 600;
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 8px;
         }
 
         @media (max-width: 768px) {
             .dashboard-header {
                 flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            .user-info {
+                gap: 15px;
                 text-align: center;
             }
-            .subject-grid {
-                grid-template-columns: 1fr;
+            .levels-container {
+                grid-template-columns: repeat(5, 1fr);
             }
         }
     </style>
@@ -260,28 +320,28 @@
 <div class="container">
     <div class="dashboard-header">
         <div class="user-info">
-            <p class="user-name">👤 <span id="userName"></span></p>
-            <p class="user-grade">Grade: <span id="userGrade"></span></p>
+            <p class="user-name">✨ Welcome back, <span id="userName"></span>! ✨</p>
+            <p class="user-grade" id="userGradeDisplay">🐣 Kindergarten Hub</p>
         </div>
-        <button class="logout-btn" onclick="logout()">Logout</button>
+        <button class="logout-btn" onclick="logout()">Sign Out 🚪</button>
     </div>
 
     <div id="subjectGrid" class="subject-grid"></div>
 
     <div class="stats-section">
-        <h2>📊 Your Progress</h2>
+        <h2>🏆 Your Super Star Badges</h2>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-value" id="completedLevels">0</div>
-                <div class="stat-label">Levels Completed</div>
+                <div class="stat-label">🌟 Levels Completed</div>
             </div>
             <div class="stat-card">
                 <div class="stat-value" id="averageScore">0%</div>
-                <div class="stat-label">Average Score</div>
+                <div class="stat-label">🎯 High Accuracy</div>
             </div>
             <div class="stat-card">
                 <div class="stat-value" id="totalAttempts">0</div>
-                <div class="stat-label">Total Attempts</div>
+                <div class="stat-label">🚀 Total Tries</div>
             </div>
         </div>
     </div>
@@ -291,35 +351,38 @@
 <script src="js/utils.js"></script>
 <script src="js/userManager.js"></script>
 <script>
-    // Check if user is logged in
     function checkLogin() {
         const currentUser = userManager.getCurrentUser();
         if (!currentUser) {
             window.location.href = 'login.html';
-            return;
+            return null;
         }
         return currentUser;
     }
 
-    // Load dashboard
     function loadDashboard() {
         const currentUser = checkLogin();
         if (!currentUser) return;
 
         document.getElementById('userName').textContent = currentUser.name;
-        document.getElementById('userGrade').textContent = currentUser.gradeLevel;
+        
+        // Dynamic decorative labeling for target grades
+        if (currentUser.gradeLevel === 'K') {
+            document.getElementById('userGradeDisplay').textContent = "🐣 Kindergarten Practice Hub";
+        } else {
+            document.getElementById('userGradeDisplay').textContent = "🎯 Grade " + currentUser.gradeLevel + " Hub";
+        }
 
         loadSubjects(currentUser);
         updateStats(currentUser);
     }
 
-    // Load subjects and levels
     function loadSubjects(currentUser) {
         const subjects = [
-            { name: 'Math', emoji: '📐', icon: '🔢' },
-            { name: 'English', emoji: '📚', icon: '✍️' },
-            { name: 'Social Studies', emoji: '🌍', icon: '📍' },
-            { name: 'Science', emoji: '🔬', icon: '⚗️' }
+            { name: 'Math', emoji: '🔢', cardClass: 'math-card', fillClass: 'math-fill' },
+            { name: 'English', emoji: '🔤', cardClass: 'english-card', fillClass: 'english-fill' },
+            { name: 'Social Studies', emoji: '🗺️', cardClass: 'social-card', fillClass: 'social-fill' },
+            { name: 'Science', emoji: '🧪', cardClass: 'science-card', fillClass: 'science-fill' }
         ];
 
         const progress = userManager.getUserProgress(currentUser.id);
@@ -340,52 +403,66 @@
             if (!subjectProgress) return;
 
             const completedLevels = subjectProgress.levels.filter(l => l.completed).length;
-            const progressPercent = (completedLevels / 10) * 100;
+            const totalSubjectLevels = subjectProgress.levels.length;
+            const progressPercent = totalSubjectLevels > 0 ? (completedLevels / totalSubjectLevels) * 100 : 0;
 
             let html = `
-                    <div class="subject-card" onclick="selectSubject('${subjectKey}', '${subject.name}')">
-                        <h3>${subject.emoji} ${subject.name}</h3>
+                <div class="subject-card ${subject.cardClass}">
+                    <h3>${subject.emoji} ${subject.name}</h3>
+                    <div class="progress-container-box">
                         <div class="progress-bar">
-                            <div class="progress-fill" style="width: ${progressPercent}%"></div>
+                            <div class="progress-fill ${subject.fillClass}" style="width: ${progressPercent}%"></div>
                         </div>
-                        <div class="progress-text">${completedLevels}/10 levels completed</div>
-                        <div class="levels-container">
-                `;
+                        <div class="progress-text">🎈 ${completedLevels} / ${totalSubjectLevels} Finished!</div>
+                    </div>
+                    <div class="levels-container">
+            `;
 
             subjectProgress.levels.forEach(level => {
-                const btnClass = level.locked ? 'locked' : (level.completed ? 'completed' : 'unlocked');
-                const btnText = level.locked ? '🔒' : (level.completed ? '✓' : level.levelNum);
-                // FIXED: event.stopPropagation() added to prevent dynamic bubbling triggers
-                const onclick = level.locked ? '' : `onclick="event.stopPropagation(); startQuiz('${subjectKey}', '${currentUser.gradeLevel}', ${level.levelNum})"`;
+                const isLocked = level.locked;
+                const isCompleted = level.completed;
+                
+                let btnClass = 'locked';
+                let btnText = '🔒';
+                let starBadge = '';
+
+                if (!isLocked) {
+                    if (isCompleted) {
+                        btnClass = 'completed';
+                        btnText = level.levelNum;
+                        
+                        // Fun reward metrics based safely on accuracy percentages
+                        if (level.score >= 90) starBadge = `<span class="star-badge">🥇</span>`;
+                        else if (level.score >= 70) starBadge = `<span class="star-badge">🥈</span>`;
+                        else starBadge = `<span class="star-badge">🥉</span>`;
+                    } else {
+                        btnClass = 'unlocked';
+                        btnText = level.levelNum;
+                    }
+                }
+
+                const onclick = isLocked ? '' : `onclick="event.stopPropagation(); startQuiz('${subjectKey}', '${currentUser.gradeLevel}', ${level.levelNum})"`;
 
                 html += `
-                        <button class="level-btn ${btnClass}" ${onclick} ${level.locked ? 'disabled' : ''} title="Level ${level.levelNum}">
-                            ${btnText}
-                        </button>
-                    `;
+                    <button class="level-btn ${btnClass}" ${onclick} ${isLocked ? 'disabled' : ''}>
+                        ${starBadge}
+                        <span>${btnText}</span>
+                    </button>
+                `;
             });
 
             html += `
-                        </div>
                     </div>
-                `;
-
+                </div>
+            `;
             grid.innerHTML += html;
         });
     }
 
-    // Select subject (optional - for now goes directly to level)
-    function selectSubject(subject, subjectName) {
-        console.log('Subject selected:', subject);
-    }
-
-    // Start quiz
     function startQuiz(subject, grade, level) {
-        const url = `${subject}/quiz.html?grade=${grade}&level=${level}`;
-        window.location.href = url;
+        window.location.href = `${subject}/quiz.html?grade=${grade}&level=${level}`;
     }
 
-    // Update statistics
     function updateStats(currentUser) {
         const progress = userManager.getUserProgress(currentUser.id);
         const subjects = ['math', 'english', 'social', 'science'];
@@ -412,14 +489,13 @@
         document.getElementById('totalAttempts').textContent = totalAttempts;
     }
 
-    // Logout
     function logout() {
-        if (confirm('Are you sure you want to logout?')) {
+        if (confirm('Are you sure you want to exit your game hub?')) {
             sessionStorage.removeItem('pssaCurrentUser');
             window.location.href = 'login.html';
         }
     }
-    // Initialize on page load
+
     document.addEventListener('DOMContentLoaded', loadDashboard);
 </script>
 </body>
