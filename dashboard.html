@@ -364,6 +364,54 @@
         const currentUser = checkLogin();
         if (!currentUser) return;
 
+        // Upgrade old 10-level data to 25 levels, preserving progress
+        try {
+            const allProgress = localStorage.getItem('pssaProgress');
+            if (allProgress) {
+                const progressMap = JSON.parse(allProgress);
+                const progress = progressMap[currentUser.id];
+
+                let needsUpgrade = false;
+                if (progress?.grades) {
+                    const subjects = ['math', 'english', 'social', 'science'];
+                    Object.keys(progress.grades).forEach(grade => {
+                        subjects.forEach(subject => {
+                            const levels = progress.grades[grade][subject]?.levels;
+                            if (levels && levels.length === 10) {
+                                // Add levels 11-25 to existing data
+                                for (let i = 10; i < 25; i++) {
+                                    levels.push({
+                                        levelNum: i + 1,
+                                        completed: false,
+                                        score: 0,
+                                        attempts: 0,
+                                        timestamp: null,
+                                        locked: true
+                                    });
+                                }
+                                // Unlock level 11 if level 10 was completed
+                                if (levels[9]?.completed) {
+                                    levels[10].locked = false;
+                                }
+                                needsUpgrade = true;
+                            }
+                        });
+                    });
+                }
+
+                // Save upgraded progress
+                if (needsUpgrade) {
+                    progressMap[currentUser.id] = progress;
+                    localStorage.setItem('pssaProgress', JSON.stringify(progressMap));
+                    // Reload to reflect changes
+                    location.reload();
+                    return;
+                }
+            }
+        } catch (e) {
+            console.error('Error upgrading progress:', e);
+        }
+
         document.getElementById('userName').textContent = currentUser.name;
         
         // Dynamic decorative labeling for target grades

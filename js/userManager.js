@@ -173,6 +173,54 @@ class UserManager {
         }
     }
 
+    // Force upgrade old progress data (public method)
+    upgradeOldProgressData(userId) {
+        try {
+            const allProgress = localStorage.getItem(this.progressKey);
+            const progressMap = allProgress ? JSON.parse(allProgress) : {};
+
+            if (progressMap[userId]) {
+                const progress = progressMap[userId];
+                const subjects = ['math', 'english', 'social', 'science'];
+                let hasOldLevels = false;
+
+                // Check if this is old 10-level data and upgrade in-place
+                Object.keys(progress.grades || {}).forEach(grade => {
+                    subjects.forEach(subject => {
+                        if (progress.grades[grade][subject]?.levels?.length === 10) {
+                            hasOldLevels = true;
+                            const levels = progress.grades[grade][subject].levels;
+
+                            // Add new levels 11-25, keeping 1-10 intact
+                            for (let i = 10; i < this.levelsPerSubject; i++) {
+                                levels.push({
+                                    levelNum: i + 1,
+                                    completed: false,
+                                    score: 0,
+                                    attempts: 0,
+                                    timestamp: null,
+                                    locked: true
+                                });
+                            }
+
+                            // Unlock level 11 if level 10 was completed
+                            if (levels[9]?.completed) {
+                                levels[10].locked = false;
+                            }
+                        }
+                    });
+                });
+
+                // Save updated progress if changes were made
+                if (hasOldLevels) {
+                    this.saveUserProgress(userId, progress);
+                }
+            }
+        } catch (e) {
+            console.error('Error upgrading progress data:', e);
+        }
+    }
+
     // Save user progress
     saveUserProgress(userId, progress) {
         try {
