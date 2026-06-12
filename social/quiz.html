@@ -512,7 +512,7 @@
 
         if (passed) {
             document.getElementById('certificateDiv').classList.remove('hide');
-            document.getElementById('nextLevelBtn').style.display = quizState.level < 10 ? 'inline-block' : 'none';
+            document.getElementById('nextLevelBtn').style.display = quizState.level < CONFIG.LEVELS_PER_SUBJECT ? 'inline-block' : 'none';
         } else {
             document.getElementById('retryDiv').classList.remove('hide');
         }
@@ -533,7 +533,7 @@
 
     // Go to next level
     function goToNextLevel() {
-        if (quizState.level < 10) {
+        if (quizState.level < CONFIG.LEVELS_PER_SUBJECT) {
             window.location.href = `${window.location.pathname}?grade=${quizState.grade}&level=${quizState.level + 1}`;
         }
     }

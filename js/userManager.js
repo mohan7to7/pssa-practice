@@ -4,6 +4,8 @@ class UserManager {
         this.storageKey = 'pssaUsers';
         this.currentUserKey = 'pssaCurrentUser';
         this.progressKey = 'pssaProgress';
+        // Default to 25 levels, or use CONFIG if available
+        this.levelsPerSubject = typeof CONFIG !== 'undefined' ? CONFIG.LEVELS_PER_SUBJECT : 25;
     }
 
     // Get current user from session
@@ -87,7 +89,7 @@ class UserManager {
             progress.grades[grade] = {};
             subjects.forEach(subject => {
                 progress.grades[grade][subject] = {
-                    levels: Array.from({ length: 25 }, (_, i) => ({
+                    levels: Array.from({ length: this.levelsPerSubject }, (_, i) => ({
                         levelNum: i + 1,
                         completed: false,
                         score: 0,
@@ -117,10 +119,57 @@ class UserManager {
                 return this.getUserProgress(user.id);
             }
 
-            return progressMap[user.id];
+            const progress = progressMap[user.id];
+
+            // Migration: Upgrade users with old 10-level structure to 25 levels
+            this.migrateProgressTo25Levels(user.id, progress);
+
+            return progress;
         } catch (e) {
             console.error('Error reading progress:', e);
             return null;
+        }
+    }
+
+    // Migrate progress from 10 levels to 25 levels (for existing users)
+    migrateProgressTo25Levels(userId, progress) {
+        let needsUpdate = false;
+        const subjects = ['math', 'english', 'social', 'science'];
+        const grades = ['K', '1', '2', '3', '4', '5'];
+
+        grades.forEach(grade => {
+            if (progress.grades[grade]) {
+                subjects.forEach(subject => {
+                    if (progress.grades[grade][subject]) {
+                        const levels = progress.grades[grade][subject].levels;
+                        // Check if user has old 10-level structure
+                        if (levels && levels.length < this.levelsPerSubject) {
+                            // Extend to 25 levels, preserving old level data
+                            const oldLength = levels.length;
+                            for (let i = oldLength; i < this.levelsPerSubject; i++) {
+                                levels.push({
+                                    levelNum: i + 1,
+                                    completed: false,
+                                    score: 0,
+                                    attempts: 0,
+                                    timestamp: null,
+                                    locked: true
+                                });
+                            }
+                            // Unlock level 11 if user completed level 10
+                            if (oldLength >= 10 && levels[9]?.completed) {
+                                levels[10].locked = false;
+                            }
+                            needsUpdate = true;
+                        }
+                    }
+                });
+            }
+        });
+
+        // Save updated progress
+        if (needsUpdate) {
+            this.saveUserProgress(userId, progress);
         }
     }
 
@@ -174,7 +223,7 @@ class UserManager {
         level.timestamp = new Date().toISOString();
 
         // If passed, unlock next level
-        if (percentage >= passingPercentage && levelNum < 10) {
+        if (percentage >= passingPercentage && levelNum < this.levelsPerSubject) {
             const nextLevel = subjectProgress.levels.find(l => l.levelNum === levelNum + 1);
             if (nextLevel) {
                 nextLevel.locked = false;
@@ -185,7 +234,7 @@ class UserManager {
         return {
             passed: percentage >= passingPercentage,
             percentage: percentage,
-            nextLevelUnlocked: percentage >= passingPercentage && levelNum < 10
+            nextLevelUnlocked: percentage >= passingPercentage && levelNum < this.levelsPerSubject
         };
     }
     // Get level statistics
