@@ -73,7 +73,7 @@ const CONFIG = {
     },
 
     // ===== QUIZ SETTINGS =====
-    LEVELS_PER_SUBJECT: 10,          // Number of levels per subject
+    LEVELS_PER_SUBJECT: 25,          // Number of levels per subject
     QUESTIONS_PER_LEVEL: 25,         // Number of questions per level
     PASSING_PERCENTAGE: 70,          // Percentage needed to pass a level
     TIMER_DURATION: 60,              // Seconds per question
