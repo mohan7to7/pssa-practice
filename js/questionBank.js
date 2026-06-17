@@ -1,11 +1,42 @@
 var questionBank={};
 function initQuestionBank(){
-    if(typeof gradeKQuestions!=='undefined')questionBank.K=gradeKQuestions;
-    if(typeof grade1Questions!=='undefined')questionBank['1']=grade1Questions;
-    if(typeof grade2Questions!=='undefined')questionBank['2']=grade2Questions;
-    if(typeof grade3Questions!=='undefined')questionBank['3']=grade3Questions;
-    if(typeof grade4Questions!=='undefined')questionBank['4']=grade4Questions;
-    if(typeof grade5Questions!=='undefined')questionBank['5']=grade5Questions;
+    // Support for original combined format (for backward compatibility)
+    if(typeof gradeKQuestions!=='undefined' && gradeKQuestions.math)questionBank.K=gradeKQuestions;
+    if(typeof grade1Questions!=='undefined' && grade1Questions.math)questionBank['1']=grade1Questions;
+    if(typeof grade2Questions!=='undefined' && grade2Questions.math)questionBank['2']=grade2Questions;
+    if(typeof grade3Questions!=='undefined' && grade3Questions.math)questionBank['3']=grade3Questions;
+    if(typeof grade4Questions!=='undefined' && grade4Questions.math)questionBank['4']=grade4Questions;
+    if(typeof grade5Questions!=='undefined' && grade5Questions.math)questionBank['5']=grade5Questions;
+
+    // Support for new split format
+    // Combine split subject files into the expected structure
+    const grades = [
+        {name: 'K', prefix: 'gradeK'},
+        {name: '1', prefix: 'grade1'},
+        {name: '2', prefix: 'grade2'},
+        {name: '3', prefix: 'grade3'},
+        {name: '4', prefix: 'grade4'},
+        {name: '5', prefix: 'grade5'}
+    ];
+
+    const subjects = ['Math', 'Science', 'English', 'Social'];
+
+    for(const grade of grades){
+        // Check if we already loaded combined format
+        if(questionBank[grade.name]) continue;
+
+        const combined = {};
+        for(const subject of subjects){
+            const varName = grade.prefix + subject + 'Questions';
+            if(typeof window !== 'undefined' && window[varName]){
+                combined[subject.toLowerCase()] = window[varName];
+            }
+        }
+
+        if(Object.keys(combined).length > 0){
+            questionBank[grade.name] = combined;
+        }
+    }
 }
 function getQuestionsForLevel(grade,subject,level){
     try{
